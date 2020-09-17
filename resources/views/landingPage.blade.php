@@ -269,7 +269,7 @@
     </div>
 </div>
 
-<button href="#" class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>
+<button class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>
 
 <footer class="footer" style="background-color: #FFD143;">
     <div class="container" >
