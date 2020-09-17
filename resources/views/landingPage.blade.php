@@ -96,6 +96,26 @@
                 float: right;
             }
         }
+
+        .act-floating-btn{
+            background:#BD7E28;
+            display: block;
+            width: 120px;
+            height: auto;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            text-decoration: none;
+            transition: ease all 0.3s;
+            position: fixed;
+            right: 30px;
+            bottom:50px;
+        }
+        .act-btn:hover{background: blue}
     </style>
 </head>
 <body>
