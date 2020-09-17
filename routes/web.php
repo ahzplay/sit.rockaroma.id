@@ -21,5 +21,6 @@ Route::get('enter-page', 'App\Http\Controllers\AuthController@login');
 Route::post('login-action', 'App\Http\Controllers\AuthController@loginAction');
 Route::group(['middleware' => 'App\Http\Middleware\LoginChecking'], function(){
     Route::get('landing-page', 'App\Http\Controllers\LandingPageController@index');
+    Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 });
 

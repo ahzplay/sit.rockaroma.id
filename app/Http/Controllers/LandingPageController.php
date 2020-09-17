@@ -10,6 +10,7 @@ class LandingPageController extends Controller
 
     public function  __construct(Request $request)
     {
+
     }
 
     public function index(){

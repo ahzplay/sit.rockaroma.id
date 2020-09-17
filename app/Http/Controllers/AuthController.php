@@ -18,4 +18,9 @@ class AuthController extends Controller
             return redirect('enter-page');
         }
     }
+
+    public function logoutAction(Request $request){
+        $request->session()->flush();
+        return redirect('enter-page');
+    }
 }
