@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{asset('app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -31,10 +31,11 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="floating-labels.css" rel="stylesheet">
+    <link href="{{asset('css/floating-labels.css')}}" rel="stylesheet">
 </head>
 <body>
-<form class="form-signin" >
+<form class="form-signin" action="{{url('login-action')}}" enctype="multipart/form-data" method="post">
+    {{csrf_field()}}
     <div class="text-center mb-4">
         {{--<img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">--}}
         <h1 class="h3 mb-3 font-weight-normal">ROCKAROMA.ID</h1>
@@ -42,7 +43,7 @@
     </div>
 
     <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <label for="inputPassword">Password</label>
     </div>
 
