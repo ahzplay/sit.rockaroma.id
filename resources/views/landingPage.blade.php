@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>ROCKAROMA -SIT-</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
@@ -273,7 +273,7 @@
 
 <footer class="footer" style="background-color: #FFD143;">
     <div class="container" >
-        <span class="text-muted" >Place sticky footer content here.</span>
+        <span class="text-muted" >This is not live --S--I--T--.</span>
     </div>
 </footer>
 
