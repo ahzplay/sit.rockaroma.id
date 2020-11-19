@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,20 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'App\Http\Controllers\AuthController@login');
+
+Route::get('upload-gdrive', 'App\Http\Controllers\GDriveApiController@index');
+Route::get('callback', 'App\Http\Controllers\GDriveApiController@callback');
+Route::post('upload-gdrive-action', function (Request $request) {
+    dd($request->file('thing')->store('','google'));
 });
 
 Route::get('enter-page', 'App\Http\Controllers\AuthController@login');
+
 Route::post('login-action', 'App\Http\Controllers\AuthController@loginAction');
 Route::group(['middleware' => 'App\Http\Middleware\LoginChecking'], function(){
     Route::get('landing-page', 'App\Http\Controllers\LandingPageController@index');
+    Route::get('register-page', 'App\Http\Controllers\RegisterController@index');
     Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 });
 

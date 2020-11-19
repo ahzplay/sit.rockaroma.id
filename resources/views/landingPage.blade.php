@@ -12,6 +12,7 @@
     <style>
         body{
             background-image: url("{{asset('img/bg.bottomSquare.png')}}");
+            background-color: black;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: bottom;
@@ -129,9 +130,9 @@
                     <div class="inner">
                         <h3 class="masthead-brand" style="color: #FFDF6C;">ROCK AROMA</h3>
                         <nav class="nav nav-masthead justify-content-center">
-                            <a class="nav-link active" href="#">HOME</a>
+                            <a class="nav-link active" href="{{url('landing-page')}}">HOME</a>
                             <a class="nav-link" href="#">ARTICLE</a>
-                            <a class="nav-link" href="#">REGISTER</a>
+                            <a class="nav-link" href="{{url('register-page')}}">REGISTER</a>
                             <a class="nav-link" href="#">SHOP</a>
                         </nav>
                     </div>
@@ -162,8 +163,8 @@
 
     <div class="row" style="padding-top: 30px">
         <div class="col-sm-5">
-            <h4 style="color: #670404"><strong>WHATS NEWS</strong></h4>
-            <p style="font-size: 12px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <h4 style="color: #FFD143;"><strong>WHATS NEWS</strong></h4>
+            <p style="font-size: 12px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div class="col-sm-7">
             <div class="text-right">
