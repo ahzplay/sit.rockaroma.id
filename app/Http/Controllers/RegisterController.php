@@ -22,6 +22,7 @@ class RegisterController extends Controller
     }
 
     public function saveDemo(Request $request) {
+        ini_set('max_execution_time', 480);
         //dd($request->file('fileDemo')/*->store('','google')*/);
         $validator = Validator::make($request->all(),
             [
@@ -48,8 +49,8 @@ class RegisterController extends Controller
 
                 $demoFile = $request->file('demoFile');
                 //10000 = 1 MB
-                if($demoFile->getSize() >= 2000000) {
-                    return response()->json(array('status'=>'fail', 'message'=>'File size maximal 200 MB'));
+                if($demoFile->getSize() >= 50753206) {
+                    return response()->json(array('status'=>'fail', 'message'=>'File size maximal 50 MB'));
                     die();
                 }
 

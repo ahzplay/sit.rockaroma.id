@@ -162,10 +162,10 @@
         });
 
         $("#demo-file").change(function(){
-            if($("#demo-file")[0].files[0].size > 200753206) { //size maximum 200 MB
+            if($("#demo-file")[0].files[0].size > 50753206) { //size maximum 200 MB
                 $.alert({
                     title: 'Something wrong !',
-                    content: 'File size maximum 200 MB'
+                    content: 'File size maximum 50 MB'
                 })
                 $("#demo-file").val('');
             }
@@ -221,7 +221,7 @@
                     'cityCode='+$('#city-code').val()+'&'+
                     'contact='+$('#contact').val()
                 ,
-                timeout: 60000,
+                timeout: 240000,
                 success: function(response){
                     console.log(response.status);
                     if(response.status == 'success') {
