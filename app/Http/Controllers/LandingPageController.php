@@ -13,7 +13,9 @@ class LandingPageController extends Controller
 
     }
 
-    public function index(){
+    public function index(Request $request){
+        $request->session()->put('menu-active-home', 'active');
+        $request->session()->put('menu-active-register', '');
         return view('landingPage');
     }
 }

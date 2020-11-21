@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegionController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('fetch-cities',[RegionController::class, 'fetchCities']);
+Route::get('fetch-bands',[RegisterController::class, 'fetchBands']);
+Route::post('register-checking-profile-form',[RegisterController::class, 'checkingProfileForm']);
