@@ -46,6 +46,13 @@ class RegisterController extends Controller
                 $image      = $request->file('profileImgFile');
                 $imageFileName   = md5(time()) . '.' . $image->getClientOriginalExtension();
 
+                $demoFile = $request->file('demoFile');
+                //10000 = 1 MB
+                if($demoFile->getSize() >= 2000000) {
+                    return response()->json(array('status'=>'fail', 'message'=>'File size maximal 200 MB'));
+                    die();
+                }
+
                 $img = Image::make($image->getRealPath());
                 $img->resize(600, 480, function ($constraint) {
                     $constraint->aspectRatio();
@@ -69,7 +76,7 @@ class RegisterController extends Controller
                                 'storage'=>'local',
                                 'file_type'=>'image',
                                 'file_name'=>$profileImagePath,
-                                'path'=> asset('storage/registered_band/').$imageFileName,
+                                'path'=> asset('storage/registered_band').'/'.$imageFileName,
                                 'updated_at'=>date('Y-m-d H:i:s'),
                             ]),
                             new FilesUploadeds([
@@ -77,7 +84,7 @@ class RegisterController extends Controller
                                 'storage'=>'google',
                                 'file_type'=>'audio/video',
                                 'file_name'=>$demoFileClouded,
-                                'path'=>'-',
+                                'path'=>'https://drive.google.com/drive/u/0/search?q='.$demoFileClouded,
                                 'updated_at'=>date('Y-m-d H:i:s'),
                             ])
                         );

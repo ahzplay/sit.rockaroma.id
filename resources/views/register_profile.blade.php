@@ -67,7 +67,7 @@
                         </div>
                         <div style="padding-top: 20px;">
                             <label style="font-size: 12px;">
-                                Upload your amazing band profile photo. For best result please use photo with ratio 5:4 with maximum size 5mb with jpg or jpeg format
+                                Upload your amazing band profile photo. For best result please use photo with ratio 5:4 with jpg or jpeg format
                             </label>
                         </div>
                     </div>
@@ -160,6 +160,16 @@
         $("#contact").keypress(function (e) {
             if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
         });
+
+        $("#demo-file").change(function(){
+            if($("#demo-file")[0].files[0].size > 200753206) { //size maximum 200 MB
+                $.alert({
+                    title: 'Something wrong !',
+                    content: 'File size maximum 200 MB'
+                })
+                $("#demo-file").val('');
+            }
+        })
     });
 
     $.ajaxSetup({
@@ -318,7 +328,7 @@
                                     $("#upload-demo-submit-btn").removeAttr("disabled");
                                     $.alert({
                                         title: 'Something wrong !',
-                                        content: 'Please check your data and file attach'
+                                        content: response.message
                                     });
                                 }
                             },
@@ -337,6 +347,7 @@
                 }
             });
         }
+
     }
 </script>
 @endsection
