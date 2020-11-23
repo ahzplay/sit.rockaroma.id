@@ -48,10 +48,18 @@ class RegisterController extends Controller
                 $imageFileName   = md5(time()) . '.' . $image->getClientOriginalExtension();
 
                 $demoFile = $request->file('demoFile');
-                //10000 = 1 MB
-                if($demoFile->getSize() >= 50753206) {
-                    return response()->json(array('status'=>'fail', 'message'=>'File size maximal 50 MB'));
-                    die();
+                $audioExtension = array('mp3','m4a','wav');
+                $videoExtension = array('mp4');
+                if(in_array(strtolower($image->getClientOriginalExtension()),$audioExtension)) {
+                    if($demoFile->getSize() >= 2010000) {
+                        return response()->json(array('status'=>'fail', 'message'=>'File size maximal 20 MB for audio'));
+                        die();
+                    }
+                } else if(in_array(strtolower($image->getClientOriginalExtension()), $videoExtension)){
+                    if($demoFile->getSize() >= 10010000) {
+                        return response()->json(array('status'=>'fail', 'message'=>'File size maximal 100 MB for video'));
+                        die();
+                    }
                 }
 
                 $img = Image::make($image->getRealPath());

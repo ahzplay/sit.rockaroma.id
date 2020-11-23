@@ -3,7 +3,8 @@
     <div class="container">
         <header class="masthead mb-auto">
             <div class="inner">
-                <h3 class="masthead-brand" style="color: #FFDF6C;">ROCK AROMA</h3>
+                {{--<h3 class="masthead-brand" style="color: #FFDF6C;">ROCK AROMA</h3>--}}
+                <img src="{{asset('img/logo-rockaroma.png')}}">
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link {{Session::get('menu-active-home')}}" href="{{url('landing-page')}}">HOME</a>
                     <a class="nav-link" href="#">ARTICLE</a>

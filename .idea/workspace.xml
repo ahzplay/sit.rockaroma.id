@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="717b6c40-9479-45fe-b552-a114e441bb4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landingPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landingPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/register_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,17 +164,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/img" />
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/resources/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/resources/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -211,7 +214,7 @@
       <workItem from="1601450347853" duration="585000" />
       <workItem from="1601460077149" duration="1875000" />
       <workItem from="1605743718014" duration="49223000" />
-      <workItem from="1605937102156" duration="23222000" />
+      <workItem from="1605937102156" duration="29326000" />
     </task>
     <servers />
   </component>
@@ -231,6 +234,10 @@
       <screen x="0" y="23" width="1280" height="731" />
     </state>
     <state x="458" y="319" key="NewPhpFileDialog/0.23.1280.731@0.23.1280.731" timestamp="1605982272019" />
+    <state x="141" y="27" key="SettingsEditor" timestamp="1606123298006">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="141" y="27" key="SettingsEditor/0.23.1280.731@0.23.1280.731" timestamp="1606123298006" />
     <state x="100" y="123" width="1080" height="531" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605951090394">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
