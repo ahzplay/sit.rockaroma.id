@@ -3,7 +3,7 @@
 @section('css-add-on');
 <style>
     body{
-        background-image: url("{{asset('img/img.sliderBanner.png')}}");
+        background-image: url("{{asset('img/bg-register.png')}}");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -161,14 +161,31 @@
             if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
         });
 
+
         $("#demo-file").change(function(){
-            if($("#demo-file")[0].files[0].size > 50753206) { //size maximum 200 MB
-                $.alert({
-                    title: 'Something wrong !',
-                    content: 'File size maximum 50 MB'
-                })
-                $("#demo-file").val('');
+            //console.log($.inArray($(this).val().split('.').pop().toLowerCase(), musicExtension));
+            var audioExtension = ['mp3', 'm4a', 'wav'];
+            var videoExtension = ['mp4'];
+            if ($.inArray($(this).val().split('.').pop().toLowerCase(), audioExtension) == 0) { //0 means true, -1 false
+                if($(this)[0].files[0].size > 20753206) { //size maximum 20 MB
+                    $.alert({
+                        title: 'Something wrong !',
+                        content: 'File size maximum 20 MB for audio'
+                    })
+                    $("#demo-file").val('');
+                }
             }
+
+            else if ($.inArray($(this).val().split('.').pop().toLowerCase(), videoExtension) == 0) { //0 means true, -1 false
+                if($(this)[0].files[0].size > 100753206) { //size maximum 100 MB
+                    $.alert({
+                        title: 'Something wrong !',
+                        content: 'File size maximum 100 MB for video'
+                    })
+                    $("#demo-file").val('');
+                }
+            }
+
         })
     });
 
