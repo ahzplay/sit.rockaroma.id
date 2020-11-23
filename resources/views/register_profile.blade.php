@@ -296,7 +296,7 @@
                             contentType: false,
                             cache: false,
                             processData:false,
-                            timeout: 60000,
+                            timeout: 300000,
                             beforeSend: function(){
                                 $('#upload-demo-submit-btn').attr("disabled","disabled");
                             },

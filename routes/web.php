@@ -19,7 +19,7 @@ Route::get('/', 'App\Http\Controllers\AuthController@login');
 Route::get('upload-gdrive', 'App\Http\Controllers\GDriveApiController@index');
 Route::get('callback', 'App\Http\Controllers\GDriveApiController@callback');
 Route::post('upload-gdrive-action', function (Request $request) {
-        dd($request->file('')->store('','google'));
+        dd($request->file('thing')->store('','google'));
     //dd($request->file('thing')->filename);
     //dd(Storage::disk('google')->url('1ZalRfEHEQtFQBGl4QrdVd3oWdPQ65t7N/' . $request->file('thing')));
 });
