@@ -5038,14 +5038,14 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
+  color: #670404;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #0056b3;
+  color: #670404;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -6057,7 +6057,7 @@ a.close.disabled {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background-color: #231315;
 }
 
 .modal-backdrop.fade {
@@ -6065,7 +6065,7 @@ a.close.disabled {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .modal-header {
