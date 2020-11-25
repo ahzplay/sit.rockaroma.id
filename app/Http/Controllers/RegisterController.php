@@ -14,7 +14,9 @@ class RegisterController extends Controller
 {
     public function index(Request $request){
         $request->session()->put('menu-active-home', '');
+        $request->session()->put('menu-active-article', '');
         $request->session()->put('menu-active-register', 'active');
+        $request->session()->put('menu-active-shop', '');
 
         $cities = new RegionController();
         $cities = $cities->fetchCities();
