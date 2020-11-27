@@ -1,15 +1,10 @@
-.container-card {
+.container-card-shop {
     position: relative;
 }
 
 .image-card {
     display: block;
     width: 100%;
-}
-
-.image-card-shop {
-    display: block;
-    width: 70%;
 }
 
 .article-card {

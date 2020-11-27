@@ -31,7 +31,7 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div id="topRow" class="row">
         <div class="col-md-6 no-padding" style="height: 480px;">
             <img id="headline-image" src="{{asset($topThree[0]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
             <div style="color: #FFD143; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
@@ -68,7 +68,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="text-right">
-                    <input type="text" class="form-control" placeholder="&#xF002; Search by keyword" style="font-family:Arial, FontAwesome" >
+                    <input id="search-keyword" type="text" class="form-control" placeholder="&#xF002; Search by keyword" style="font-family:Arial, FontAwesome" >
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                                 @php
                                     $prevPage = Request::segment(2)-1;
                                 @endphp
-                                <a class="page-link" href="{{url('article-page/').'/'.$prevPage.'/searchLanding'}}" aria-label="Previous">
+                                <a class="page-link" href="{{url('article-page/').'/'.$prevPage.'/searchLanding?keyword='}}" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                     <span class="sr-only">Previous</span>
                                 </a>
@@ -120,7 +120,7 @@
                         </li>
                         @for ($i = 1; $i <= $page; $i++)
                             <li class="page-item">
-                                <a class="page-link" href="{{url('article-page/').'/'.$i.'/searchLanding'}}">
+                                <a class="page-link" href="{{url('article-page/').'/'.$i.'/searchLanding?keyword='}}">
                                     @if(Request::segment(2) == $i)
                                         <strong>{{$i}}</strong>
                                     @else
@@ -134,7 +134,7 @@
                                 @php
                                     $nextPage = Request::segment(2)+1;
                                 @endphp
-                                <a class="page-link" href="{{url('article-page/').'/'.$nextPage.'/searchLanding'}}" aria-label="Previous">
+                                <a class="page-link" href="{{url('article-page/').'/'.$nextPage.'/searchLanding?keyword='}}" aria-label="Previous">
                                     <span aria-hidden="true">&raquo;</span>
                                     <span class="sr-only">Previous</span>
                                 </a>
@@ -158,6 +158,15 @@
             $('html, body').animate({
                 scrollTop: $('#{{Request::segment(3)}}').offset().top
             }, 'slow');
+
+
+            $("#search-keyword").on('keyup', function (e) {
+                var keyword = encodeURI($(this).val());
+
+                if (e.key === 'Enter' || e.keyCode === 13) {
+                    window.location.href = '{{url('article-page/').'/1/searchLanding?keyword='}}'+keyword;
+                }
+            });
         })
     </script>
 @endsection
