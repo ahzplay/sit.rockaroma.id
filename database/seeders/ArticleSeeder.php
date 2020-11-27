@@ -13,7 +13,7 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->insert([
+        \DB::table('articles')->insert([
             'is_active' => 1,
             'image_path' => 'img/img-article1.jpg',
             'title' => 'LOREM IPSUM',
