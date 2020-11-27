@@ -131,4 +131,8 @@ class RegisterController extends Controller
         $raw = Band::with('filesUploadeds')->get();
         return response()->json($raw);
     }
+
+    public function phpInfo() {
+        phpinfo();
+    }
 }

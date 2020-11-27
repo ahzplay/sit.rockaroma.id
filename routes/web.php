@@ -39,6 +39,7 @@ Route::group(['middleware' => 'App\Http\Middleware\LoginChecking'], function(){
     Route::get('video-page/{page}', 'App\Http\Controllers\VideoController@index');
     //Route::get('register-file-page', 'App\Http\Controllers\RegisterController@registerFile');
     Route::post('register-save-demo', 'App\Http\Controllers\RegisterController@saveDemo');
+    Route::get('php-info', 'App\Http\Controllers\RegisterController@phpInfo');
 
     Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 });
