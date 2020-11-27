@@ -25,13 +25,13 @@
         </div>
 
         <div class="row" >
-            @foreach($videos as $val)
+            @foreach($raw as $val)
                 <div class="col-md-4" style="padding-bottom: 5%;">
                     <center>
                         <div class="card" style="width: 17.75rem;">
                             <div class="container-card" >
-                                <a href="#" onclick="iframeAdjust('{{$val['videoEmbed']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
-                                    <img src="{{asset($val['thumbPath'])}}" alt="Avatar" class="image-card" width="50">
+                                <a href="#" onclick="iframeAdjust('{{$val['youtube_embeded']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
+                                    <img src="{{asset($val['thumb_path'])}}" alt="Avatar" class="image-card" width="50">
                                 </a>
                             </div>
                             <div class="card-body-videos-list" >
@@ -93,22 +93,51 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
+                {{Request::segment(2)}}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
+                            @if(Request::segment(2)>1)
+                                @php
+                                    $prevPage = Request::segment(2)-1;
+                                @endphp
+                                <a class="page-link" href="{{url('video-page/').'/'.$prevPage}}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            @else
+                                <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            @endif
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        @for ($i = 1; $i <= $page; $i++)
+                            <li class="page-item">
+                                <a class="page-link" href="{{url('video-page/').'/'.$i}}">
+                                    @if(Request::segment(2) == $i)
+                                        <strong>{{$i}}</strong>
+                                    @else
+                                        {{$i}}
+                                    @endif
+                                </a>
+                            </li>
+                        @endfor
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            @if(Request::segment(2)<$page)
+                                @php
+                                    $nextPage = Request::segment(2)+1;
+                                @endphp
+                                <a class="page-link" href="{{url('video-page/').'/'.$nextPage}}" aria-label="Previous">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            @else
+                                <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            @endif
                         </li>
                     </ul>
                 </nav>
@@ -122,7 +151,6 @@
                 </div>
             </div>
         </div>
-        <button class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>
     </div>
 @endsection
 
