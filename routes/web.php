@@ -34,8 +34,9 @@ Route::post('login-action', 'App\Http\Controllers\AuthController@loginAction');
 Route::group(['middleware' => 'App\Http\Middleware\LoginChecking'], function(){
     Route::get('landing-page', 'App\Http\Controllers\LandingPageController@index');
     Route::get('register-profile-page', 'App\Http\Controllers\RegisterController@index');
-    Route::get('article-detail-page', 'App\Http\Controllers\ArticleDetail@index');
-    Route::get('video-page', 'App\Http\Controllers\VideoController@index');
+    Route::get('article-page/{page}/{landingArea}', 'App\Http\Controllers\ArticleController@index');
+    Route::get('article-detail-page', 'App\Http\Controllers\ArticleController@detailPage');
+    Route::get('video-page/{page}', 'App\Http\Controllers\VideoController@index');
     //Route::get('register-file-page', 'App\Http\Controllers\RegisterController@registerFile');
     Route::post('register-save-demo', 'App\Http\Controllers\RegisterController@saveDemo');
 

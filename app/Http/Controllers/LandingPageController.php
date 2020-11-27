@@ -16,6 +16,7 @@ class LandingPageController extends Controller
     public function index(Request $request){
         $request->session()->put('menu-active-home', 'active');
         $request->session()->put('menu-active-article', '');
+        $request->session()->put('menu-active-video', '');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
         $data = array(
