@@ -46,7 +46,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="text-right">
-                    <button type="button" class="btn btn-primary btn-sm">MORE NEWS</button>
+                    <a href="{{url('article-page/1/topRow')}}"  class="btn btn-primary btn-sm">MORE NEWS</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="text-right">
-                    <button type="button" class="btn btn-primary btn-sm">MORE VIDEOS</button>
+                    <a href="{{url('video-page/1')}}" class="btn btn-primary btn-sm">MORE VIDEOS</a>
                 </div>
             </div>
         </div>
