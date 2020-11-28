@@ -37,10 +37,11 @@ Route::group(['middleware' => 'App\Http\Middleware\LoginChecking'], function(){
     Route::get('article-page/{page}/{landingArea}/', 'App\Http\Controllers\ArticleController@index');
     Route::get('article-detail-page', 'App\Http\Controllers\ArticleController@detailPage');
     Route::get('video-page/{page}', 'App\Http\Controllers\VideoController@index');
-    Route::get('shop-page/', 'App\Http\Controllers\ShopController@index');
+    Route::get('shop-page/{page}/{showAll}/', 'App\Http\Controllers\ShopController@index');
     //Route::get('register-file-page', 'App\Http\Controllers\RegisterController@registerFile');
     Route::post('register-save-demo', 'App\Http\Controllers\RegisterController@saveDemo');
     Route::get('php-info', 'App\Http\Controllers\RegisterController@phpInfo');
+    Route::get('fetch-product', 'App\Http\Controllers\ShopController@fetchProducts');
 
     Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 });
