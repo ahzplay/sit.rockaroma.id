@@ -87,7 +87,7 @@
                             <div class="container-card" >
                                 <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card article-card">
                                 <div class="overlay">
-                                    <a href="javascript:history.back()"><i class="fa fa-arrow-circle-left" style="font-size: 50px; color: #FFD143"></i></a>
+                                    <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                                 </div>
                             </div>
                             <div class="card-body" >
