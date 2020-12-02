@@ -95,7 +95,7 @@
     <div class="container" style="padding-left: 15%; padding-right: 15%">
         <div class="row" style="padding-top: 20px;">
             <div class="col-md-2">
-                <i class="fa fa-arrow-circle-left" style="font-size: 50px; color: #FFD143"></i>
+                <a href="javascript:history.back()"><i class="fa fa-arrow-circle-left" style="font-size: 50px; color: #FFD143"></i></a>
             </div>
             <div class="col-md-10">
                 <div class="row">
@@ -300,5 +300,10 @@
                 }, speed);
             }
         });*/
+
+        <script>
+        function goBack() {
+            window.history.back();
+        }
     </script>
 @endsection

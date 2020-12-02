@@ -58,7 +58,7 @@
                         <div class="container-card" >
                             <img src="{{asset('img/img.articlePreview1.png')}}" alt="Avatar" class="image-card">
                             <div class="overlay">
-                                <div class="text-card">Read More</div>
+                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
@@ -77,7 +77,7 @@
                         <div class="container-card" >
                             <img src="{{asset('img/img.articlePreview2.png')}}" alt="Avatar" class="image-card">
                             <div class="overlay">
-                                <div class="text-card">Read More</div>
+                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
@@ -96,7 +96,7 @@
                         <div class="container-card" >
                             <img src="{{asset('img/img.articlePreview3.png')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <div class="text-card">Read More</div>
+                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
