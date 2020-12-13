@@ -319,25 +319,7 @@
                 content: 'There is no file that you attach'
             })
         } else {
-            $('body').loadingModal({
-                position: 'auto',
-                text: 'Uploading, 10%',
-                color: '#FFC108',
-                opacity: '0.7',
-                backgroundColor: 'rgb(0,0,0)',
-                animation: 'cubeGrid'
-            });
-            var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
-            var time = 2000;
 
-            delay(time)
-                .then(function() { $('body').loadingModal('text', 'Uploading, 35%');  return delay(time); } )
-                .then(function() { $('body').loadingModal('text', 'Uploading, 68%');  return delay(time); } )
-                .then(function() { $('body').loadingModal('text', 'Uploading, 75%');  return delay(time); } )
-                .then(function() { $('body').loadingModal('text', 'Uploading, 80%');  return delay(time); } )
-                .then(function() { $('body').loadingModal('text', 'Uploading, 99%');  /*return delay(time);*/ } );
-            /*.then(function() { $('body').loadingModal('hide'); return delay(time); } )
-            .then(function() { $('body').loadingModal('destroy') ;} );*/
             var data = new FormData();
             data.append('demoFile', $('#demo-file').prop('files')[0]);
             data.append('profileImgFile', $('#profile-img-file').prop('files')[0]);
@@ -351,6 +333,25 @@
                     confirm: function () {
                         $('#demo-file').hide();
                         $('.loader').show();
+                        $('body').loadingModal({
+                            position: 'auto',
+                            text: 'Uploading, 10%',
+                            color: '#FFC108',
+                            opacity: '0.7',
+                            backgroundColor: 'rgb(0,0,0)',
+                            animation: 'cubeGrid'
+                        });
+                        var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+                        var time = 2000;
+
+                        delay(time)
+                            .then(function() { $('body').loadingModal('text', 'Uploading, 35%');  return delay(time); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading, 68%');  return delay(time); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading, 75%');  return delay(time); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading, 80%');  return delay(time); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading, 99%');  /*return delay(time);*/ } );
+                        /*.then(function() { $('body').loadingModal('hide'); return delay(time); } )
+                        .then(function() { $('body').loadingModal('destroy') ;} );*/
                         $.ajax({
                             type: "POST",
                             url: "{{url('register-save-demo')}}",
