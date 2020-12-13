@@ -6,7 +6,7 @@
             background-color: #212020;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: top;
+            background-position: bottom;
         }
 
         .video-wrapper {position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}

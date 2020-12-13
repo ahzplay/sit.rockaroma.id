@@ -5,9 +5,8 @@
     body{
         background-image: url("{{asset('img/bg-register.png')}}");
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-position: top;
+
+        background-position: bottom;
     }
 
     @media (min-width: 48em) {
