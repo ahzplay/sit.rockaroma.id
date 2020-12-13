@@ -34,15 +34,24 @@
             right: 30px;
             bottom:50px;
         }
+
+        .footer {
+            botom: 0px;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-
 @include('base.menu')
 
 @yield('content')
 
-{{--@include('base.footer');--}}
+
+
+@include('base.footer');
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -50,6 +59,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 @yield('js-add-on')
+
 </body>
 </html>
 

@@ -35,7 +35,7 @@
         }
 
     </style>
-    <link rel="stylesheet" href="http://demos.sanwebcorner.com/automatic-image-scrolling-responsive-carousel/assets/slick.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/add_on/container-card.css')}}">
 @endsection
 
@@ -266,7 +266,7 @@
             $(".video-wrapper").html(videoEmbed);
         }
     </script>
-    <script src="http://demos.sanwebcorner.com/automatic-image-scrolling-responsive-carousel/assets/slick.js"></script>
+    <script src="{{asset('js/slick.js')}}"></script>
     <script type="text/javascript">
         $(document).on('ready', function() {
             $('.autoplay').slick({
