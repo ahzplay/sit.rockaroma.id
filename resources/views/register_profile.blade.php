@@ -22,6 +22,7 @@
         }
     }
 </style>
+<link rel="stylesheet" href="{{asset('css/loading-modal.css')}}">
 <link rel="stylesheet" href="{{asset('css/file-upload.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @endsection
@@ -146,9 +147,13 @@
 @endsection
 
 @section('js-add-on');
+
+
+<script src="https://www.jqueryscript.net/demo/Fullscreen-Loading-Modal-Indicator-Plugin-For-jQuery-loadingModal/js/jquery.loadingModal.js"></script>
 <script src="{{asset('js/file-upload.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+
         $('#profile-container').show();
         $('#profile-label-link').css('color','#FFD143');
         $('#demo-track-container').hide();
@@ -223,12 +228,22 @@
                 content: "Please complete your band profile"
             })
         } else {
+            $('body').loadingModal({
+                position: 'auto',
+                text: 'Checking Band Profile, Please Wait...',
+                color: '#FFC108',
+                opacity: '0.7',
+                backgroundColor: 'rgb(0,0,0)',
+                animation: 'cubeGrid'
+            });
+
             var data = new FormData();
             data.append('profile-img-file', $('#profile-img-file').prop('files')[0]);
             data.append('profile-img-file', $('#profile-img-file').prop('files')[0]);
             data.append('bandName', $('#band-name').val());
             data.append('cityCode', $('#city-code').val());
             data.append('contact', $('#contact').val());
+
             $.ajax({
                 type: "POST",
                 url: "{{url('api/register-checking-profile-form')}}",
@@ -240,6 +255,12 @@
                 ,
                 timeout: 240000,
                 success: function(response){
+                    var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+                    var time = 2000;
+
+                    delay(time)
+                        .then(function() { $('body').loadingModal('hide'); return delay(time); } )
+                        .then(function() { $('body').loadingModal('destroy') ;} );
                     console.log(response.status);
                     if(response.status == 'success') {
                         $('#profile-container').hide();
@@ -255,6 +276,12 @@
 
                 },
                 error: function(){
+                    var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+                    var time = 2000;
+
+                    delay(time)
+                        .then(function() { $('body').loadingModal('hide'); return delay(time); } )
+                        .then(function() { $('body').loadingModal('destroy') ;} );
                     $('#demo-file').show();
                     $('.loader').hide();
                     $.alert({
@@ -293,6 +320,25 @@
                 content: 'There is no file that you attach'
             })
         } else {
+            $('body').loadingModal({
+                position: 'auto',
+                text: 'Uploading, 10%',
+                color: '#FFC108',
+                opacity: '0.7',
+                backgroundColor: 'rgb(0,0,0)',
+                animation: 'cubeGrid'
+            });
+            var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+            var time = 2000;
+
+            delay(time)
+                .then(function() { $('body').loadingModal('text', 'Uploading, 35%');  return delay(time); } )
+                .then(function() { $('body').loadingModal('text', 'Uploading, 68%');  return delay(time); } )
+                .then(function() { $('body').loadingModal('text', 'Uploading, 75%');  return delay(time); } )
+                .then(function() { $('body').loadingModal('text', 'Uploading, 80%');  return delay(time); } )
+                .then(function() { $('body').loadingModal('text', 'Uploading, 99%');  /*return delay(time);*/ } );
+            /*.then(function() { $('body').loadingModal('hide'); return delay(time); } )
+            .then(function() { $('body').loadingModal('destroy') ;} );*/
             var data = new FormData();
             data.append('demoFile', $('#demo-file').prop('files')[0]);
             data.append('profileImgFile', $('#profile-img-file').prop('files')[0]);
@@ -318,6 +364,12 @@
                                 $('#upload-demo-submit-btn').attr("disabled","disabled");
                             },
                             success: function(response){ //console.log(response);
+                                var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+                                var time = 2000;
+
+                                delay(time)
+                                    .then(function() { $('body').loadingModal('hide'); return delay(time); } )
+                                    .then(function() { $('body').loadingModal('destroy') ;} );
                                 if(response.status == 'success') {
                                     $('#demo-file').show();
                                     $('#upload-demo-form')[0].reset()
@@ -350,6 +402,13 @@
                                 }
                             },
                             error: function(){
+                                var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
+                                var time = 2000;
+
+                                delay(time)
+                                    .then(function() { $('body').loadingModal('hide'); return delay(time); } )
+                                    .then(function() { $('body').loadingModal('destroy') ;} );
+
                                 $('#demo-file').show();
                                 $('.loader').hide();
                                 $("#upload-demo-submit-btn").removeAttr("disabled");
@@ -364,7 +423,6 @@
                 }
             });
         }
-
     }
 </script>
 @endsection
