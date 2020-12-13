@@ -11,7 +11,31 @@
 
         .video-wrapper {position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}
         .video-wrapper iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 100%;
+            /*margin: 100px auto;*/
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
     </style>
+    <link rel="stylesheet" href="http://demos.sanwebcorner.com/automatic-image-scrolling-responsive-carousel/assets/slick.css">
     <link rel="stylesheet" href="{{asset('css/add_on/container-card.css')}}">
 @endsection
 
@@ -25,13 +49,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('img/img.sliderBanner.png')}}" alt="Los Angeles" width="100%">
+                    <img src="{{asset('img/slider1.jpg')}}" alt="Los Angeles" width="100%" height="670">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('img/img.sliderBanner.png')}}" alt="Los Angeles" width="100%">
+                    <img src="{{asset('img/slider2.jpg')}}" alt="Los Angeles" width="100%" height="670">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('img/img.sliderBanner.png')}}" alt="Los Angeles" width="100%">
+                    <img src="{{asset('img/slider3.jpg')}}" alt="Los Angeles" width="100%" height="670">
                 </div>
             </div>
 
@@ -123,7 +147,36 @@
         </div>
 
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px; padding-bottom: 45px;">
-            @foreach($videos as $val)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <center>
+                            <section class="responsive slider">
+                                @foreach($videos as $val)
+                                    <div>
+                                        <div class="card" style="width: 17.75rem;">
+                                            <div class="container-card" >
+                                                <a href="#" onclick="iframeAdjust('{{$val['videoEmbed']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
+                                                    <img src="{{asset($val['thumbPath'])}}" alt="Avatar" class="image-card" width="50">
+                                                </a>
+                                            </div>
+                                            <div class="card-body-videos-list" >
+                                                <p class="card-text" style="text-align: left;">
+                                                    <label style="color: white">{{$val['title']}}</label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                {{--<div>
+                                    <img src="http://placehold.it/350x300?text=6">
+                                </div>--}}
+                            </section>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            {{--@foreach($videos as $val)
                 <div class="col-md-4">
                     <center>
                         <div class="card" style="width: 17.75rem;">
@@ -140,7 +193,7 @@
                         </div>
                     </center>
                 </div>
-            @endforeach
+            @endforeach--}}
             {{--<div class="col-md-4">
                 <center>
                     <div class="card" style="width: 17.75rem;">
@@ -212,5 +265,64 @@
         function iframeAdjust(videoEmbed) {
             $(".video-wrapper").html(videoEmbed);
         }
+    </script>
+    <script src="http://demos.sanwebcorner.com/automatic-image-scrolling-responsive-carousel/assets/slick.js"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $('.autoplay').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+            $(".center").slick({
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $(".variable").slick({
+                dots: true,
+                infinite: true,
+                variableWidth: true
+            });
+        });
+
+
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
     </script>
 @endsection
