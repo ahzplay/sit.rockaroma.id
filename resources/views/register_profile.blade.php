@@ -342,14 +342,16 @@
                             animation: 'cubeGrid'
                         });
                         var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
-                        var time = 2000;
 
-                        delay(time)
-                            .then(function() { $('body').loadingModal('text', 'Uploading, 35%');  return delay(time); } )
-                            .then(function() { $('body').loadingModal('text', 'Uploading, 68%');  return delay(time); } )
-                            .then(function() { $('body').loadingModal('text', 'Uploading, 75%');  return delay(time); } )
-                            .then(function() { $('body').loadingModal('text', 'Uploading, 80%');  return delay(time); } )
-                            .then(function() { $('body').loadingModal('text', 'Uploading, 99%');  /*return delay(time);*/ } );
+                        delay(1000)
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 8%');  return delay(200); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 21%');  return delay(500); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 35%');  return delay(300); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 54%');  return delay(2000); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 68%');  return delay(2000); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 75%');  return delay(1500); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 80%');  return delay(2000); } )
+                            .then(function() { $('body').loadingModal('text', 'Uploading... 98%');  /*return delay(time);*/ } );
                         /*.then(function() { $('body').loadingModal('hide'); return delay(time); } )
                         .then(function() { $('body').loadingModal('destroy') ;} );*/
                         $.ajax({
