@@ -8,82 +8,55 @@
             background-size: contain;
             background-position: bottom;
         }
-        .swiper-container {
-            width: 100%;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
+
+        /* Basic style for Slider */
+        .slider{
+            position: relative;
+            width: 640px;
+            padding-top: 320px;
+            margin: 0px auto;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
         }
 
-        .swiper-slide {
-            background-size: cover;
-            background-position: center;
+        /* Style for Image*/
+        .slider>img{
+            position: absolute;
+            left: 0; top: 0;
+            transition: all 0.5s;
         }
 
-        .gallery-top {
-            height: 80%;
-            width: 100%;
-        }
-
-        .gallery-thumbs {
-            height: 20%;
-            box-sizing: border-box;
-            padding: 10px 0;
-        }
-
-        .gallery-thumbs .swiper-slide {
-            height: 100%;
-            opacity: 0.4;
-        }
-
-        .gallery-thumbs .swiper-slide-thumb-active {
-            opacity: 1;
-        }
-        /*.carousel-indicators {
-            overflow: auto;
-            overflow-y: hidden;
-            -ms-overflow-style: scroll;
-            scrollbar-width: none;
-            position: relative !important;
-            margin-right: 0 !important;
-            margin-left: 0 !important;
-        }
-
-        .carousel-indicators::-webkit-scrollbar {
+        .slider input[name='slide_switch'] {
             display: none;
         }
 
-
-        .carousel-indicators li {
-            height: 3.75rem !important;
-            width: 5rem !important;
-            padding: 5px;
+        .slider label {
+            margin: 18px 0 0 18px;
+            border: 3px solid #999;
+            float: left;
+            cursor: pointer;
+            transition: all 0.5s;
+            opacity: 0.6;
         }
 
-        ol li img.img-tn {
-            height: 100%;
+        .slider label img{
             display: block;
-            object-fit: cover;
-            padding: 0.10rem;
         }
 
-        .carousel-control-prev-icon-thumbs {
+        .slider input[name='slide_switch']:checked+label {
+            border-color: #666;
+            opacity: 1;
+        }
+        /* Main images */
+        .slider input[name='slide_switch'] ~ img {
+            opacity: 0;
+            transform: scale(1.1);
         }
 
-        .carousel-control-next-icon-thumbs {
+        .slider input[name='slide_switch']:checked+label+img {
+            opacity: 1;
+            transform: scale(1);
         }
 
-        .carousel-inner {
-            position: relative;
-            width: 95%;
-            overflow: hidden;
-        }
-
-        figure picture img.image-cover {
-            width: 100%;
-            height: 25rem;
-            object-fit: cover;
-        }*/
     </style>
 @endsection
 
@@ -122,10 +95,10 @@
                         <div class="col-xs-1 text-center">
                             <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
 
-                            <img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120">
-                            <img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120">
-                            <img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120">
-                            <img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120">
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img-article1.jpg')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview3.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                    <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview2.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                        <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview1.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
                         </div>
                     </div>
                 </div>
@@ -145,95 +118,40 @@
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content" style="background-color: #212020;">
                     <div class="modal-body">
-                        <div class="swiper-container gallery-top">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-6.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-7.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-8.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-9.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-10.jpg)"></div>
-                            </div>
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next swiper-button-white"></div>
-                            <div class="swiper-button-prev swiper-button-white"></div>
+                        <div class="slider">
+                            <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                            <label for="id1">
+                                <img src="{{asset('img/img.sliderBanner.png')}}" style="width: 100px; height: 50px;">
+                            </label>
+                            <img src="{{asset('img/img.sliderBanner.png')}}" style="width: 640px; height: 320px;">
+
+                            <input type="radio" name="slide_switch" id="id2" />
+                            <label for="id2">
+                                <img src="{{asset('img/img-article1.jpg')}}" style="width: 100px; height: 50px;">
+                            </label>
+                            <img src="{{asset('img/img-article1.jpg')}}" style="width: 640px; height: 320px;">
+
+                            <input type="radio" name="slide_switch" id="id3" />
+                            <label for="id3">
+                                <img src="{{asset('img/img.articlePreview3.png')}}" style="width: 100px; height: 50px;">
+                            </label>
+                            <img src="{{asset('img/img.articlePreview3.png')}}" style="width: 640px; height: 320px;">
+
+                            <input type="radio" name="slide_switch" id="id4" />
+                            <label for="id4">
+                                <img src="{{asset('img/img.articlePreview2.png')}}" style="width: 100px; height: 50px;">
+                            </label>
+                            <img src="{{asset('img/img.articlePreview2.png')}}" style="width: 640px; height: 320px;">
+
+                            <input type="radio" name="slide_switch" id="id5" />
+                            <label for="id5">
+                                <img src="{{asset('img/img.articlePreview1.png')}}" style="width: 100px; height: 50px;">
+                            </label>
+                            <img src="{{asset('img/img.articlePreview1.png')}}" style="width: 640px; height: 320px;">
                         </div>
-                        <div class="swiper-container gallery-thumbs">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-6.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-7.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-8.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-9.jpg)"></div>
-                                <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-10.jpg)"></div>
-                            </div>
-                        </div>
-                        {{--<div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" data-interval="false">
 
-
-                            <div>
-                                <div class="carousel-inner" role="listbox">
-
-                                    <figure class="carousel-item active">
-                                        <picture>
-                                            <img class="image-cover" src="{{asset('img/img.sliderBanner.png')}}" alt="First slide">
-                                        </picture>
-                                    </figure>
-                                    <figure class="carousel-item ">
-                                        <picture>
-                                            <img class="image-cover" src="{{asset('img/bg-home.png')}}" alt="First slide">
-                                        </picture>
-                                    </figure>
-                                    <figure class="carousel-item ">
-                                        <picture>
-                                            <img class="image-cover" src="{{asset('img/bg-register.png')}}" alt="First slide">
-                                        </picture>
-                                    </figure>
-
-                                </div>
-                            </div>
-                            <div class="scoll-pane" id="scoll_pane">
-                                <ol class="carousel-indicators" id="carousel_indicators">
-
-                                    <li data-target="#carousel-thumb" data-slide-to="0" class="active">
-                                        <picture>
-                                            <img src="{{asset('img/img.sliderBanner.png')}}" class="img-tn">
-                                        </picture>
-                                    </li>
-                                    <li data-target="#carousel-thumb" data-slide-to="1" class="active">
-                                        <picture>
-                                            <img src="{{asset('img/bg-home.png')}}" class="img-tn">
-                                        </picture>
-                                    </li>
-                                    <li data-target="#carousel-thumb" data-slide-to="2" class="active">
-                                        <picture>
-                                            <img src="{{asset('img/bg-register.png')}}" class="img-tn">
-                                        </picture>
-                                    </li>
-                                </ol>
-
-                                <div class="text-center">
-                                    <a class="carousel-control-prev-thumbs" href="#" id="slideBack1">
-                                        <span class="carousel-control-prev-icon-thumbs" aria-hidden="true"></span>
-                                        <span>Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next-thumbs" href="#" id="slideNext1">
-                                        <span class="carousel-control-next-icon-thumbs" aria-hidden="true"></span>
-                                        <span>Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>--}}
                     </div>
                 </div>
             </div>

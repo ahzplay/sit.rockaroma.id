@@ -49,13 +49,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('img/slider1.jpg')}}" alt="Los Angeles" width="100%" height="670">
+                    <img src="{{asset('img/slider1.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('img/slider2.jpg')}}" alt="Los Angeles" width="100%" height="670">
+                    <img src="{{asset('img/slider2.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('img/slider3.jpg')}}" alt="Los Angeles" width="100%" height="670">
+                    <img src="{{asset('img/slider3.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px; padding-bottom: 45px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-sm-4">
                         <center>
                             <section class="responsive slider">
                                 @foreach($videos as $val)
