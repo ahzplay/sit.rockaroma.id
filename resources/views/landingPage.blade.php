@@ -80,7 +80,7 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/article-endank-6.png')}}" alt="Avatar" class="image-card">
+                            <img src="{{asset('img/article-endank-6.png')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
                                 <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
