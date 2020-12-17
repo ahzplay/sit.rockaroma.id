@@ -80,16 +80,16 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/img.articlePreview1.png')}}" alt="Avatar" class="image-card">
+                            <img src="{{asset('img/article-endank-6.png')}}" alt="Avatar" class="image-card">
                             <div class="overlay">
                                 <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Lorem ipsum dolor sit amet.</strong>
+                                <strong style="color: #FFD143">Rockaroma Showcase</strong>
                                 <br>
-                                <label style="color: white">Some quick example text to build on the card title</label>
+                                <label style="color: white">Wadah baru bagi musisi tanah air unjuk karya terbaik mereka ke masyarakat</label>
                             </p>
                         </div>
                     </div>
@@ -106,9 +106,9 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Lorem ipsum dolor sit amet.</strong>
+                                <strong style="color: #FFD143">Nasib event musik masa kini</strong>
                                 <br>
-                                <label style="color: white">Some quick example text to build on the card title</label>
+                                <label style="color: white">Pandemi membuatevent musik tidak bisa dilakukan,nasib pelakunya ?</label>
                             </p>
                         </div>
                     </div>
@@ -118,16 +118,16 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/img.articlePreview3.png')}}" alt="Avatar" class="image-card" width="50">
+                            <img src="{{asset('img/article-endank-7.png')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
                                 <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Lorem ipsum dolor sit amet.</strong>
+                                <strong style="color: #FFD143">Behind the scene:Rockaroma showcase</strong>
                                 <br>
-                                <label style="color: white">Some quick example text to build on the card title</label>
+                                <label style="color: white">Behind the scene:Rockaroma showcase</label>
                             </p>
                         </div>
                     </div>

@@ -5,16 +5,13 @@
     body{
         background-image: url("{{asset('img/bg-register.png')}}");
         background-size: cover;
-
         background-position: bottom;
     }
-
     @media (min-width: 48em) {
         #register-menu-sm {
             display: none;
         }
     }
-
     @media (max-width: 48em) {
         #register-menu {
             display: none;
@@ -152,20 +149,15 @@
 <script src="{{asset('js/file-upload.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-
         $('#profile-container').show();
         $('#profile-label-link').css('color','#FFD143');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
         $('.file-upload').file_upload();
-
         $('#city-code').select2();
-
         $("#contact").keypress(function (e) {
             if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
         });
-
-
         $("#demo-file").change(function(){
             //console.log($.inArray($(this).val().split('.').pop().toLowerCase(), musicExtension));
             var audioExtension = ['mp3', 'm4a', 'wav'];
@@ -179,7 +171,6 @@
                     $("#demo-file").val('');
                 }
             }
-
             else if ($.inArray($(this).val().split('.').pop().toLowerCase(), videoExtension) == 0) { //0 means true, -1 false
                 if($(this)[0].files[0].size > 100753206) { //size maximum 100 MB
                     $.alert({
@@ -189,31 +180,25 @@
                     $("#demo-file").val('');
                 }
             }
-
         })
     });
-
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-
     function showProfileContainer() {
         $('#profile-container').show();
         $('#profile-label-link').css('color','#FFD143');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
     }
-
     function showDemoTrackContainer() {
         $('#profile-container').hide();
         $('#profile-label-link').css('color','white');
         $('#demo-track-container').show();
         $('#demo-track-label-link').css('color','#FFD143');
     }
-
-
     function showDemoTrackContainerIncludingCheck() {
         //console.log($('#band-name').val());
         if(
@@ -235,14 +220,12 @@
                 backgroundColor: 'rgb(0,0,0)',
                 animation: 'cubeGrid'
             });
-
             var data = new FormData();
             data.append('profile-img-file', $('#profile-img-file').prop('files')[0]);
             data.append('profile-img-file', $('#profile-img-file').prop('files')[0]);
             data.append('bandName', $('#band-name').val());
             data.append('cityCode', $('#city-code').val());
             data.append('contact', $('#contact').val());
-
             $.ajax({
                 type: "POST",
                 url: "{{url('api/register-checking-profile-form')}}",
@@ -256,7 +239,6 @@
                 success: function(response){
                     var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
                     var time = 2000;
-
                     delay(time)
                         .then(function() { $('body').loadingModal('hide'); return delay(time); } )
                         .then(function() { $('body').loadingModal('destroy') ;} );
@@ -272,12 +254,10 @@
                             content: "Please complete your band profile"
                         })
                     }
-
                 },
                 error: function(){
                     var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
                     var time = 2000;
-
                     delay(time)
                         .then(function() { $('body').loadingModal('hide'); return delay(time); } )
                         .then(function() { $('body').loadingModal('destroy') ;} );
@@ -289,28 +269,22 @@
                     });
                 },
             });
-
         }
     }
-
     function readURL(input_files) {
         if (input_files[0]) {
             var reader = new FileReader();
-
             reader.onload = function(e) {
                 $('#profile-img').attr('src', e.target.result);
                 $('#profile-img').attr('size', e.target.result);
             }
-
             reader.readAsDataURL(input_files[0]); // convert to base64 string
         }
     }
-
     $(".file-upload").change(function() {
         readURL($('#profile-img-file').prop('files'));
         console.log($('#profile-img-file').prop('files'));
     });
-
     function uploadDemo() {
         //console.log($("#demo-file")[0].files[0].size);
         if($('#demo-file').get(0).files.length === 0) {
@@ -319,7 +293,6 @@
                 content: 'There is no file that you attach'
             })
         } else {
-
             var data = new FormData();
             data.append('demoFile', $('#demo-file').prop('files')[0]);
             data.append('profileImgFile', $('#profile-img-file').prop('files')[0]);
@@ -342,7 +315,6 @@
                             animation: 'cubeGrid'
                         });
                         var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
-
                         delay(1000)
                             .then(function() { $('body').loadingModal('text', 'Uploading... 8%');  return delay(200); } )
                             .then(function() { $('body').loadingModal('text', 'Uploading... 21%');  return delay(500); } )
@@ -368,7 +340,6 @@
                             success: function(response){ //console.log(response);
                                 var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
                                 var time = 2000;
-
                                 delay(time)
                                     .then(function() { $('body').loadingModal('hide'); return delay(time); } )
                                     .then(function() { $('body').loadingModal('destroy') ;} );
@@ -406,11 +377,9 @@
                             error: function(){
                                 var delay = function(ms){ return new Promise(function(r) { setTimeout(r, ms) }) };
                                 var time = 2000;
-
                                 delay(time)
                                     .then(function() { $('body').loadingModal('hide'); return delay(time); } )
                                     .then(function() { $('body').loadingModal('destroy') ;} );
-
                                 $('#demo-file').show();
                                 $('.loader').hide();
                                 $("#upload-demo-submit-btn").removeAttr("disabled");

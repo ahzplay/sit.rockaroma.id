@@ -12,10 +12,10 @@
         /* Basic style for Slider */
         .slider{
             position: relative;
-            width: 640px;
-            padding-top: 320px;
+            width: 600px;
+            padding-top: 400px;
             margin: 0px auto;
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+            /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);*/
         }
 
         /* Style for Image*/
@@ -62,7 +62,7 @@
 
 @section('content')
     <jumbotron class="mb-0">
-        <img src="{{asset('img/img.sliderBanner.png')}}" alt="Los Angeles" width="100%">
+        <img src="{{asset('img/article-banner-1.png')}}" alt="Los Angeles" width="100%">
     </jumbotron>
 
     <div class="container" style="padding-left: 15%; padding-right: 15%">
@@ -73,32 +73,37 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col-md-12">
-                        <label style="color: white;">Jakarta, 20 Agustus 2020</label>
+                        <label style="color: white;">Jakarta, 18 Desember 2020</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 style=" color: #FFD143;">Lorem Ipsum</h4>
+                        <h4 style=" color: #FFD143;">Rockaroma Showcase, wadah baru bagi musisi tanah air unjuk karya terbaik ke mayarakat</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <p style="color: white;">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            Rockaroma Showcase adalah program yang dibuat oleh Rockaaroma ID untuk menjadi wadah bagi seluruh musisi berbakat tanah air unjuk karya terbaik ke masyarakat.
+                            <br>
+                            Pada Rockaroma Showcase Vol.1 kali ini, StereoWall unjuk gigi mengenalkan karya mereka. Band yang beranggotakan Cynantia Pratita sebagai vokalis, Rama Mayristha dan Usay Sunny sebagai di gitar, Ramadhan Satria di bass dan Frans Orrico di drum ini menunjukkan 3 karya mereka yang berjudul Blood & Light, Who Saved My Life From Crashing Down (ft. Kevin Diaz) dan Forever.
+                            <br>
+                            Kalian dapat menyaksikan karya mereka di YouTube Channel @rockaroma_id lho, yuk dukung terus band dan musisi favorit kalian melalui @rockaroma_id dan jangan lupa untuk comment, like dan subscribe channel @rockaroma_id ya, karena suara dan dukungan kalian adalah semangat pergerakan ini.
+                            <br>
+                            Rockaroma Showcase ini gak cuma ada StereoWall lho, jadi stay tune untuk tahu band mana yang akan tampil selanjutnya.
                         </p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
                     <div class="col-md-12">
                         <div class="col-xs-1 text-center">
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.sliderBanner.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-1.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
 
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img-article1.jpg')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
-                                <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview3.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
-                                    <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview2.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
-                                        <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/img.articlePreview1.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-2.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-3.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                    <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-4.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                                        <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-5.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
                         </div>
                     </div>
                 </div>
@@ -123,35 +128,34 @@
                         <div class="slider">
                             <input type="radio" name="slide_switch" id="id1" checked="checked" />
                             <label for="id1">
-                                <img src="{{asset('img/img.sliderBanner.png')}}" style="width: 100px; height: 50px;">
+                                <img src="{{asset('img/article-gallery-1.png')}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/img.sliderBanner.png')}}" style="width: 640px; height: 320px;">
+                            <img src="{{asset('img/article-gallery-1.png')}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id2" />
                             <label for="id2">
-                                <img src="{{asset('img/img-article1.jpg')}}" style="width: 100px; height: 50px;">
+                                <img src="{{asset('img/article-gallery-2.png')}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/img-article1.jpg')}}" style="width: 640px; height: 320px;">
+                            <img src="{{asset('img/article-gallery-2.png')}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id3" />
                             <label for="id3">
-                                <img src="{{asset('img/img.articlePreview3.png')}}" style="width: 100px; height: 50px;">
+                                <img src="{{asset('img/article-gallery-3.png')}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/img.articlePreview3.png')}}" style="width: 640px; height: 320px;">
+                            <img src="{{asset('img/article-gallery-3.png')}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id4" />
                             <label for="id4">
-                                <img src="{{asset('img/img.articlePreview2.png')}}" style="width: 100px; height: 50px;">
+                                <img src="{{asset('img/article-gallery-4.png')}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/img.articlePreview2.png')}}" style="width: 640px; height: 320px;">
+                            <img src="{{asset('img/article-gallery-4.png')}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id5" />
                             <label for="id5">
-                                <img src="{{asset('img/img.articlePreview1.png')}}" style="width: 100px; height: 50px;">
+                                <img src="{{asset('img/article-gallery-5.png')}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/img.articlePreview1.png')}}" style="width: 640px; height: 320px;">
+                            <img src="{{asset('img/article-gallery-5.png')}}" style="width: 600px; height: 400px;">
                         </div>
-
                     </div>
                 </div>
             </div>
