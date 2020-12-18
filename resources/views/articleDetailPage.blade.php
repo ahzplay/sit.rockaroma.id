@@ -98,11 +98,11 @@
                 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
                     <div class="col-md-12">
                         <div class="col-xs-1">
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-1.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-1.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
 
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-2.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-3.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-4.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-2.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-3.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-4.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
                             {{--<a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-5.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>--}}
                         </div>
                     </div>
