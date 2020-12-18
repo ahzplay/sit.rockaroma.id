@@ -262,7 +262,7 @@
             });
 
             $('#myCarousel.slide').carousel({
-                interval: 300,
+                interval: 4000,
                 pause: "none"
             });
         })
