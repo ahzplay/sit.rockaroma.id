@@ -260,6 +260,11 @@
             $("#video-modal").on('hidden.bs.modal', function (e) {
                 $(".video-wrapper iframe").attr("src", $("#video-modal iframe").attr("src"));
             });
+
+            $('#myCarousel.slide').carousel({
+                interval: 300,
+                pause: "none"
+            });
         })
 
         function iframeAdjust(videoEmbed) {
