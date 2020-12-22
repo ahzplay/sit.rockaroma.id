@@ -8,7 +8,7 @@
             background-size: contain;
             background-position: top;
         }
-        a:hover {color: #FFD143;}
+        a:hover {color: #FDDA25;}
 
     </style>
     <link rel="stylesheet" href="{{asset('css/add_on/container-card.css')}}">
@@ -18,7 +18,7 @@
     <div class="container" style="padding-top: 10%; padding-left: 10%; padding-right: 10%; padding-bottom: 45px;">
         <div class="row">
             <div class="col-sm-12 text-center" style="padding-bottom: 3%;">
-                <h4 style="color: #FFD143;"><strong>OUR MERCHANDISE</strong></h4>
+                <h4 style="color: #FDDA25;"><strong>OUR MERCHANDISE</strong></h4>
             </div>
 
             <div class="col-sm-12 text-center" style="padding-bottom: 8%;">
@@ -44,7 +44,7 @@
                             </div>
                             <div class="card-body" >
                                 <p class="card-text" style="text-align: left; font-size: 12px;">
-                                    <strong style="color: #FFD143">{{$val['name']}}</strong>
+                                    <strong style="color: #FDDA25">{{$val['name']}}</strong>
                                     <br>
                                     <label style="color: white">IDR {{number_format($val['price'], 0, '', '.')}}</label>
                                 </p>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock two</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock two</strong>
                                 <br>
                                 <label style="color: white">IDR 11,999</label>
                             </p>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock three</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock three</strong>
                                 <br>
                                 <label style="color: white">IDR 55,999</label>
                             </p>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock four</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock four</strong>
                                 <br>
                                 <label style="color: white">IDR 99,999</label>
                             </p>
@@ -123,7 +123,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock one</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock one</strong>
                                 <br>
                                 <label style="color: white">IDR 88,999</label>
                             </p>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock two</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock two</strong>
                                 <br>
                                 <label style="color: white">IDR 11,999</label>
                             </p>
@@ -161,7 +161,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock three</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock three</strong>
                                 <br>
                                 <label style="color: white">IDR 55,999</label>
                             </p>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock four</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock four</strong>
                                 <br>
                                 <label style="color: white">IDR 99,999</label>
                             </p>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock one</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock one</strong>
                                 <br>
                                 <label style="color: white">IDR 88,999</label>
                             </p>
@@ -218,7 +218,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock two</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock two</strong>
                                 <br>
                                 <label style="color: white">IDR 11,999</label>
                             </p>
@@ -237,7 +237,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left; font-size: 12px;">
-                                <strong style="color: #FFD143">Merhandise Rock three</strong>
+                                <strong style="color: #FDDA25">Merhandise Rock three</strong>
                                 <br>
                                 <label style="color: white">IDR 55,999</label>
                             </p>
@@ -257,7 +257,7 @@
                             </div>
                             <div class="card-body" >
                                 <p class="card-text" style="text-align: left; font-size: 12px;">
-                                    <strong style="color: #FFD143">Merhandise Rock four</strong>
+                                    <strong style="color: #FDDA25">Merhandise Rock four</strong>
                                     <br>
                                     <label style="color: white">IDR 99,999</label>
                                 </p>

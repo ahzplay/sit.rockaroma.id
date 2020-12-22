@@ -594,6 +594,7 @@ class ComposerStaticInitbd6c5be6917aa792252276df3abacd53
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\Band' => __DIR__ . '/../..' . '/app/Models/Band.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
+        'App\\Models\\DashboardSlider' => __DIR__ . '/../..' . '/app/Models/DashboardSlider.php',
         'App\\Models\\FilesUploadeds' => __DIR__ . '/../..' . '/app/Models/FilesUploadeds.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
         'App\\Models\\Region' => __DIR__ . '/../..' . '/app/Models/Region.php',
