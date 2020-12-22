@@ -3,8 +3,8 @@
 @section('css-add-on');
 <style>
     body{
-        background-image: url("{{asset('img/bg-register.png')}}");
-        background-size: cover;
+        background-image: url("{{asset('img/bg-2.jpg')}}");
+        background-size: contain;
         background-position: bottom;
     }
     @media (min-width: 48em) {
