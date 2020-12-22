@@ -2,11 +2,11 @@
 @section('css-add-on')
     <style>
         body{
-            background-image: url("{{asset('img/bg-home.png')}}");
-            background-color: #212020;
+            background-image: url("{{asset('img/bg-4.jpg')}}");
+            background-color: #1e1616;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom;
+            background-position: top;
         }
 
         .video-wrapper {position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}

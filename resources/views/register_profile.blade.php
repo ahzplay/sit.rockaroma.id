@@ -4,8 +4,9 @@
 <style>
     body{
         background-image: url("{{asset('img/bg-2.jpg')}}");
-        background-size: contain;
-        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: top;
     }
     @media (min-width: 48em) {
         #register-menu-sm {

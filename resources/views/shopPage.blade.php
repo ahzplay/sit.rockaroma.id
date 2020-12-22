@@ -3,7 +3,7 @@
     <style>
         body{
             background-image: url("{{asset('img/bg-3.jpg')}}");
-            background-color: #212020;
+            background-color: #1e1616;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: top;
