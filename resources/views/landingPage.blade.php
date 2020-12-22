@@ -5,7 +5,7 @@
             background-image: url("{{asset('img/bg-1.jpg')}}");
             background-color: #1e1616;
             background-repeat: repeat;
-            background-size: cover;
+            background-size: auto;
             background-position: bottom;
         }
 
