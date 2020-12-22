@@ -27,7 +27,7 @@
     <div class="container" style="padding-bottom: 5%;">
         <div class="row" style="padding-top: 8%;">
             <div id="register-menu" class="col-lg-3 col-md-3 col-sm-12">
-                <h3 style="color: #FFD143;"><strong>REGISTER FORM</strong></h3>
+                <h3 style="color: #FDDA25;"><strong>REGISTER FORM</strong></h3>
                 <p style="font-size: 11px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus placerat metus</p>
                 <hr style="height:3px;border:none;color:#333;background-color:#ffffff;" />
                 <a href="#" onclick="showProfileContainer()" id="profile-label-link" style="text-decoration:none;"><h4 style=" padding-top: 15%;"><strong>Band Profile</strong></h4></a>
@@ -35,7 +35,7 @@
             </div>
 
             <div id="register-menu-sm" class="col-lg-3 col-md-3 col-sm-12" >
-                <h3 style="color: #FFD143;"><strong>REGISTER FORM</strong></h3>
+                <h3 style="color: #FDDA25;"><strong>REGISTER FORM</strong></h3>
                 <p style="font-size: 11px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus placerat metus</p>
                 <hr style="height:3px;border:none;color:#333;background-color:#ffffff;" />
                 <a href="#" style="text-decoration:none;"> <label id="profile-label-link" ><strong>Band Profile</strong></label> </a>
@@ -150,7 +150,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#profile-container').show();
-        $('#profile-label-link').css('color','#FFD143');
+        $('#profile-label-link').css('color','#FDDA25');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
         $('.file-upload').file_upload();
@@ -189,7 +189,7 @@
     });
     function showProfileContainer() {
         $('#profile-container').show();
-        $('#profile-label-link').css('color','#FFD143');
+        $('#profile-label-link').css('color','#FDDA25');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
     }
@@ -197,7 +197,7 @@
         $('#profile-container').hide();
         $('#profile-label-link').css('color','white');
         $('#demo-track-container').show();
-        $('#demo-track-label-link').css('color','#FFD143');
+        $('#demo-track-label-link').css('color','#FDDA25');
     }
     function showDemoTrackContainerIncludingCheck() {
         //console.log($('#band-name').val());
@@ -215,7 +215,7 @@
             $('body').loadingModal({
                 position: 'auto',
                 text: 'Checking Band Profile, Please Wait...',
-                color: '#FFC108',
+                color: '#FDDA25',
                 opacity: '0.7',
                 backgroundColor: 'rgb(0,0,0)',
                 animation: 'cubeGrid'
@@ -247,7 +247,7 @@
                         $('#profile-container').hide();
                         $('#profile-label-link').css('color','white');
                         $('#demo-track-container').show();
-                        $('#demo-track-label-link').css('color','#FFD143');
+                        $('#demo-track-label-link').css('color','#FDDA25');
                     } else {
                         $.alert({
                             title: "Something wrong !",

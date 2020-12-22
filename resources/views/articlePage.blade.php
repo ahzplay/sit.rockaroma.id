@@ -35,7 +35,7 @@
         <div class="col-md-6 no-padding" style="height: 480px;">
             <img id="headline-image" src="{{asset($topThree[0]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
             <a href="{{url('article-detail-page')}}">
-            <div style="color: #FFD143; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+            <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
                 <strong>{{$topThree[0]['title']}}</strong><br>
                 <label style="color: white;">{{substr($topThree[0]['content'], 0, 120)}} ...</label>
             </div>
@@ -46,7 +46,7 @@
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset($topThree[1]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
                     <a href="{{url('article-detail-page')}}">
-                    <div style="color: #FFD143; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
                         <strong>{{$topThree[1]['title']}}</strong><br>
                         <label style="color: white;">{{substr($topThree[1]['content'], 0, 100)}} ...</label>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset($topThree[2]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
                     <a href="{{url('article-detail-page')}}">
-                    <div style="color: #FFD143; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
                         <strong>{{$topThree[2]['title']}}</strong><br>
                         <label style="color: white;">{{substr($topThree[2]['content'], 0, 100)}} ...</label>
                     </div>
@@ -70,7 +70,7 @@
     <div id="searchLanding" class="container" style="padding-left: 10%; padding-right: 10%;">
         <div class="row" style="padding-top: 30px">
             <div class="col-sm-9">
-                <h4 style="color: #FFD143;"><strong>WHATS NEWS</strong></h4>
+                <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
             </div>
             <div class="col-sm-3">
                 <div class="text-right">
@@ -92,7 +92,7 @@
                             </div>
                             <div class="card-body" >
                                 <p class="card-text" style="text-align: left;">
-                                    <strong style="color: #FFD143">{{$val['title']}}</strong>
+                                    <strong style="color: #FDDA25">{{$val['title']}}</strong>
                                     <br>
                                     <label style="color: white">{{substr($val['content'], 0, 50)}} ... </label>
                                 </p>

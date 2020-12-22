@@ -2543,8 +2543,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: rgba(103, 4, 4, 1.0);
-  border-color: rgba(103, 4, 4, 1.0);
+  background-color: #da291c;
+  border-color: #da291c;
 }
 
 .btn-primary:hover {
@@ -6534,7 +6534,7 @@ a.close.disabled {
   -ms-flex-pack: center;
   justify-content: center;
   width: 15%;
-  color: #fff;
+  color: #da291c;
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.15s ease;

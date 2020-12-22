@@ -20,7 +20,7 @@
     <div class="container" style="padding-top: 10%; padding-left: 10%; padding-right: 10%; padding-bottom: 45px;">
         <div class="row">
             <div class="col-sm-12 text-center" style="padding-bottom: 8%;">
-                <h4 style="color: #FFD143;"><strong>SHOWCASE VIDEO GALLERY</strong></h4>
+                <h4 style="color: #FDDA25;"><strong>SHOWCASE VIDEO GALLERY</strong></h4>
             </div>
         </div>
 

@@ -58,14 +58,21 @@
                     <img src="{{asset('img/slider3.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
                 </div>
             </div>
-
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </jumbotron>
 
     <div class="container" >
         <div class="row" style="padding-top: 30px">
             <div class="col-sm-5">
-                <h4 style="color: #FFD143;"><strong>WHATS NEWS</strong></h4>
+                <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
                 <p style="font-size: 12px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
             <div class="col-sm-7">
@@ -87,7 +94,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Rockaroma Showcase</strong>
+                                <strong style="color: #FDDA25">Rockaroma Showcase</strong>
                                 <br>
                                 <label style="color: white">Wadah baru bagi musisi tanah air unjuk karya terbaik mereka ke masyarakat</label>
                             </p>
@@ -106,7 +113,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Nasib event musik masa kini</strong>
+                                <strong style="color: #FDDA25">Nasib event musik masa kini</strong>
                                 <br>
                                 <label style="color: white">Pandemi membuatevent musik tidak bisa dilakukan,nasib pelakunya ?</label>
                             </p>
@@ -125,7 +132,7 @@
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FFD143">Behind the scene:Rockaroma showcase</strong>
+                                <strong style="color: #FDDA25">Behind the scene:Rockaroma showcase</strong>
                                 <br>
                                 <label style="color: white">Behind the scene:Rockaroma showcase</label>
                             </p>
@@ -136,7 +143,7 @@
         </div>
         <div class="row" style="padding-top: 70px">
             <div class="col-sm-5">
-                <h4 style="color: #FFD143;"><strong>OUR VIDEOS</strong></h4>
+                <h4 style="color: #FDDA25;"><strong>OUR VIDEOS</strong></h4>
                 <p style="font-size: 12px; color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
             <div class="col-sm-7">
