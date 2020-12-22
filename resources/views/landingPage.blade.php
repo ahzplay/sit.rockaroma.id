@@ -2,10 +2,10 @@
 @section('css-add-on')
     <style>
         body{
-            background-image: url("{{asset('img/bg-home.png')}}");
-            background-color: #212020;
-            background-repeat: no-repeat;
-            background-size: contain;
+            background-image: url("{{asset('img/bg-1.jpg')}}");
+            background-color: #1e1616;
+            background-repeat: repeat;
+            background-size: cover;
             background-position: bottom;
         }
 
