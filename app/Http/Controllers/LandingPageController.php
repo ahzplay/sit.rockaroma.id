@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DashboardSlider;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Session;
 
@@ -14,15 +15,24 @@ class LandingPageController extends Controller
     }
 
     public function index(Request $request){
+        //echo $this->fetchSliders(); die();
         $request->session()->put('menu-active-home', 'active');
         $request->session()->put('menu-active-article', '');
         $request->session()->put('menu-active-video', '');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
         $data = array(
-            'videos' => $this->fetchVideos()
+            'videos' => $this->fetchVideos(),
+            'sliders' => $this->fetchSliders()
         );
         return view('landingPage')->with($data);
+    }
+
+    public function fetchSliders(){
+        $raw = DashboardSlider::orderBy('order','asc')->get();
+
+        return $raw;
+
     }
 
     public function fetchVideos(){

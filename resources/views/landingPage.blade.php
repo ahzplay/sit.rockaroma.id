@@ -42,21 +42,22 @@
 @section('content')
     <jumbotron class="mb-0">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            {{--<ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>--}}
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                {{--<div class="carousel-item active">
                     <img src="{{asset('img/slider1.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('img/slider2.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{asset('img/slider3.jpg')}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
-                </div>
+                </div>--}}
+                @foreach($sliders as $val)
+                    <div class="carousel-item {{$val->order==0?'active':''}}">
+                        <img src="{{$val->secure_url}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
+                    </div>
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -232,4 +232,7 @@ return [
 
     ],
 
+    'live_url' => env('LIVE_URL',null),
+    'google_uploaded_url' => env('GOOGLE_UPLOADED_URL',null),
+
 ];
