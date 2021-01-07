@@ -18,6 +18,7 @@ class ShopController extends Controller
 
         $products = $this->fetchProducts(array('page'=>$request->page,'showAll'=>$request->showAll,'categoryId'=>$request->categoryId));
         $category = $this->fetchCategories();
+        //echo json_encode($products); die();
         $data = array(
             'category' => $category,
             'raw' => $products['raw'],
@@ -47,8 +48,7 @@ class ShopController extends Controller
                 } else {
                     $q->where('category_id',$param['categoryId']);
                 }
-
-            })->count();
+            })->where('status', 1)->count();
 
         $row = Product::with('category')
             ->whereHas('category', function($q) use ($param){
@@ -58,7 +58,7 @@ class ShopController extends Controller
                     $q->where('category_id',$param['categoryId']);
                 }
 
-            })->skip($offset)->take($rows)->count();
+            })->where('status', 1)->skip($offset)->take($rows)->count();
 
         $raw = Product::with('category')
             ->whereHas('category', function($q) use ($param){
@@ -68,7 +68,7 @@ class ShopController extends Controller
                     $q->where('category_id',$param['categoryId']);
                 }
 
-            })->skip($offset)->take($rows)->get();
+            })->where('status', 1)->skip($offset)->take($rows)->get();
         $page = ceil($total/$rows);
         return array(
             'row' => $row,
