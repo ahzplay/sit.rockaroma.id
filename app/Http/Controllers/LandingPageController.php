@@ -72,7 +72,7 @@ class LandingPageController extends Controller
 
         return $data;*/
 
-        $raw = Video::take(5)->get();
+        $raw = Video::where('is_active',1)->take(5)->get();
         return $raw;
     }
 
