@@ -88,7 +88,7 @@ class RegisterController extends Controller
                                 'storage'=>'local',
                                 'file_type'=>'image',
                                 'file_name'=>$profileImagePath,
-                                'path'=> asset('storage/registered_band').'/'.$imageFileName,
+                                'path'=> env('LIVE_URL').'storage/registered_band/'.$imageFileName,
                                 'updated_at'=>date('Y-m-d H:i:s'),
                             ]),
                             new FilesUploadeds([
@@ -96,7 +96,7 @@ class RegisterController extends Controller
                                 'storage'=>'google',
                                 'file_type'=>'audio/video',
                                 'file_name'=>$demoFileClouded,
-                                'path'=>'https://drive.google.com/drive/u/0/search?q='.$demoFileClouded,
+                                'path'=>env('GOOGLE_UPLOADED_URL').$demoFileClouded,
                                 'updated_at'=>date('Y-m-d H:i:s'),
                             ])
                         );
