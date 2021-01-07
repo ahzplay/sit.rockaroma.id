@@ -164,8 +164,8 @@
                                     <div>
                                         <div class="card" style="width: 17.75rem;">
                                             <div class="container-card" >
-                                                <a href="#" onclick="iframeAdjust('{{$val['videoEmbed']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
-                                                    <img src="{{asset($val['thumbPath'])}}" alt="Avatar" class="image-card" width="50">
+                                                <a href="#" onclick="iframeAdjust('{{$val['youtube_embeded']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
+                                                    <img src="{{asset($val['secure_url'])}}" alt="Avatar" class="image-card" width="50">
                                                 </a>
                                             </div>
                                             <div class="card-body-videos-list" >

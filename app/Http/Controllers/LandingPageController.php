@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DashboardSlider;
+use App\Models\Video;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Session;
 
@@ -15,7 +16,7 @@ class LandingPageController extends Controller
     }
 
     public function index(Request $request){
-        //echo json_encode($this->fetchSliders()); die();
+        //echo json_encode($this->fetchVideos()); die();
         $request->session()->put('menu-active-home', 'active');
         $request->session()->put('menu-active-article', '');
         $request->session()->put('menu-active-video', '');
@@ -36,7 +37,7 @@ class LandingPageController extends Controller
     }
 
     public function fetchVideos(){
-        $data = array(
+        /*$data = array(
             array(
                 'title' => 'RockAroma UDUT Eps.2 Pop Punk Bukan Bucin',
                 'thumbPath' => 'img/yt.vid3.png',
@@ -69,7 +70,10 @@ class LandingPageController extends Controller
             ),
         );
 
-        return $data;
+        return $data;*/
+
+        $raw = Video::take(5)->get();
+        return $raw;
     }
 
     function array_sort($array, $on, $order=SORT_ASC)
