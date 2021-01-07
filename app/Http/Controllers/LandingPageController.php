@@ -29,7 +29,7 @@ class LandingPageController extends Controller
     }
 
     public function fetchSliders(){
-        $raw = DashboardSlider::orderBy('order','asc')->get();
+        $raw = DashboardSlider::where('is_active', 1)->orderBy('order','asc')->get();
 
         return $raw;
 
