@@ -15,7 +15,7 @@ class LandingPageController extends Controller
     }
 
     public function index(Request $request){
-        //echo $this->fetchSliders(); die();
+        //echo json_encode($this->fetchSliders()); die();
         $request->session()->put('menu-active-home', 'active');
         $request->session()->put('menu-active-article', '');
         $request->session()->put('menu-active-video', '');
@@ -29,7 +29,7 @@ class LandingPageController extends Controller
     }
 
     public function fetchSliders(){
-        $raw = DashboardSlider::orderBy('order','asc')->get();
+        $raw = DashboardSlider::where('is_active', 1)->orderBy('order','asc')->get();
 
         return $raw;
 
@@ -70,6 +70,41 @@ class LandingPageController extends Controller
         );
 
         return $data;
+    }
+
+    function array_sort($array, $on, $order=SORT_ASC)
+    {
+        $new_array = array();
+        $sortable_array = array();
+
+        if (count($array) > 0) {
+            foreach ($array as $k => $v) {
+                if (is_array($v)) {
+                    foreach ($v as $k2 => $v2) {
+                        if ($k2 == $on) {
+                            $sortable_array[$k] = $v2;
+                        }
+                    }
+                } else {
+                    $sortable_array[$k] = $v;
+                }
+            }
+
+            switch ($order) {
+                case SORT_ASC:
+                    asort($sortable_array);
+                    break;
+                case SORT_DESC:
+                    arsort($sortable_array);
+                    break;
+            }
+
+            foreach ($sortable_array as $k => $v) {
+                $new_array[$k] = $array[$k];
+            }
+        }
+
+        return $new_array;
     }
 }
 
