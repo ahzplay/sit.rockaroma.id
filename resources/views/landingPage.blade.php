@@ -88,16 +88,16 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/article-endank-6.png')}}" alt="Avatar" class="image-card" width="50">
+                            <img src="{{asset(isset($articles[0]['thumb_path'])?$articles[0]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[0]['id'])?url('article-detail-page').'/'.$articles[0]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FDDA25">Rockaroma Showcase</strong>
+                                <strong style="color: #FDDA25">{{isset($articles[0]['title'])?$articles[0]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                                <label style="color: white">Wadah baru bagi musisi tanah air unjuk karya terbaik mereka ke masyarakat</label>
+                                <div style="color: white">{!! substr(isset($articles[0]['content'])?$articles[0]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
                             </p>
                         </div>
                     </div>
@@ -107,16 +107,16 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/img.articlePreview2.png')}}" alt="Avatar" class="image-card">
+                            <img src="{{asset(isset($articles[1]['thumb_path'])?$articles[1]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[1]['id'])?url('article-detail-page').'/'.$articles[1]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FDDA25">Nasib event musik masa kini</strong>
+                                <strong style="color: #FDDA25">{{isset($articles[1]['title'])?$articles[1]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                                <label style="color: white">Pandemi membuatevent musik tidak bisa dilakukan,nasib pelakunya ?</label>
+                            <div style="color: white">{!! substr(isset($articles[1]['content'])?$articles[1]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
                             </p>
                         </div>
                     </div>
@@ -126,16 +126,16 @@
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
-                            <img src="{{asset('img/article-endank-7.png')}}" alt="Avatar" class="image-card" width="50">
+                            <img src="{{asset(isset($articles[2]['thumb_path'])?$articles[2]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[2]['id'])?url('article-detail-page').'/'.$articles[2]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
                             <p class="card-text" style="text-align: left;">
-                                <strong style="color: #FDDA25">Behind the scene:Rockaroma showcase</strong>
+                                <strong style="color: #FDDA25">{{isset($articles[2]['title'])?$articles[2]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                                <label style="color: white">Behind the scene:Rockaroma showcase</label>
+                            <div style="color: white">{!! substr(isset($articles[2]['content'])?$articles[2]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
                             </p>
                         </div>
                     </div>
