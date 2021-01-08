@@ -55,7 +55,7 @@
                 </div>--}}
                 @foreach($sliders as $val)
                     <div class="carousel-item {{$val->order==0?'active':''}}">
-                        <img src="{{$val->secure_url}}" alt="RockAroma Slider" style="width:100%; max-height:670px;">
+                        <a href="{{$val->link}}"><img src="{{$val->secure_url}}" alt="RockAroma Slider" style="width:100%; max-height:670px;"></a>
                     </div>
                 @endforeach
             </div>
