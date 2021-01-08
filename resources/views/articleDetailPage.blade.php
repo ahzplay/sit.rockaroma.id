@@ -62,7 +62,8 @@
 
 @section('content')
     <jumbotron class="mb-0">
-        <img src="{{asset('img/article-banner-1.png')}}" alt="Los Angeles" width="100%">
+        {{--<img src="{{asset('img/article-banner-1.png')}}" alt="Los Angeles" width="100%">--}}
+        <img src="{{$articleContent['image_path']}}" width="100%">
     </jumbotron>
 
     <div class="container" style="padding-left: 15%; padding-right: 15%">
@@ -73,36 +74,41 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col-md-12">
-                        <label style="color: white;">Jakarta, 18 Desember 2020</label>
+                        {{--@php
+                            $date = strtotime($data['articleContent']['created_at']);
+                            $convertedDate = date('j F Y', $date);
+                        @endphp--}}
+                        <label style="color: white;">{{--Jakarta, --}}{{date('j F Y', strtotime($articleContent['created_at']))}}</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 style=" color: #FFD143;">Rockaroma Showcase, wadah baru bagi musisi tanah air unjuk karya terbaik ke mayarakat</h4>
+                        {{--<h4 style=" color: #FFD143;">Rockaroma Showcase, wadah baru bagi musisi tanah air unjuk karya terbaik ke mayarakat</h4>--}}
+                        <h4 style=" color: #FFD143;">{{$articleContent['title']}}</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <p style="color: white;">
-                            Rockaroma Showcase adalah program yang dibuat oleh Rockaaroma ID untuk menjadi wadah bagi seluruh musisi berbakat tanah air unjuk karya terbaik ke masyarakat.
+                            {{--Rockaroma Showcase adalah program yang dibuat oleh Rockaaroma ID untuk menjadi wadah bagi seluruh musisi berbakat tanah air unjuk karya terbaik ke masyarakat.
                             <br>
                             Pada Rockaroma Showcase Vol.1 kali ini, StereoWall unjuk gigi mengenalkan karya mereka. Band yang beranggotakan Cynantia Pratita sebagai vokalis, Rama Mayristha dan Usay Sunny sebagai di gitar, Ramadhan Satria di bass dan Frans Orrico di drum ini menunjukkan 3 karya mereka yang berjudul Blood & Light, Who Saved My Life From Crashing Down (ft. Kevin Diaz) dan Forever.
                             <br>
                             Kalian dapat menyaksikan karya mereka di YouTube Channel @rockaroma_id lho, yuk dukung terus band dan musisi favorit kalian melalui @rockaroma_id dan jangan lupa untuk comment, like dan subscribe channel @rockaroma_id ya, karena suara dan dukungan kalian adalah semangat pergerakan ini.
                             <br>
-                            Rockaroma Showcase ini gak cuma ada StereoWall lho, jadi stay tune untuk tahu band mana yang akan tampil selanjutnya.
+                            Rockaroma Showcase ini gak cuma ada StereoWall lho, jadi stay tune untuk tahu band mana yang akan tampil selanjutnya.--}}
+                            {{htmlspecialchars_decode($articleContent['content'])}}
                         </p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
                     <div class="col-md-12">
                         <div class="col-xs-1">
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-1.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
-
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-2.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-3.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
-                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-4.png')}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{$articleContent['gallery_1_path']}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{$articleContent['gallery_2_path']}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{$articleContent['gallery_3_path']}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
+                            <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{$articleContent['gallery_4_path']}}" style="padding: 5px;" alt="Los Angeles" height="90" width="130"></a>
                             {{--<a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="{{asset('img/article-gallery-5.png')}}" style="padding: 5px;" alt="Los Angeles" height="120" width="120"></a>--}}
                         </div>
                     </div>
@@ -128,33 +134,33 @@
                         <div class="slider">
                             <input type="radio" name="slide_switch" id="id1" checked="checked" />
                             <label for="id1">
-                                <img src="{{asset('img/article-gallery-1.png')}}" style="width: 80px; height: 53px;">
+                                <img src="{{$articleContent['gallery_1_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/article-gallery-1.png')}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_1_path']}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id2" />
                             <label for="id2">
-                                <img src="{{asset('img/article-gallery-2.png')}}" style="width: 80px; height: 53px;">
+                                <img src="{{$articleContent['gallery_2_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/article-gallery-2.png')}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_2_path']}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id3" />
                             <label for="id3">
-                                <img src="{{asset('img/article-gallery-3.png')}}" style="width: 80px; height: 53px;">
+                                <img src="{{$articleContent['gallery_3_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/article-gallery-3.png')}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_3_path']}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id4" />
                             <label for="id4">
-                                <img src="{{asset('img/article-gallery-4.png')}}" style="width: 80px; height: 53px;">
+                                <img src="{{$articleContent['gallery_4_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/article-gallery-4.png')}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_4_path']}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id5" />
                             <label for="id5">
-                                <img src="{{asset('img/article-gallery-5.png')}}" style="width: 80px; height: 53px;">
+                                <img src="{{$articleContent['gallery_5_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{asset('img/article-gallery-5.png')}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_6_path']}}" style="width: 600px; height: 400px;">
                         </div>
                     </div>
                 </div>
