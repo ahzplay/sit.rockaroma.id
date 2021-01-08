@@ -90,7 +90,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p style="color: white;">
+                        <div style="color: white;">
                             {{--Rockaroma Showcase adalah program yang dibuat oleh Rockaaroma ID untuk menjadi wadah bagi seluruh musisi berbakat tanah air unjuk karya terbaik ke masyarakat.
                             <br>
                             Pada Rockaroma Showcase Vol.1 kali ini, StereoWall unjuk gigi mengenalkan karya mereka. Band yang beranggotakan Cynantia Pratita sebagai vokalis, Rama Mayristha dan Usay Sunny sebagai di gitar, Ramadhan Satria di bass dan Frans Orrico di drum ini menunjukkan 3 karya mereka yang berjudul Blood & Light, Who Saved My Life From Crashing Down (ft. Kevin Diaz) dan Forever.
@@ -98,8 +98,8 @@
                             Kalian dapat menyaksikan karya mereka di YouTube Channel @rockaroma_id lho, yuk dukung terus band dan musisi favorit kalian melalui @rockaroma_id dan jangan lupa untuk comment, like dan subscribe channel @rockaroma_id ya, karena suara dan dukungan kalian adalah semangat pergerakan ini.
                             <br>
                             Rockaroma Showcase ini gak cuma ada StereoWall lho, jadi stay tune untuk tahu band mana yang akan tampil selanjutnya.--}}
-                            {{htmlspecialchars_decode($articleContent['content'])}}
-                        </p>
+                            {!! html_entity_decode($articleContent['content']) !!}
+                        </div>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
