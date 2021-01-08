@@ -87,7 +87,7 @@
                             <div class="container-card" >
                                 <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card article-card">
                                 <div class="overlay">
-                                    <a href="{{url('article-detail-page/').$val['id']}}"><div class="text-card">Read More</div></a>
+                                    <a href="{{url('article-detail-page/').'/'.$val['id']}}"><div class="text-card">Read More</div></a>
                                 </div>
                             </div>
                             <div class="card-body" >
