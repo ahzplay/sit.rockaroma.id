@@ -33,33 +33,33 @@
 @section('content')
     <div id="topRow" class="row">
         <div class="col-md-6 no-padding" style="height: 480px;">
-            <img id="headline-image" src="{{asset($topThree[0]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-            <a href="{{url('article-detail-page').'/'.$topThree[0]['id']}}">
-            <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
-                <strong>{{$topThree[0]['title']}}</strong><br>
-                <label style="color: white;">{{strip_tags(substr($topThree[0]['content'], 0, 120))}} ...</label>
+            <img id="headline-image" src="{{asset(isset($topThree[0]['image_path'])?$topThree[0]['image_path']:'img/bg-1.jpg')}}" style='height: 100%; width: 100%; object-fit: cover'>
+            <a href="{{isset($topThree[0]['id'])?url('article-detail-page').'/'.$topThree[0]['id']:'#'}}">
+            <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 95%;">
+                <strong>{{isset($topThree[0]['title'])?$topThree[0]['title']:'Rockaroma Article Title'}}</strong><br>
+                <label style="color: white;">{{strip_tags(substr(isset($topThree[0]['content'])?$topThree[0]['content']:'Rockaroma Article Content', 0, 120))}} ...</label>
             </div>
             </a>
         </div>
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
-                    <img id="headline-image" src="{{asset($topThree[1]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{url('article-detail-page').'/'.$topThree[1]['id']}}">
+                    <img id="headline-image" src="{{asset(isset($topThree[1]['image_path'])?$topThree[1]['image_path']:'img/bg-1.jpg')}}" style='height: 100%; width: 100%; object-fit: cover'>
+                    <a href="{{isset($topThree[1]['id'])?url('article-detail-page').'/'.$topThree[1]['id']:'#'}}">
                     <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
-                        <strong>{{$topThree[1]['title']}}</strong><br>
-                        <label style="color: white;">{{strip_tags(substr($topThree[1]['content'], 0, 100))}} ...</label>
+                        <strong>{{isset($topThree[1]['title'])?$topThree[1]['title']:'Rockaroma Article Title'}}</strong><br>
+                        <label style="color: white;">{{strip_tags(substr(isset($topThree[1]['content'])?$topThree[1]['content']:'Rockaroma Article Content', 0, 120))}} ...</label>
                     </div>
                     </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
-                    <img id="headline-image" src="{{asset($topThree[2]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{url('article-detail-page').'/'.$topThree[2]['id']}}">
+                    <img id="headline-image" src="{{asset(isset($topThree[2]['image_path'])?$topThree[2]['image_path']:'img/bg-1.jpg')}}" style='height: 100%; width: 100%; object-fit: cover'>
+                    <a href="{{isset($topThree[2]['id'])?url('article-detail-page').'/'.$topThree[2]['id']:'#'}}">
                     <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
-                        <strong>{{$topThree[2]['title']}}</strong><br>
-                        <label style="color: white;">{{strip_tags(substr($topThree[2]['content'], 0, 100))}} ...</label>
+                        <strong>{{isset($topThree[2]['title'])?$topThree[2]['title']:'Rockaroma Article Title'}}</strong><br>
+                        <label style="color: white;">{{strip_tags(substr(isset($topThree[2]['content'])?$topThree[2]['content']:'Rockaroma Article Content', 0, 120))}} ...</label>
                     </div>
                     </a>
                 </div>
