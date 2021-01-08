@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\DashboardSlider;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class LandingPageController extends Controller
     }
 
     public function index(Request $request){
-        //echo json_encode($this->fetchVideos()); die();
+        //echo json_encode($this->fetchArticlesTopThree()); die();
         $request->session()->put('menu-active-home', 'active');
         $request->session()->put('menu-active-article', '');
         $request->session()->put('menu-active-video', '');
@@ -24,7 +25,8 @@ class LandingPageController extends Controller
         $request->session()->put('menu-active-shop', '');
         $data = array(
             'videos' => $this->fetchVideos(),
-            'sliders' => $this->fetchSliders()
+            'articles' => $this->fetchArticlesTopThree(),
+            'sliders' => $this->fetchSliders(),
         );
         return view('landingPage')->with($data);
     }
@@ -34,6 +36,11 @@ class LandingPageController extends Controller
 
         return $raw;
 
+    }
+
+    public function fetchArticlesTopThree(){
+        $raw = Article::where('is_active',1)->take(3)->orderby('created_at', 'desc')->get();
+        return $raw;
     }
 
     public function fetchVideos(){
