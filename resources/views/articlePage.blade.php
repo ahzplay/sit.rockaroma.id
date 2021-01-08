@@ -34,10 +34,10 @@
     <div id="topRow" class="row">
         <div class="col-md-6 no-padding" style="height: 480px;">
             <img id="headline-image" src="{{asset($topThree[0]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-            <a href="{{url('article-detail-page')}}">
-            <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+            <a href="{{url('article-detail-page').'/'.$topThree[0]['id']}}">
+            <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                 <strong>{{$topThree[0]['title']}}</strong><br>
-                <label style="color: white;">{{substr($topThree[0]['content'], 0, 120)}} ...</label>
+                <label style="color: white;">{{strip_tags(substr($topThree[0]['content'], 0, 120))}} ...</label>
             </div>
             </a>
         </div>
@@ -45,10 +45,10 @@
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset($topThree[1]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{url('article-detail-page')}}">
-                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+                    <a href="{{url('article-detail-page').'/'.$topThree[1]['id']}}">
+                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                         <strong>{{$topThree[1]['title']}}</strong><br>
-                        <label style="color: white;">{{substr($topThree[1]['content'], 0, 100)}} ...</label>
+                        <label style="color: white;">{{strip_tags(substr($topThree[1]['content'], 0, 100))}} ...</label>
                     </div>
                     </a>
                 </div>
@@ -56,10 +56,10 @@
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset($topThree[2]['image_path'])}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{url('article-detail-page')}}">
-                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%;">
+                    <a href="{{url('article-detail-page').'/'.$topThree[2]['id']}}">
+                    <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                         <strong>{{$topThree[2]['title']}}</strong><br>
-                        <label style="color: white;">{{substr($topThree[2]['content'], 0, 100)}} ...</label>
+                        <label style="color: white;">{{strip_tags(substr($topThree[2]['content'], 0, 100))}} ...</label>
                     </div>
                     </a>
                 </div>
@@ -87,7 +87,7 @@
                             <div class="container-card" >
                                 <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card article-card">
                                 <div class="overlay">
-                                    <a href="{{url('article-detail-page')}}"><div class="text-card">Read More</div></a>
+                                    <a href="{{url('article-detail-page/').$val['image_path']}}"><div class="text-card">Read More</div></a>
                                 </div>
                             </div>
                             <div class="card-body" >

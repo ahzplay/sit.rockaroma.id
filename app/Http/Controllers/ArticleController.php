@@ -35,7 +35,7 @@ class ArticleController extends Controller
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
         $data = array(
-            'videos' =>''
+            'articleContent' =>$this->getArticle($request->articleId),
         );
         return view('articleDetailPage')->with($data);
     }
@@ -105,5 +105,11 @@ class ArticleController extends Controller
         $raw = Article::where('is_active',1)->take(3)->orderby('created_at', 'desc')->get();
         return $raw;
     }
+
+    public function getArticle($id) {
+        $raw = Article::where('id', $id)->first();
+        return $raw;
+    }
+
 
 }
