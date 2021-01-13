@@ -1,5 +1,10 @@
 @extends('base.base')
 @section('css-add-on')
+    <meta property="og:url" content="{{url()->current()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{$articleContent['title']}}" />
+    {{--<meta property="og:description" content="How much does culture influence creative thinking?" />--}}
+    <meta property="og:image" content="{{$articleContent['image_path']}}" />
     <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
     <style>
         body{
@@ -118,8 +123,8 @@
                     <div class="col-md-12">
                         <label style="color: white; font-weight: bold;">SHARE :</label>
                         <p>
-                            <i class="fa fa-instagram" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i>
-                            <i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i>
+                            {{--<i class="fa fa-instagram" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i>--}}
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.43.13%3A3333%2Farticle-detail-page%2F5&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i></a>
                             <i class="fa fa-twitter" style="font-size: 22px; color: #FFD143;"></i>
                         </p>
                     </div>
@@ -167,6 +172,7 @@
             </div>
         </div>
     </div>
+    <div id="fb-root"></div>
 @endsection
 
 @section('js-add-on')
@@ -228,10 +234,11 @@
                 }, speed);
             }
         });*/
-
+        </script>
         <script>
         function goBack() {
             window.history.back();
         }
-    </script>
+        </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v9.0" nonce="pyhTXSu0"></script>
 @endsection
