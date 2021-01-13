@@ -3,7 +3,7 @@
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{$articleContent['title']}}" />
-    {{--<meta property="og:description" content="How much does culture influence creative thinking?" />--}}
+    <meta property="og:description" content="Kamu bisa menekan link banner ini untuk membuka artikel." />
     <meta property="og:image" content="{{$articleContent['image_path']}}" />
     <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
     <style>
@@ -124,7 +124,7 @@
                         <label style="color: white; font-weight: bold;">SHARE :</label>
                         <p>
                             {{--<i class="fa fa-instagram" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i>--}}
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F192.168.43.13%3A3333%2Farticle-detail-page%2F5&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F60138212%2Fflutter-dynamic-suffix-text-for-textfield&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i></a>
                             <i class="fa fa-twitter" style="font-size: 22px; color: #FFD143;"></i>
                         </p>
                     </div>
