@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset(isset($topThree[1]['image_path'])?$topThree[1]['image_path']:'img/bg-1.jpg')}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{isset($topThree[1]['id'])?url('article-detail-page').'/'. $topThree[0]['title'] .'/'.$topThree[1]['id']:'#'}}">
+                    <a href="{{isset($topThree[1]['id'])?url('article-detail-page').'/'. $topThree[1]['title'] .'/'.$topThree[1]['id']:'#'}}">
                     <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                         <strong>{{isset($topThree[1]['title'])?$topThree[1]['title']:'Rockaroma Article Title'}}</strong><br>
                         <label style="color: white;">{!! substr(isset($topThree[1]['content'])?$topThree[1]['content']:'Rockaroma Article Content', 0, 120) !!} ...</label>
@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col-md-12 no-padding" style="height: 240px;">
                     <img id="headline-image" src="{{asset(isset($topThree[2]['image_path'])?$topThree[2]['image_path']:'img/bg-1.jpg')}}" style='height: 100%; width: 100%; object-fit: cover'>
-                    <a href="{{isset($topThree[2]['id'])?url('article-detail-page').'/'. $topThree[0]['title'] .'/'.$topThree[2]['id']:'#'}}">
+                    <a href="{{isset($topThree[2]['id'])?url('article-detail-page').'/'. $topThree[2]['title'] .'/'.$topThree[2]['id']:'#'}}">
                     <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                         <strong>{{isset($topThree[2]['title'])?$topThree[2]['title']:'Rockaroma Article Title'}}</strong><br>
                         <label style="color: white;">{!! substr(isset($topThree[2]['content'])?$topThree[2]['content']:'Rockaroma Article Content', 0, 120) !!} ...</label>
@@ -87,7 +87,7 @@
                             <div class="container-card" >
                                 <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card article-card">
                                 <div class="overlay">
-                                    <a href="{{url('article-detail-page/').'/'. $val[0]['title'] .'/'.$val['id']}}"><div class="text-card">Read More</div></a>
+                                    <a href="{{url('article-detail-page/').'/'. $val['title'] .'/'.$val['id']}}"><div class="text-card">Read More</div></a>
                                 </div>
                             </div>
                             <div class="card-body" >
