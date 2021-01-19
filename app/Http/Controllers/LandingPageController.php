@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\DashboardSlider;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use MongoDB\Driver\Session;
 
 class LandingPageController extends Controller
@@ -81,6 +82,14 @@ class LandingPageController extends Controller
 
         $raw = Video::where('is_active',1)->take(5)->get();
         return $raw;
+    }
+
+    public function aboutUs() {
+        return View('aboutUsPage');
+    }
+
+    public function termAndCondition() {
+        return View('termAndConditionPage');
     }
 
     function array_sort($array, $on, $order=SORT_ASC)

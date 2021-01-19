@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="717b6c40-9479-45fe-b552-a114e441bb4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articlePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articlePage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LandingPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/landingPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landingPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shopPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,23 +165,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/add_on" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/css/add_on" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public/img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/resources/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/public/css/add_on" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/img" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,7 +224,10 @@
       <workItem from="1605937102156" duration="110503000" />
       <workItem from="1607305990148" duration="40316000" />
       <workItem from="1607997503293" duration="22823000" />
-      <workItem from="1608610223132" duration="49533000" />
+      <workItem from="1608610223132" duration="51615000" />
+      <workItem from="1610520939440" duration="3147000" />
+      <workItem from="1610696109249" duration="27000" />
+      <workItem from="1611041633355" duration="4654000" />
     </task>
     <servers />
   </component>
@@ -227,18 +235,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600359275816">
-      <screen x="0" y="23" width="1280" height="731" />
-    </state>
-    <state x="104" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.731@0.23.1280.731" timestamp="1600359275816" />
     <state x="378" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606358973436">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
     <state x="378" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.731@0.23.1280.731" timestamp="1606358973436" />
-    <state x="378" y="150" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606548819146">
+    <state x="378" y="150" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610108188422">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
-    <state x="378" y="150" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.731@0.23.1280.731" timestamp="1606548819146" />
+    <state x="378" y="150" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.731@0.23.1280.731" timestamp="1610108188422" />
     <state x="458" y="319" key="NewPhpFileDialog" timestamp="1606468197980">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
@@ -255,10 +259,10 @@
       <screen x="0" y="23" width="1280" height="731" />
     </state>
     <state x="295" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.731@0.23.1280.731" timestamp="1606314007173" />
-    <state x="298" y="145" width="683" height="486" key="find.popup" timestamp="1609233313195">
+    <state x="298" y="145" width="683" height="486" key="find.popup" timestamp="1611042153364">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
-    <state x="298" y="145" width="683" height="486" key="find.popup/0.23.1280.731@0.23.1280.731" timestamp="1609233313195" />
+    <state x="298" y="145" width="683" height="486" key="find.popup/0.23.1280.731@0.23.1280.731" timestamp="1611042153364" />
     <state x="305" y="78" width="670" height="676" key="search.everywhere.popup" timestamp="1609728669016">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
