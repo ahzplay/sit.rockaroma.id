@@ -28,7 +28,7 @@
                 <img src="{{asset('img/rockaroma-logo-black.png')}}" width="200">
             </div>
             <div class="col-md-4" style="color: #670404;font-size: 14px; text-align: right; font-weight: bold; margin-top: 1%;">
-                Stay connected <br>
+                Stay connected : <br>
                 <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #670404; padding-right: 1%;"></i></a>
                 <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #670404;"></i></a>
             </div>

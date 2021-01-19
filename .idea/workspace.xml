@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="717b6c40-9479-45fe-b552-a114e441bb4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LandingPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/base/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aboutUsPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articlePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articlePage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/base/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/landingPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landingPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shopPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +226,7 @@
       <workItem from="1608610223132" duration="51615000" />
       <workItem from="1610520939440" duration="3147000" />
       <workItem from="1610696109249" duration="27000" />
-      <workItem from="1611041633355" duration="4654000" />
+      <workItem from="1611041633355" duration="5414000" />
     </task>
     <servers />
   </component>
@@ -259,10 +258,10 @@
       <screen x="0" y="23" width="1280" height="731" />
     </state>
     <state x="295" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.731@0.23.1280.731" timestamp="1606314007173" />
-    <state x="298" y="145" width="683" height="486" key="find.popup" timestamp="1611042153364">
+    <state x="298" y="145" width="683" height="486" key="find.popup" timestamp="1611062383102">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
-    <state x="298" y="145" width="683" height="486" key="find.popup/0.23.1280.731@0.23.1280.731" timestamp="1611042153364" />
+    <state x="298" y="145" width="683" height="486" key="find.popup/0.23.1280.731@0.23.1280.731" timestamp="1611062383102" />
     <state x="305" y="78" width="670" height="676" key="search.everywhere.popup" timestamp="1609728669016">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
