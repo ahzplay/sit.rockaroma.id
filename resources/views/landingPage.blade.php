@@ -258,7 +258,7 @@
                 </div>
             </div>
         </div>
-        <button class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>
+        {{--<button class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>--}}
     </div>
 @endsection
 

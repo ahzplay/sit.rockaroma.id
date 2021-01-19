@@ -1,12 +1,18 @@
 @extends('base.base')
 @section('css-add-on')
     <style>
+        html{
+            height: 100%;
+        }
         body{
             background-image: url("{{asset('img/bg-3.jpg')}}");
             background-color: #1e1616;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: top;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         a:hover {color: #FDDA25;}
 

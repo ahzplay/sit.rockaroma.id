@@ -14,41 +14,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     @yield('css-add-on')
 
-    <style>
-
-        .act-floating-btn{
-            background:#BD7E28;
-            display: block;
-            width: 120px;
-            height: auto;
-            line-height: 50px;
-            text-align: center;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            text-decoration: none;
-            transition: ease all 0.3s;
-            position: fixed;
-            right: 30px;
-            bottom:50px;
-        }
-
-        .footer {
-            botom: 0px;
-            width: 100%;
-            background-color: red;
-            color: white;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 @include('base.menu')
 
+<div class="content-wrapper">
 @yield('content')
-
+</div>
 
 
 @include('base.footer');
