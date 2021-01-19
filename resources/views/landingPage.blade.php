@@ -90,7 +90,7 @@
                         <div class="container-card" >
                             <img src="{{asset(isset($articles[0]['thumb_path'])?$articles[0]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{isset($articles[0]['id'])?url('article-detail-page').'/'. $articles[0]['title'] .'/'.$articles[0]['id']:'#'}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[0]['id'])?url('article-detail-page').'/'. urlencode($articles[0]['title']) .'/'.$articles[0]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
@@ -109,7 +109,7 @@
                         <div class="container-card" >
                             <img src="{{asset(isset($articles[1]['thumb_path'])?$articles[1]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{isset($articles[1]['id'])?url('article-detail-page').'/'. $articles[1]['title'] .'/'.$articles[1]['id']:'#'}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[1]['id'])?url('article-detail-page').'/'. urlencode($articles[1]['title']) .'/'.$articles[1]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
@@ -128,7 +128,7 @@
                         <div class="container-card" >
                             <img src="{{asset(isset($articles[2]['thumb_path'])?$articles[2]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
-                                <a href="{{isset($articles[2]['id'])?url('article-detail-page').'/'. $articles[2]['title'] .'/'.$articles[2]['id']:'#'}}"><div class="text-card">Read More</div></a>
+                                <a href="{{isset($articles[2]['id'])?url('article-detail-page').'/'. urlencode($articles[2]['title']) .'/'.$articles[2]['id']:'#'}}"><div class="text-card">Read More</div></a>
                             </div>
                         </div>
                         <div class="card-body" >
