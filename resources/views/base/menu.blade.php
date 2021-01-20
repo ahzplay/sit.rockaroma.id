@@ -1,10 +1,9 @@
-<div class="carousel-menu-background" style="background-color: black; opacity: .7;"></div>
-<div class="carousel-menu">
+<div class="carousel-menu" style="position: sticky; background-color: black; opacity: .7; height: 50px;">
     <div class="container">
         <header class="masthead mb-auto">
             <div class="inner">
                 {{--<h3 class="masthead-brand" style="color: #FFDF6C;">ROCK AROMA</h3>--}}
-                <img class="masthead-brand" src="{{asset('img/logo-rockaroma.png')}}">
+                <img class="masthead-brand" src="{{asset('img/logo-rockaroma.png')}}" style="padding-top: 0.5%;">
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link {{Session::get('menu-active-home')}}" href="{{url('landing-page')}}">HOME</a>
                     <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}">ARTICLE</a>
@@ -16,3 +15,7 @@
         </header>
     </div>
 </div>
+{{--
+<div class="carousel-menu-background" style="background-color: black; opacity: .7; position: sticky;"></div>
+--}}
+

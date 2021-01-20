@@ -72,19 +72,19 @@
 
     <div class="container" >
         <div class="row" style="padding-top: 30px">
-            <div class="col-sm-5">
+            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
                 <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
                 <p style="font-size: 12px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
-            <div class="col-sm-7">
+            <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-right">
-                    <a href="{{url('article-page/1/topRow')}}"  class="btn btn-primary btn-sm">MORE NEWS</a>
+                    <a href="{{url('article-page/1/topRow')}}"  class="btn btn-primary btn-sm btn-block">MORE NEWS</a>
                 </div>
             </div>
         </div>
 
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px;">
-            <div class="col-md-4 col-sm-8">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
@@ -103,7 +103,7 @@
                     </div>
                 </center>
             </div>
-            <div class="col-md-4 col-sm-8">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
@@ -122,7 +122,7 @@
                     </div>
                 </center>
             </div>
-            <div class="col-md-4 col-sm-8">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <center>
                     <div class="card w3-animate-top" style="width: 17.75rem;">
                         <div class="container-card" >
@@ -143,11 +143,11 @@
             </div>
         </div>
         <div class="row" style="padding-top: 70px">
-            <div class="col-sm-5">
+            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
                 <h4 style="color: #FDDA25;"><strong>OUR VIDEOS</strong></h4>
                 <p style="font-size: 12px; color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
-            <div class="col-sm-7">
+            <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-right">
                     <a href="{{url('video-page/1')}}" class="btn btn-primary btn-sm">MORE VIDEOS</a>
                 </div>
@@ -157,7 +157,7 @@
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px; padding-bottom: 45px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-sm-4">
+                    <div class="col-md-12">
                         <center>
                             <section class="responsive slider">
                                 @foreach($videos as $val)
@@ -176,78 +176,11 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                {{--<div>
-                                    <img src="http://placehold.it/350x300?text=6">
-                                </div>--}}
                             </section>
                         </center>
                     </div>
                 </div>
             </div>
-            {{--@foreach($videos as $val)
-                <div class="col-md-4">
-                    <center>
-                        <div class="card" style="width: 17.75rem;">
-                            <div class="container-card" >
-                                <a href="#" onclick="iframeAdjust('{{$val['videoEmbed']}}')" data-toggle="modal" data-target=".bd-example-modal-lg" >
-                                    <img src="{{asset($val['thumbPath'])}}" alt="Avatar" class="image-card" width="50">
-                                </a>
-                            </div>
-                            <div class="card-body-videos-list" >
-                                <p class="card-text" style="text-align: left;">
-                                    <label style="color: white">{{$val['title']}}</label>
-                                </p>
-                            </div>
-                        </div>
-                    </center>
-                </div>
-            @endforeach--}}
-            {{--<div class="col-md-4">
-                <center>
-                    <div class="card" style="width: 17.75rem;">
-                        <div class="container-card" >
-                            <img src="{{asset('img/yt.vid3.png')}}" alt="Avatar" class="image-card" width="50">
-                        </div>
-                        <div class="card-body-videos-list" >
-                            <p class="card-text" style="text-align: left;">
-                                <label style="color: white">RockAroma UDUT Eps.2 Pop Punk Bukan Bucin</label>
-                            </p>
-                        </div>
-                    </div>
-                </center>
-            </div>
-            <div class="col-md-4">
-                <center>
-                    <div class="card" style="width: 17.75rem;">
-                        <div class="container-card" >
-                            <a id="video-thumb-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" video-embed-link="https://youtu.be/embed/Th_r5mcFoXY" >
-                                <img src="{{asset('img/yt.vid2.png')}}" alt="Avatar" class="image-card" width="50">
-                            </a>
-                        </div>
-                        <div class="card-body-videos-list" >
-                            <p class="card-text" style="text-align: left;">
-                                <label style="color: white">RockAroma Showcase #vol.2 | Summerlane</label>
-                            </p>
-                        </div>
-                    </div>
-                </center>
-            </div>
-            <div class="col-md-4">
-                <center>
-                    <div class="card" style="width: 17.75rem;">
-                        <div class="container-card" >
-                            <a id="video-thumb-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" video-embed-link="https://www.youtube.com/embed/CDd_2e9oqVA" >
-                                <img src="{{asset('img/yt.vid1.png')}}" alt="Avatar" class="image-card" width="50">
-                            </a>
-                        </div>
-                        <div class="card-body-videos-list" >
-                            <p class="card-text" style="text-align: left;">
-                                <label style="color: white">RockAroma Showcase #vol.1 | StereoWall</label>
-                            </p>
-                        </div>
-                    </div>
-                </center>
-            </div>--}}
         </div>
         <div id="video-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -258,7 +191,6 @@
                 </div>
             </div>
         </div>
-        {{--<button class="act-floating-btn" onclick="window.location.href = '{{url('logout-action')}}'">Exit</button>>--}}
     </div>
 @endsection
 
@@ -315,17 +247,31 @@
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
                         infinite: true,
                         dots: false
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 900,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {
