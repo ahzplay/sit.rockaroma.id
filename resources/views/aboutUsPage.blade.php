@@ -21,7 +21,7 @@
     <div class="container" style="padding-left: 15%; padding-right: 15%">
         <div class="row" style="padding-top: 20%;">
             <div class="col-md-12" style="color: white; text-align: justify; padding-bottom: 5%">
-                <center><h2 style="padding-bottom: 5%">ROCKAROMA</h2></center>
+                <center><img src="{{asset('img/logo-rockaroma.png')}}" style="padding-bottom: 6%;"></center>
                 <p>
                     Suatu bentuk kolektif untuk mendukung semua musisi tanah air dan pecinta musik tanah air seperti kalian. Yes! Kalian yang muda, berani, punya semangat membara! Selamat datang, di Rockaroma.id!
                 </p>
