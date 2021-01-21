@@ -21,34 +21,34 @@
     <div class="container" style="padding-left: 15%; padding-right: 15%">
         <div class="row" style="padding-top: 20%;">
             <div class="col-md-12" style="color: white; text-align: justify;">
-                <center><h3 style="padding-bottom: 2%">Syarat & Ketentuan</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold">SYARAT & KETENTUAN</h3></center>
                 <p>
                     <strong>Rockaroma.id</strong> adalah platform media dan kolektif sosial online. Situs ini adalah milik PT. Aroma Tobacco Indonesia dan/atau dikelola oleh ...... Selaku pengelola situs <strong>Rockaroma.id</strong> ​kami menyediakan sebuah jasa untuk berbagi konten secara digital dimana setiap konten atau pun kegiatan dapat direvisi atau berubah dari waktu ke waktu. Pada laman ini akan mengatur dan menjelaskan ​“Syarat dan Ketentuan” ketika menggunakan platform ​<strong>Rockaroma.id</strong> yang kami harapkan semua pengunjung dapat memahami dengan seksama mengenai syarat dan ketentuan yang ada di bawah ini sebelum mengakses situs kami. Ketika Anda mengakses dan menggunakan platform ​<strong>Rockaroma.id</strong>​, berarti Anda telah menyetujui dan memahami ​“Syarat dan Ketentuan” ​di dalam situs ini. Jika ada yang kurang disetujui dan berkenan, mohon untuk tidak mengakses atau menggunakan situs <strong>Rockaroma.id</strong>​ serta kegiatan-kegiatan di dalamnya.
                 </p>
 
-                <center><h3 style="padding-bottom: 2%; padding-top: 10%">​Pendaftaran dan Penggunaan Situs oleh Anda</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">PENDAFTARAN DAN PENGGUNAAN SITUS OLEH ANDA</h3></center>
                 <p>
                     Situs ​<strong>Rockaroma.id</strong> ​ditujukan khusus untuk yang berusia ​18 tahun atau lebih, berdomisili di ​Indonesia.​ Jika Anda telah mendaftarkan diri, Anda berarti setuju untuk memberikan beberapa informasi seperti nama, tanggal lahir, alamat ​email​, serta nomor ponsel yang aktif. Anda juga setuju untuk menerima berbagai materi informasi atau pun promosi yang berkaitan dengan ​Rockaroma ​melalui sarana elektronik atau sarana lainnya (seperti surat elektronik, SMS, MMS, atau surat). Anda bebas untuk menggunakan jasa atau platform ​<strong>Rockaroma.id</strong> ​ketika Anda sudah
                     setuju dengan beberapa kontrak terikat yang sebagaimana dimaksudkan di dalam Syarat dan Ketentuan ​ini. Anda juga diperbolehkan untuk mengundang/mengajak, berbagi materi dan situs ini, kepada audiens yang memenuhi syarat (seperti berusia 18 tahun dan berdomisili di Indonesia). Segala sesuatu yang berkaitan atau terdampak di dalamnya merupakan di luar tanggung jawab ​Rockaroma ​dan merupakan tanggung jawab pengguna.
                 </p>
 
-                <center><h3 style="padding-bottom: 2%; padding-top: 10%">Daftar Direktori Dan Layanan</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">DAFTAR DIREKTORI DAN LAYANAN</h3></center>
                 <p>
                     Anda dapat mengakses dan menggunakan informasi, fitur, dan layanan yang merupakan tanggung jawab serta risiko Anda. Situs ​<strong>Rockaroma.id</strong> ​juga mempunyai kebijakan untuk dapat mengubah atau merevisi setiap kegiatan atau pun ​“Syarat dan Ketentuan” yang berlaku. Beberapa area atau layanan dari situs <strong>Rockaroma.id</strong> ​serta syarat-syarat yang dapat berubah sewaktu-waktu juga sudah Anda harus setuju dan pahami sebelumnya. Maka kami menyarankan untuk para pengguna mengunjungi secara rutin untuk mengetahui perubahan yang mungkin terjadi. Situs ​<strong>Rockaroma.id</strong> ​juga tidak merepresentasikan sepenuhnya atau mengesahkan segala reliabilitas informasi atau konten layanan yang tersedia. Ketika Anda di sini mengakui dan mempercayai informasi, konten, kegiatan layanan yang tersedia pada setiap daftar direktori maka hal tersebut merupakan risiko dan tanggung jawab Anda sendiri.
                 </p>
 
-                <center><h3 style="padding-bottom: 2%; padding-top: 10%">Penggunaan Materi Atau Konten Dari Situs</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">PENGGUNAAN MATERI ATAU KONTEN DARI SITUS</h3></center>
                 <p>
                     Situs ​<strong>Rockaroma.id</strong> beserta semua isinya adalah hak milik ​Rockaroma,​ ​para pemberi lisensinya, dan dilindungi oleh undang-undang hak cipta, merek dagang, undang-undang lain terkait hak kekayaan intelektual, dan undang-undang lainnya di Indonesia. Setiap materi atau digital konten pada situs ​Rockaroma ​telah memberikan lisensi non-eksklusif, bebas-royalti, dan semuanya terbatas untuk tujuan pengoperasian Situs ​<strong>Rockaroma.id</strong> beserta semua isinya adalah hak milik ​Rockaroma,​ ​para pemberi lisensinya, dan dilindungi oleh undang-undang hak cipta, merek dagang, undang-undang lain terkait hak kekayaan intelektual, dan undang-undang lainnya di Indonesia. Setiap materi atau digital konten pada situs ​Rockaroma ​telah memberikan lisensi non-eksklusif, bebas-royalti, dan semuanya terbatas untuk tujuan pengoperasian
                     dan penggunaan jasa di ​Rockaroma ​saja. Kami juga berhak menghapus, mengubah atau memodifikasi materi atau konten pengguna dengan alasan apapun, terlebih materiataukontenyangmelanggarS​ yaratdanKetentuan​ini.
                 </p>
 
-                <center><h3 style="padding-bottom: 2%; padding-top: 10%">Mengenai Kekayaan Intelektual</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">MENGENAI KEKAYAAN INTELEKTUAL</h3></center>
                 <p>
                     Setiap pengguna situs ​<strong>Rockaroma.id</strong> harus menghargai hak kekayaan intelektual antar pengguna. Para pengguna tidak boleh menyalin atau membuat ulang, mengeksploitasi setiap materi atau konten, membuat ulang untuk tujuan apapun tanpa adanya persetujuan tertulis atau izin dari sang pemilik asli materi atau konten (pengguna lain).
                 </p>
 
-                <center><h3 style="padding-bottom: 2%; padding-top: 10%">Pernyataan Dan Jaminan</h3></center>
+                <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">PERNYATAAN DAN JAMINAN</h3></center>
                 <p>
                     Para pengguna yang mengakses atau menggunakan jasa atau platform ​Rockaroma dengan ini menyatakan dan menjamin seluruh hal-hal berikut:
                     <ol>
