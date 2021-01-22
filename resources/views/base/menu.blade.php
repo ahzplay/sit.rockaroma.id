@@ -1,4 +1,4 @@
-<div class="carousel-menu" style="position: sticky; background-color: black; opacity: .7; height: 50px;">
+<div class="carousel-menu" style="position: fixed; background-color: black; opacity: .7; height: 50px;">
     <div class="container">
         <header class="masthead mb-auto">
             <div class="inner">

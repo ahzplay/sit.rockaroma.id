@@ -2,6 +2,9 @@
 
 @section('css-add-on');
 <style>
+    html{
+        height: 100%;
+    }
     body{
         background-image: url("{{asset('img/bg-2.jpg')}}");
         background-repeat: no-repeat;
