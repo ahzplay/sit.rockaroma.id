@@ -27,8 +27,8 @@ Route::post('upload-gdrive-action', function (Request $request) {
     dd(Storage::disk('google')->delete('1ZalRfEHEQtFQBGl4QrdVd3oWdPQ65t7N/1icRvP5kST9PN8jQOcpuoOyR3qvRnrQGE8HaKIbd'));
 });*/
 
-Route::get('enter-page', 'App\Http\Controllers\AuthController@login');
-Route::post('login-action', 'App\Http\Controllers\AuthController@loginAction');
+//Route::get('enter-page', 'App\Http\Controllers\AuthController@login');
+//Route::post('login-action', 'App\Http\Controllers\AuthController@loginAction');
 
 Route::get('about-us-page', 'App\Http\Controllers\LandingPageController@aboutUs');
 Route::get('term-and-condition-page', 'App\Http\Controllers\LandingPageController@termAndCondition');
@@ -42,6 +42,9 @@ Route::get('shop-page/{page}/{showAll}/', 'App\Http\Controllers\ShopController@i
 Route::post('register-save-demo', 'App\Http\Controllers\RegisterController@saveDemo');
 Route::get('php-info', 'App\Http\Controllers\RegisterController@phpInfo');
 Route::get('fetch-product', 'App\Http\Controllers\ShopController@fetchProducts');
+Route::get('login-page', 'App\Http\Controllers\RegistrationController@login');
+Route::get('registration-page', 'App\Http\Controllers\RegistrationController@register');
+Route::post('register-member', 'App\Http\Controllers\RegistrationController@doRegister');
 
 Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 
