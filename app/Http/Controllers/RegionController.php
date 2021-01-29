@@ -12,6 +12,16 @@ class RegionController extends Controller
             ->whereRaw("char_length(`code`) = '5'")
             ->get();
 
-        return response()->json($raw);
+        //return response()->json($raw);
+        return $raw;
+    }
+
+    public function fetchProvinces(){
+        $raw = Region::select('code as province_code','name as province_name')
+            ->whereRaw("char_length(`code`) = '2'")
+            ->get();
+
+        //return response()->json($raw);
+        return $raw;
     }
 }

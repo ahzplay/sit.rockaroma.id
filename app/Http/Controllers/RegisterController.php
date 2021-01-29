@@ -21,7 +21,7 @@ class RegisterController extends Controller
 
         $cities = new RegionController();
         $cities = $cities->fetchCities();
-        return view('register_profile')->with(['cities'=>$cities->getData()]);
+        return view('register_profile')->with(['cities'=>$cities]);
     }
 
     public function saveDemo(Request $request) {
