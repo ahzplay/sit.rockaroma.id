@@ -39,6 +39,8 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   public $inventorySourceIds;
   public $lineItemId;
   public $lineItemType;
+  protected $mobileAppType = 'Google_Service_DisplayVideo_MobileApp';
+  protected $mobileAppDataType = '';
   public $name;
   protected $pacingType = 'Google_Service_DisplayVideo_Pacing';
   protected $pacingDataType = '';
@@ -46,6 +48,8 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   protected $partnerCostsDataType = 'array';
   protected $partnerRevenueModelType = 'Google_Service_DisplayVideo_PartnerRevenueModel';
   protected $partnerRevenueModelDataType = '';
+  protected $targetingExpansionType = 'Google_Service_DisplayVideo_TargetingExpansionConfig';
+  protected $targetingExpansionDataType = '';
   public $updateTime;
   public $warningMessages;
 
@@ -205,6 +209,20 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   {
     return $this->lineItemType;
   }
+  /**
+   * @param Google_Service_DisplayVideo_MobileApp
+   */
+  public function setMobileApp(Google_Service_DisplayVideo_MobileApp $mobileApp)
+  {
+    $this->mobileApp = $mobileApp;
+  }
+  /**
+   * @return Google_Service_DisplayVideo_MobileApp
+   */
+  public function getMobileApp()
+  {
+    return $this->mobileApp;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -228,14 +246,14 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
     return $this->pacing;
   }
   /**
-   * @param Google_Service_DisplayVideo_PartnerCost
+   * @param Google_Service_DisplayVideo_PartnerCost[]
    */
   public function setPartnerCosts($partnerCosts)
   {
     $this->partnerCosts = $partnerCosts;
   }
   /**
-   * @return Google_Service_DisplayVideo_PartnerCost
+   * @return Google_Service_DisplayVideo_PartnerCost[]
    */
   public function getPartnerCosts()
   {
@@ -254,6 +272,20 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   public function getPartnerRevenueModel()
   {
     return $this->partnerRevenueModel;
+  }
+  /**
+   * @param Google_Service_DisplayVideo_TargetingExpansionConfig
+   */
+  public function setTargetingExpansion(Google_Service_DisplayVideo_TargetingExpansionConfig $targetingExpansion)
+  {
+    $this->targetingExpansion = $targetingExpansion;
+  }
+  /**
+   * @return Google_Service_DisplayVideo_TargetingExpansionConfig
+   */
+  public function getTargetingExpansion()
+  {
+    return $this->targetingExpansion;
   }
   public function setUpdateTime($updateTime)
   {

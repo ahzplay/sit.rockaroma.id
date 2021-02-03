@@ -61,7 +61,7 @@ class Google_Service_Logging_Resource_BillingAccountsLocationsBucketsViews exten
     return $this->call('delete', array($params), "Google_Service_Logging_LoggingEmpty");
   }
   /**
-   * Lists views on a bucket.. (views.listBillingAccountsLocationsBucketsViews)
+   * Lists views on a bucket. (views.listBillingAccountsLocationsBucketsViews)
    *
    * @param string $parent Required. The bucket whose views are to be listed:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"

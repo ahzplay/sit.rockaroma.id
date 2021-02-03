@@ -44,7 +44,6 @@ Route::get('php-info', 'App\Http\Controllers\RegisterController@phpInfo');
 Route::get('fetch-product', 'App\Http\Controllers\ShopController@fetchProducts');
 Route::get('login-page', 'App\Http\Controllers\RegistrationController@login');
 Route::get('registration-page', 'App\Http\Controllers\RegistrationController@register');
-Route::post('register-member', 'App\Http\Controllers\RegistrationController@doRegister');
 
 Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');
 

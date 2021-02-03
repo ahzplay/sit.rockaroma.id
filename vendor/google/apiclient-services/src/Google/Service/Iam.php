@@ -21,10 +21,7 @@
  * <p>
  * Manages identity and access control for Google Cloud Platform resources,
  * including the creation of service accounts, which you can use to authenticate
- * to Google and make API calls. *Note:* This API is tied to the IAM service
- * account credentials API ( iamcredentials.googleapis.com). Enabling or
- * disabling this API will also enable or disable the IAM service account
- * credentials API.</p>
+ * to Google and make API calls.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -42,11 +39,13 @@ class Google_Service_Iam extends Google_Service
   public $iamPolicies;
   public $organizations_roles;
   public $permissions;
+  public $projects_locations_workloadIdentityPools_operations;
+  public $projects_locations_workloadIdentityPools_providers_operations;
   public $projects_roles;
   public $projects_serviceAccounts;
   public $projects_serviceAccounts_keys;
   public $roles;
-  
+
   /**
    * Constructs the internal representation of the Iam service.
    *
@@ -188,6 +187,46 @@ class Google_Service_Iam extends Google_Service
           )
         )
     );
+    $this->projects_locations_workloadIdentityPools_operations = new Google_Service_Iam_Resource_ProjectsLocationsWorkloadIdentityPoolsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_workloadIdentityPools_providers_operations = new Google_Service_Iam_Resource_ProjectsLocationsWorkloadIdentityPoolsProvidersOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->projects_roles = new Google_Service_Iam_Resource_ProjectsRoles(
         $this,
         $this->serviceName,
@@ -241,7 +280,7 @@ class Google_Service_Iam extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'view' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -249,7 +288,7 @@ class Google_Service_Iam extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

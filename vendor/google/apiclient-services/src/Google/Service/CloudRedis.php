@@ -37,7 +37,7 @@ class Google_Service_CloudRedis extends Google_Service
   public $projects_locations;
   public $projects_locations_instances;
   public $projects_locations_operations;
-  
+
   /**
    * Constructs the internal representation of the CloudRedis service.
    *
@@ -78,13 +78,13 @@ class Google_Service_CloudRedis extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -147,6 +147,16 @@ class Google_Service_CloudRedis extends Google_Service
               ),
             ),'get' => array(
               'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getAuthString' => array(
+              'path' => 'v1/{+name}/authString',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -260,13 +270,13 @@ class Google_Service_CloudRedis extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

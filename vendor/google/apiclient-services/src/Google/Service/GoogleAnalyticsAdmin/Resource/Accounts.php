@@ -46,8 +46,7 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
     return $this->call('delete', array($params), "Google_Service_GoogleAnalyticsAdmin_GoogleProtobufEmpty");
   }
   /**
-   * Lookup for a single Account. Throws "Target not found" if no such account
-   * found, or if caller does not have permissions to access it. (accounts.get)
+   * Lookup for a single Account. (accounts.get)
    *
    * @param string $name Required. The name of the account to lookup. Format:
    * accounts/{account} Example: "accounts/100"
@@ -78,15 +77,12 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
   }
   /**
    * Returns all accounts accessible by the caller. Note that these accounts might
-   * not currently have App+Web properties. Soft-deleted (ie: "trashed") accounts
-   * are excluded by default. Returns an empty list if no relevant accounts are
-   * found. (accounts.listAccounts)
+   * not currently have GA4 properties. Soft-deleted (ie: "trashed") accounts are
+   * excluded by default. Returns an empty list if no relevant accounts are found.
+   * (accounts.listAccounts)
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool showDeleted Whether to include soft-deleted (ie: "trashed")
-   * Accounts in the results. Accounts can be inspected to determine whether they
-   * are deleted or not.
    * @opt_param int pageSize The maximum number of resources to return. The
    * service may return fewer than this value, even if there are additional pages.
    * If unspecified, at most 50 resources will be returned. The maximum value is
@@ -95,6 +91,9 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
    * `ListAccounts` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListAccounts` must match the
    * call that provided the page token.
+   * @opt_param bool showDeleted Whether to include soft-deleted (ie: "trashed")
+   * Accounts in the results. Accounts can be inspected to determine whether they
+   * are deleted or not.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListAccountsResponse
    */
   public function listAccounts($optParams = array())
@@ -111,8 +110,9 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaAccount $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to be updated. Omitted fields
-   * will not be updated.
+   * @opt_param string updateMask Required. The list of fields to be updated.
+   * Omitted fields will not be updated. To replace the entire entity, use one
+   * path with the string "*" to match all fields.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaAccount
    */
   public function patch($name, Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaAccount $postBody, $optParams = array())

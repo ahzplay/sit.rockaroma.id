@@ -38,7 +38,7 @@
 
     <div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>
     <div class="login-form">
-        <form action="/examples/actions/confirmation.php" method="post">
+        <form id="login-form" action="" method="post">
             <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome Back</div>
             <div class="text-center" style="padding-bottom: 10%; font-size: 12px;">Lorem ipsum dolor sit amet, consector</div>
             <div class="form-group">
@@ -47,11 +47,11 @@
             </div>
             <div class="form-group">
                 <label style="color: #FDDA25; font-size: 12px;">Password</label>
-                <input type="password" class="form-control" placeholder="Enter your password" required="required">
+                <input type="password" name="password" class="form-control" placeholder="Enter your password" {{--required="required"--}}>
                 <a href="#" class="float-right" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Forgot Password?</a>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-warning btn-block">LOGIN</button>
+                <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">LOGIN</button>
             </div>
             <div class="text-center" style="font-size: 12px;"> Dont have an account ? <a href="{{url('registration-page')}}" style="color: #FDDA25;">Register here</a> </div>
         </form>
@@ -59,4 +59,33 @@
     </div>
 @endsection
 @section('js-add-on')
+    <script>
+        function doLogin() {
+            $.ajax({
+                type: "POST",
+                url: "{{url('api/login-action')}}",
+                data: $('#login-form').serialize(),
+                processData:false,
+                timeout: 60000,
+                beforeSend: function(){
+                    //$('#upload-demo-submit-btn').attr("disabled","disabled");
+                },
+                success: function(response){
+                    //$('#loading-div').hide();
+                    if(response.status == 'success') {
+                        window.location.replace("{{url('landing-page')}}");
+                    } else {
+                        $.alert({
+                            title: 'Something Wrong !',
+                            content: response.message
+                        });
+                    }
+
+                },
+                error: function(){
+                    //$('#loading-div').hide();
+                },
+            });
+        }
+    </script>
 @endsection

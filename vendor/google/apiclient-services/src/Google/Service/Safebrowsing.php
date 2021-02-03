@@ -43,7 +43,7 @@ class Google_Service_Safebrowsing extends Google_Service
   public $threatListUpdates;
   public $threatLists;
   public $threatMatches;
-  
+
   /**
    * Constructs the internal representation of the Safebrowsing service.
    *
