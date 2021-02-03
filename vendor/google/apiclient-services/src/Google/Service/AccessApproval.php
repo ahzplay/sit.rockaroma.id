@@ -40,7 +40,7 @@ class Google_Service_AccessApproval extends Google_Service
   public $organizations_approvalRequests;
   public $projects;
   public $projects_approvalRequests;
-  
+
   /**
    * Constructs the internal representation of the AccessApproval service.
    *
@@ -251,10 +251,6 @@ class Google_Service_AccessApproval extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -262,6 +258,10 @@ class Google_Service_AccessApproval extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -357,15 +357,15 @@ class Google_Service_AccessApproval extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

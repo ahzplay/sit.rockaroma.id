@@ -107,6 +107,9 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set `pageToken` to
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
+   * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
+   * which provides partial results in case of failure. The default value is false
+   * and the logic is the same as today.
    * @return Google_Service_Compute_DiskAggregatedList
    */
   public function aggregatedList($project, $optParams = array())
@@ -124,7 +127,7 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    * @param Google_Service_Compute_Snapshot $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool guestFlush [Input Only] Specifies to create an application
+   * @opt_param bool guestFlush [Input Only] Whether to attempt an application
    * consistent snapshot by informing the OS to prepare for the snapshot process.
    * Currently only supported on Windows instances using the Volume Shadow Copy
    * Service (VSS).
@@ -237,7 +240,8 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @opt_param string sourceImage Optional. Source image to restore onto a disk.
+   * @opt_param string sourceImage Source image to restore onto a disk. This field
+   * is optional.
    * @return Google_Service_Compute_Operation
    */
   public function insert($project, $zone, Google_Service_Compute_Disk $postBody, $optParams = array())
@@ -292,6 +296,9 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set `pageToken` to
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
+   * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
+   * which provides partial results in case of failure. The default value is false
+   * and the logic is the same as today.
    * @return Google_Service_Compute_DiskList
    */
   public function listDisks($project, $zone, $optParams = array())

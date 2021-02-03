@@ -18,21 +18,12 @@
 class Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1Device extends Google_Collection
 {
   protected $collection_key = 'parentRelations';
-  public $assignee;
   public $name;
   protected $parentRelationsType = 'Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1ParentRelation';
   protected $parentRelationsDataType = 'array';
   public $traits;
   public $type;
 
-  public function setAssignee($assignee)
-  {
-    $this->assignee = $assignee;
-  }
-  public function getAssignee()
-  {
-    return $this->assignee;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -42,14 +33,14 @@ class Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1Device exten
     return $this->name;
   }
   /**
-   * @param Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1ParentRelation
+   * @param Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1ParentRelation[]
    */
   public function setParentRelations($parentRelations)
   {
     $this->parentRelations = $parentRelations;
   }
   /**
-   * @return Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1ParentRelation
+   * @return Google_Service_SmartDeviceManagement_GoogleHomeEnterpriseSdmV1ParentRelation[]
    */
   public function getParentRelations()
   {

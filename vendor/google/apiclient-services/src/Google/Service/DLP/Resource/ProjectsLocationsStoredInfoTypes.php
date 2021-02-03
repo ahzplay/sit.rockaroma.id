@@ -31,17 +31,14 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * (storedInfoTypes.create)
    *
    * @param string $parent Required. Parent resource name. The format of this
-   * value varies depending on the scope of the request (project or organization)
-   * and whether you have [specified a processing
-   * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-   * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-   * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID + Organizations scope, location specified:
-   * `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no
-   * location specified (defaults to global): `organizations/`ORG_ID The following
-   * example `parent` string specifies a parent project with the identifier
-   * `example-project`, and specifies the `europe-west3` location for processing
-   * data: parent=projects/example-project/locations/europe-west3
+   * value varies depending on the scope of the request (project) and whether you
+   * have [specified a processing location](https://cloud.google.com/dlp/docs
+   * /specifying-location): + Projects scope, location specified:
+   * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+   * specified (defaults to global): `projects/`PROJECT_ID The following example
+   * `parent` string specifies a parent project with the identifier `example-
+   * project`, and specifies the `europe-west3` location for processing data:
+   * parent=projects/example-project/locations/europe-west3
    * @param Google_Service_DLP_GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
@@ -56,10 +53,8 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-
    * stored-infotypes to learn more. (storedInfoTypes.delete)
    *
-   * @param string $name Required. Resource name of the organization and
-   * storedInfoType to be deleted, for example
-   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
-   * id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of the storedInfoType to be
+   * deleted, for example projects/project-id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GoogleProtobufEmpty
    */
@@ -73,10 +68,8 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-
    * stored-infotypes to learn more. (storedInfoTypes.get)
    *
-   * @param string $name Required. Resource name of the organization and
-   * storedInfoType to be read, for example
-   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
-   * id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of the storedInfoType to be read,
+   * for example projects/project-id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType
    */
@@ -92,21 +85,17 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * (storedInfoTypes.listProjectsLocationsStoredInfoTypes)
    *
    * @param string $parent Required. Parent resource name. The format of this
-   * value varies depending on the scope of the request (project or organization)
-   * and whether you have [specified a processing
-   * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-   * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-   * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID + Organizations scope, location specified:
-   * `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no
-   * location specified (defaults to global): `organizations/`ORG_ID The following
-   * example `parent` string specifies a parent project with the identifier
-   * `example-project`, and specifies the `europe-west3` location for processing
-   * data: parent=projects/example-project/locations/europe-west3
+   * value varies depending on the scope of the request (project) and whether you
+   * have [specified a processing location](https://cloud.google.com/dlp/docs
+   * /specifying-location): + Projects scope, location specified:
+   * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+   * specified (defaults to global): `projects/`PROJECT_ID The following example
+   * `parent` string specifies a parent project with the identifier `example-
+   * project`, and specifies the `europe-west3` location for processing data:
+   * parent=projects/example-project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Size of the page, can be limited by server. If zero
-   * server returns a page of max size 100.
+   * @opt_param string locationId Deprecated. This field has no effect.
    * @opt_param string orderBy Comma separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case-insensitive, default
    * sorting order is ascending, redundant space characters are insignificant.
@@ -115,9 +104,10 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * was created. - `state`: corresponds to the state of the resource. - `name`:
    * corresponds to resource name. - `display_name`: corresponds to info type's
    * display name.
+   * @opt_param int pageSize Size of the page, can be limited by server. If zero
+   * server returns a page of max size 100.
    * @opt_param string pageToken Page token to continue retrieval. Comes from
    * previous call to `ListStoredInfoTypes`.
-   * @opt_param string locationId Deprecated. This field has no effect.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ListStoredInfoTypesResponse
    */
   public function listProjectsLocationsStoredInfoTypes($parent, $optParams = array())
@@ -132,10 +122,8 @@ class Google_Service_DLP_Resource_ProjectsLocationsStoredInfoTypes extends Googl
    * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
    * (storedInfoTypes.patch)
    *
-   * @param string $name Required. Resource name of organization and
-   * storedInfoType to be updated, for example
-   * `organizations/433245324/storedInfoTypes/432452342` or projects/project-
-   * id/storedInfoTypes/432452342.
+   * @param string $name Required. Resource name of storedInfoType to be updated,
+   * for example projects/project-id/storedInfoTypes/432452342.
    * @param Google_Service_DLP_GooglePrivacyDlpV2UpdateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType

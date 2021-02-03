@@ -86,11 +86,11 @@ class Google_Service_Workflows_Resource_ProjectsLocationsWorkflows extends Googl
    * should be listed. Format: projects/{project}/locations/{location}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Filter to restrict results to specific workflows.
    * @opt_param string orderBy Comma-separated list of fields that that specify
    * the order of the results. Default sorting order for a field is ascending. To
    * specify descending order for a field, append a " desc" suffix. If not
    * specified, the results will be returned in an unspecified order.
-   * @opt_param string filter Filter to restrict results to specific workflows.
    * @opt_param int pageSize Maximum number of workflows to return per call. The
    * service may return fewer than this value. If the value is not specified, a
    * default value of 500 will be used. The maximum permitted value is 1000 and

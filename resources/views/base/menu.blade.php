@@ -17,9 +17,16 @@
                         </nav>
                     </div>
                     <div class="col-md-4 text-right">
-                        <nav class="nav nav-masthead justify-content-right">
-                            <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('login-page')}}">REGISTER/LOGIN</a>
-                        </nav>
+                        @if(session()->has('isLogin'))
+                            <nav class="nav nav-masthead justify-content-right">
+                                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('api/logout-action')}}">LOGOUT</a>
+                            </nav>
+                        @else
+                            <nav class="nav nav-masthead justify-content-right">
+                                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('login-page')}}">REGISTER/LOGIN</a>
+                            </nav>
+                            {{'is login = ' . Session::get('menu-active-shop')}}
+                        @endif
                     </div>
                 </div>
             </div>

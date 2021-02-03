@@ -39,7 +39,7 @@ class Google_Service_CloudBuild extends Google_Service
   public $projects_locations_builds;
   public $projects_locations_operations;
   public $projects_triggers;
-  
+
   /**
    * Constructs the internal representation of the CloudBuild service.
    *
@@ -156,11 +156,11 @@ class Google_Service_CloudBuild extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'parent' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -223,11 +223,11 @@ class Google_Service_CloudBuild extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'projectId' => array(
+                'id' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'id' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -241,15 +241,15 @@ class Google_Service_CloudBuild extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -394,6 +394,25 @@ class Google_Service_CloudBuild extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),'webhook' => array(
+              'path' => 'v1/projects/{projectId}/triggers/{trigger}:webhook',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'trigger' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'secret' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

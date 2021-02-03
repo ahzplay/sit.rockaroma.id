@@ -36,7 +36,7 @@ class Google_Service_CivicInfo extends Google_Service
   public $divisions;
   public $elections;
   public $representatives;
-  
+
   /**
    * Constructs the internal representation of the CivicInfo service.
    *
@@ -90,15 +90,15 @@ class Google_Service_CivicInfo extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'returnAllAvailableData' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'electionId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'officialOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'returnAllAvailableData' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -117,6 +117,10 @@ class Google_Service_CivicInfo extends Google_Service
               'path' => 'civicinfo/v2/representatives',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'address' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeOffices' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -131,10 +135,6 @@ class Google_Service_CivicInfo extends Google_Service
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'address' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'representativeInfoByDivision' => array(
               'path' => 'civicinfo/v2/representatives/{ocdId}',
@@ -145,7 +145,7 @@ class Google_Service_CivicInfo extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'roles' => array(
+                'levels' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
@@ -154,7 +154,7 @@ class Google_Service_CivicInfo extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'levels' => array(
+                'roles' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
