@@ -34,9 +34,9 @@ class AuthController extends Controller
         if(empty($user)){
             return response()->json(array('status'=>'fail','message'=>'Email not found'), 200);
         } else {
-            if($user->code_confirmation != 1) {
+            /*if($user->code_confirmation != 1) {
                 return response()->json(array('status'=>'fail','message'=>'Please verify account, check your email'), 200);
-            }
+            }*/
 
             if(empty($user->role)) {
                 return response()->json(array('status'=>'fail','message'=>'Make sure you already register'), 200);
