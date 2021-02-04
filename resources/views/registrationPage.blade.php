@@ -172,7 +172,7 @@
                 buttons: {
                     confirm: function () {
                         $('#file-demo').show();
-                        $('.loader').show();
+                        $('#loading-div').show();
                         //$('#loading-div').show();
                         $.ajax({
                             type: "POST",
