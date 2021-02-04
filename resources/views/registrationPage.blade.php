@@ -172,7 +172,7 @@
                 buttons: {
                     confirm: function () {
                         $('#file-demo').show();
-                        //$('.loader').show();
+                        $('.loader').show();
                         //$('#loading-div').show();
                         $.ajax({
                             type: "POST",
@@ -214,7 +214,7 @@
                         });
                     },
                     cancel: function () {
-                        $('#loading-div').show();
+                        $('#loading-div').hide();
                     },
                 }
             });
