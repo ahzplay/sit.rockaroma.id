@@ -79,7 +79,7 @@ class RegistrationController extends Controller
                   'name' =>$request->fullname,
                   'link' => env('LIVE_URL').'api/email-verification/'.urlencode(base64_encode($user->code_confirmation))
                 );
-                Mail::to('ari.azharr@gmail.com')->send(new MemberRegistrationEmail($data));
+                Mail::to($request->email)->send(new MemberRegistrationEmail($data));
                 return response()->json(array('status'=>'success','message'=>'Please check your email to verify your account.'), 200);
             } else {
                 return response()->json(array('status'=>'fail','message'=>'Registration failed'), 200);
