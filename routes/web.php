@@ -43,6 +43,8 @@ Route::post('register-save-demo', 'App\Http\Controllers\RegisterController@saveD
 Route::get('php-info', 'App\Http\Controllers\RegisterController@phpInfo');
 Route::get('fetch-product', 'App\Http\Controllers\ShopController@fetchProducts');
 Route::get('login-page', 'App\Http\Controllers\RegistrationController@login');
+Route::get('forgot-password-page', 'App\Http\Controllers\RegistrationController@forgotPassword');
+Route::get('reset-password-page/{codeConfirmation}', 'App\Http\Controllers\AuthController@resetPasswordValidation');
 Route::get('registration-page', 'App\Http\Controllers\RegistrationController@register');
 
 Route::get('logout-action', 'App\Http\Controllers\AuthController@logoutAction');

@@ -39,23 +39,22 @@
     <div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>
     <div class="login-form">
         <form id="login-form" action="" method="post">
-            <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome Back</div>
-            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;">Lorem ipsum dolor sit amet, consector</div>
+            <div class="text-center" style="font-size: 20px; font-weight: bold;">Reset Password</div>
+            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;"></div>
             <div class="form-group">
-                <label style="color: #FDDA25; font-size: 12px;">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your Email">
+                <label style="color: #FDDA25; font-size: 12px;">New Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your new password">
             </div>
             <div class="form-group">
-                <label style="color: #FDDA25; font-size: 12px;">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter your password" {{--required="required"--}}>
-                <a href="{{url('forgot-password-page')}}" class="float-right" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Forgot Password?</a>
+                <label style="color: #FDDA25; font-size: 12px;">Confirm Password</label>
+                <input type="password" class="form-control" id="password-confirmation" name="password_confirmation" placeholder="Confirm your new password">
             </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">LOGIN</button>
-            </div>
-            <div class="text-center" style="font-size: 12px;"> Dont have an account ? <a href="{{url('registration-page')}}" style="color: #FDDA25;">Register here</a> </div>
-        </form>
+            <input type="hidden" class="form-control" id="code-confirmation" name="codeConfirmation" value="{{$codeConfirmation}}">
 
+            <div class="form-group" style="padding-top: 15px;">
+                <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">CHANGE PASSWORD</button>
+            </div>
+        </form>
     </div>
 @endsection
 @section('js-add-on')
@@ -64,7 +63,7 @@
             $('#loading-div').show();
             $.ajax({
                 type: "POST",
-                url: "{{url('api/login-action')}}",
+                url: "{{url('api/change-password-action')}}",
                 data: $('#login-form').serialize(),
                 processData:false,
                 timeout: 60000,
@@ -74,14 +73,21 @@
                 success: function(response){
                     $('#loading-div').hide();
                     if(response.status == 'success') {
-                        window.location.replace("{{url('landing-page')}}");
+                        $.confirm({
+                            title: 'Success !',
+                            content: response.message,
+                            buttons: {
+                                confirm: function() {
+                                    window.location.replace("{{url('login-page')}}");
+                                }
+                            }
+                        });
                     } else {
                         $.alert({
                             title: 'Something Wrong !',
                             content: response.message
                         });
                     }
-
                 },
                 error: function(){
                     $('#loading-div').hide();

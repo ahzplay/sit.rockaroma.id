@@ -39,21 +39,16 @@
     <div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>
     <div class="login-form">
         <form id="login-form" action="" method="post">
-            <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome Back</div>
-            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;">Lorem ipsum dolor sit amet, consector</div>
+            <div class="text-center" style="font-size: 20px; font-weight: bold;">Forgot Password</div>
+            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;"></div>
             <div class="form-group">
-                <label style="color: #FDDA25; font-size: 12px;">Email</label>
+                <label style="color: #FDDA25; font-size: 12px;">Enter your email and we'll send you a link to reset your password.</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Enter your Email">
             </div>
             <div class="form-group">
-                <label style="color: #FDDA25; font-size: 12px;">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter your password" {{--required="required"--}}>
-                <a href="{{url('forgot-password-page')}}" class="float-right" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Forgot Password?</a>
+                <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">SEND EMAIL</button>
             </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">LOGIN</button>
-            </div>
-            <div class="text-center" style="font-size: 12px;"> Dont have an account ? <a href="{{url('registration-page')}}" style="color: #FDDA25;">Register here</a> </div>
+            <div class="text-center" style="font-size: 12px;"> Back to <a href="{{url('login-page')}}" style="color: #FDDA25;">Login</a> </div>
         </form>
 
     </div>
@@ -64,7 +59,7 @@
             $('#loading-div').show();
             $.ajax({
                 type: "POST",
-                url: "{{url('api/login-action')}}",
+                url: "{{url('api/reset-password-action')}}",
                 data: $('#login-form').serialize(),
                 processData:false,
                 timeout: 60000,
@@ -74,7 +69,11 @@
                 success: function(response){
                     $('#loading-div').hide();
                     if(response.status == 'success') {
-                        window.location.replace("{{url('landing-page')}}");
+                        $('#email').val('');
+                        $.alert({
+                            title: 'Success !',
+                            content: response.message
+                        });
                     } else {
                         $.alert({
                             title: 'Something Wrong !',
