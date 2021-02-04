@@ -14,6 +14,14 @@ class RegistrationController extends Controller
         return view('loginPage');
     }
 
+    public function forgotPassword() {
+        return view('forgotPassword');
+    }
+
+    /*public function resetPassword() {
+        return view('resetPassword');
+    }*/
+
     public function register() {
         $region = new RegionController();
         $cities = $region->fetchCities();
@@ -46,7 +54,8 @@ class RegistrationController extends Controller
                 'phoneNumber.numeric' => 'Enter valid phone number',
                 'gender.required' => 'Gender cannot be empty',
                 'smoker.required' => 'Smoker status cannot be empty',
-                'password.required' => 'Password cannot be empty'
+                'password.required' => 'Password cannot be empty',
+                'password.confirmed' => 'Your password is not match'
             ]
         );
 
@@ -105,7 +114,7 @@ class RegistrationController extends Controller
                 echo "
                     <html>
                         <head>
-                            <title>Verification Failed</title>
+                            <title>Verification Success</title>
                             <style>
                                 .box{
                                     position: fixed;

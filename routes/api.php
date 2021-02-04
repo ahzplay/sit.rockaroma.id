@@ -30,3 +30,5 @@ Route::post('register-checking-profile-form',[RegisterController::class, 'checki
 Route::post('register-member', [RegistrationController::class, 'doRegister']);
 Route::post('login-action', [AuthController::class, 'doLogin']);
 Route::get('logout-action', [AuthController::class, 'dologout']);
+Route::post('reset-password-action', [AuthController::class, 'resetPassword']);
+Route::post('change-password-action', [AuthController::class, 'changePassword']);
