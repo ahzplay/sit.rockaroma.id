@@ -39,8 +39,8 @@
     <div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>
     <div class="login-form">
         <form action="#" id="register-form" method="post" enctype="multipart/form-data">
-            <div class="text-center" style="font-size: 20px; font-weight: bold;">Lorem Ipsum</div>
-            <div class="text-center" style="padding-bottom: 5%; font-size: 12px;">Lorem ipsum dolor sit amet, consector</div>
+            <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome</div>
+            <div class="text-center" style="padding-bottom: 5%; font-size: 12px;"></div>
             <div class="form-group">
                 <label style="color: #FDDA25; font-size: 12px;">Fullname</label>
                 <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your fullname">

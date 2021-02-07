@@ -39,8 +39,8 @@
     <div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>
     <div class="login-form">
         <form id="login-form" action="" method="post">
-            <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome Back</div>
-            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;">Lorem ipsum dolor sit amet, consector</div>
+            <div class="text-center" style="font-size: 20px; font-weight: bold;">Welcome</div>
+            <div class="text-center" style="padding-bottom: 10%; font-size: 12px;"></div>
             <div class="form-group">
                 <label style="color: #FDDA25; font-size: 12px;">Email</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Enter your Email">
@@ -53,7 +53,7 @@
             <div class="form-group">
                 <button type="button" class="btn btn-warning btn-block" onclick="doLogin()">LOGIN</button>
             </div>
-            <div class="text-center" style="font-size: 12px;"> Dont have an account ? <a href="{{url('registration-page')}}" style="color: #FDDA25;">Register here</a> </div>
+            <div class="text-center" style="font-size: 12px;"> Dont have an account ? <a href="{{url('registration-page')}}" style="color: #FDDA25;">Sign up here</a> </div>
         </form>
 
     </div>
