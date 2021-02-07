@@ -23,9 +23,8 @@
                             </nav>
                         @else
                             <nav class="nav nav-masthead justify-content-right">
-                                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('login-page')}}">REGISTER/LOGIN</a>
+                                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('login-page')}}">LOGIN</a>
                             </nav>
-                            {{'is login = ' . Session::get('menu-active-shop')}}
                         @endif
                     </div>
                 </div>
