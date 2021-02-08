@@ -32,7 +32,7 @@
         <div class="row" style="padding-top: 8%;">
             <div id="register-menu" class="col-lg-3 col-md-3 col-sm-12">
                 <h3 style="color: #FDDA25;"><strong>REGISTER FORM</strong></h3>
-                <p style="font-size: 11px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus placerat metus</p>
+                <p style="font-size: 11px; color: white;"></p>
                 <hr style="height:3px;border:none;color:#333;background-color:#ffffff;" />
                 <a href="#" onclick="showProfileContainer()" id="profile-label-link" style="text-decoration:none;"><h4 style=" padding-top: 15%;"><strong>Band Profile</strong></h4></a>
                 <a href="#" onclick="showDemoTrackContainerIncludingCheck()" id="demo-track-label-link" style="text-decoration:none;"><h4 style=" padding-top: 10%;"><strong>Upload Demo</strong></h4></a>
