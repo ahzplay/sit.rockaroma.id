@@ -74,7 +74,7 @@
         <div class="row" style="padding-top: 30px">
             <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
                 <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
-                <p style="font-size: 12px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <p style="font-size: 12px; color: white;"></p>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-right">
@@ -145,7 +145,7 @@
         <div class="row" style="padding-top: 70px">
             <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
                 <h4 style="color: #FDDA25;"><strong>OUR VIDEOS</strong></h4>
-                <p style="font-size: 12px; color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <p style="font-size: 12px; color: white"></p>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-right">
