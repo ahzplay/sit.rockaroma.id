@@ -79,7 +79,7 @@ class VideoController extends Controller
                     $q->where('category_id',$param['categoryId']);
                 }
 
-            })->where('is_active', 1)->skip($offset)->take($rows)->get();
+            })->where('is_active', 1)->skip($offset)->take($rows)->orderBy('id', 'desc')->get();
         $page = ceil($total/$rows);
         return array(
             'row' => $row,

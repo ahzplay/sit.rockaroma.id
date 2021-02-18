@@ -124,7 +124,7 @@
                         <label style="color: white; font-weight: bold;">SHARE :</label>
                         <p>
                             {{--<i class="fa fa-instagram" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i>--}}
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 7%;"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url()->current()}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook-square" style="font-size: 22px; color: #FFD143; padding-right: 1%;"></i></a>
                             <a target="_blank" href="https://twitter.com/intent/tweet?text={{url()->current()}}"><i class="fa fa-twitter" style="font-size: 22px; color: #FFD143;"></i></a>
                         </p>
                     </div>
@@ -165,7 +165,7 @@
                             <label for="id5">
                                 <img src="{{$articleContent['gallery_5_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{$articleContent['gallery_6_path']}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_5_path']}}" style="width: 600px; height: 400px;">
                         </div>
                     </div>
                 </div>

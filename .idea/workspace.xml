@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717b6c40-9479-45fe-b552-a114e441bb4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/base/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shopPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/videoPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videoPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articleDetailPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articleDetailPage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +238,7 @@
       <workItem from="1612306302792" duration="36079000" />
       <workItem from="1613191218722" duration="60000" />
       <workItem from="1613431818116" duration="6818000" />
-      <workItem from="1613617772059" duration="6021000" />
+      <workItem from="1613617772059" duration="6501000" />
     </task>
     <servers />
   </component>

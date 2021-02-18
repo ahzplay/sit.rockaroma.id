@@ -70,7 +70,7 @@ class ShopController extends Controller
                     $q->where('category_id',$param['categoryId']);
                 }
 
-            })->where('status', 1)->skip($offset)->take($rows)->get();
+            })->where('status', 1)->skip($offset)->take($rows)->orderBy('id', 'desc')->get();
         $page = ceil($total/$rows);
         return array(
             'row' => $row,
