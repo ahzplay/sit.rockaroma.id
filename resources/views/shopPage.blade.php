@@ -122,6 +122,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
+                {{Request::segment(2)}}
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
                         <li class="page-item">
@@ -129,10 +130,19 @@
                                 @php
                                     $prevPage = Request::segment(2)-1;
                                 @endphp
-                                <a class="page-link" href="{{url('shop-page/'.$prevPage.'/1/?categoryId=0')}}" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
+
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$prevPage.'/'.'1?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$prevPage.'/'.'0?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @endif
+
                             @else
                                 <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
                                     <span aria-hidden="true">&laquo;</span>
@@ -142,13 +152,23 @@
                         </li>
                         @for ($i = 1; $i <= $page; $i++)
                             <li class="page-item">
-                                <a class="page-link" href="{{url('shop-page/'.$i.'/1/?categoryId=0')}}">
-                                    @if(Request::segment(2) == $i)
-                                        <strong>{{$i}}</strong>
-                                    @else
-                                        {{$i}}
-                                    @endif
-                                </a>
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$i.'/'.'1?categoryId=' . Session::get('category-active')}}" >
+                                        @if(Request::segment(2) == $i)
+                                            <strong>{{$i}}</strong>
+                                        @else
+                                            {{$i}}
+                                        @endif
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$i.'/'.'0?categoryId=' . Session::get('category-active')}}" >
+                                        @if(Request::segment(2) == $i)
+                                            <strong>{{$i}}</strong>
+                                        @else
+                                            {{$i}}
+                                        @endif
+                                    </a>
+                                @endif
                             </li>
                         @endfor
                         <li class="page-item">
@@ -156,10 +176,17 @@
                                 @php
                                     $nextPage = Request::segment(2)+1;
                                 @endphp
-                                <a class="page-link" href="{{url('shop-page/'.$nextPage.'/1/?categoryId=0')}}" aria-label="Previous">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$nextPage.'/'.'1?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('shop-page/').'/'.$nextPage.'/'.'0?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @endif
                             @else
                                 <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
                                     <span aria-hidden="true">&raquo;</span>
@@ -178,6 +205,8 @@
 @section('js-add-on')
     <script>
         $(document).ready(function() {
+            //$('#category-select option[value={{Session::get('category-active')}}]').prop('selected', true);
+            $("#category-select[data-value='" + {{Session::get('category-active')}} +"']").attr("selected","selected");
             $("#olshop-modal").on('hidden.bs.modal', function (e) {
                 $("#tokopedia-url").attr("href", '#');
                 $("#shopee-url").attr("href", '#');

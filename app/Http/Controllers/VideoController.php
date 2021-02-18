@@ -16,6 +16,8 @@ class VideoController extends Controller
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
 
+        $request->session()->put('category-active', $request->categoryId);
+
         //$videos = $this->fetchVideos($request->page);
         $videos = $this->fetchVideos(array('page'=>$request->page,'showAll'=>$request->showAll,'categoryId'=>$request->categoryId));
         $category = $this->fetchCategories();

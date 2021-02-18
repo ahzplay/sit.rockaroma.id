@@ -6,14 +6,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/landingPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landingPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/shopPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shopPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/videoPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/videoPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +241,7 @@
       <workItem from="1612306302792" duration="36079000" />
       <workItem from="1613191218722" duration="60000" />
       <workItem from="1613431818116" duration="6818000" />
-      <workItem from="1613617772059" duration="2460000" />
+      <workItem from="1613617772059" duration="6021000" />
     </task>
     <servers />
   </component>
@@ -274,10 +269,10 @@
       <screen x="0" y="23" width="1280" height="731" />
     </state>
     <state x="141" y="27" key="SettingsEditor/0.23.1280.731@0.23.1280.731" timestamp="1606123298006" />
-    <state x="100" y="123" width="1080" height="531" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613436958131">
+    <state x="100" y="123" width="1080" height="531" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613631137493">
       <screen x="0" y="23" width="1280" height="731" />
     </state>
-    <state x="100" y="123" width="1080" height="531" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.731@0.23.1280.731" timestamp="1613436958131" />
+    <state x="100" y="123" width="1080" height="531" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.731@0.23.1280.731" timestamp="1613631137493" />
     <state x="317" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1613431818771">
       <screen x="0" y="23" width="1280" height="731" />
     </state>

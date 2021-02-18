@@ -11,11 +11,7 @@
                         <nav class="nav nav-masthead justify-content-center">
                             <a class="nav-link {{Session::get('menu-active-home')}}" href="{{url('landing-page')}}">HOME</a>
                             <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}">ARTICLE</a>
-<<<<<<< HEAD
                             <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1/?categoryId=0')}}">VIDEO</a>
-=======
-                            <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1?categoryId=0')}}">VIDEO</a>
->>>>>>> 0ba1765734f3707c3ab2289a5822f03a50d1453e
                             <a class="nav-link {{Session::get('menu-active-register')}}" href="{{url('register-profile-page')}}">REGISTER</a>
                             <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}">SHOP</a>
                         </nav>

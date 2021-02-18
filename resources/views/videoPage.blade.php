@@ -27,12 +27,20 @@
                 <h4 style="color: #FDDA25;"><strong>VIDEO GALLERY</strong></h4>
             </div>
 
-
                 <div class="col-sm-12 text-center" style="padding-bottom: 11%;">
                     <center>
-                    <label style="color: white;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
-                    @foreach($category as $val)
-                        <label style="color: white;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
+                        @if(Session::get('category-active') == 0)
+                            <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
+                        @else
+                            <label style="color: #FFFFFF;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
+                        @endif
+                        @foreach($category as $val)
+                            @if(Session::get('category-active') == $val['id'])
+                                <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
+                            @else
+                                <label style="color: #FFFFFF;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
+                            @endif
+
                     @endforeach
                     {{--<center>
                         <select class="form-control-yellow" id="category-select" style="width:auto;">
@@ -125,10 +133,19 @@
                                 @php
                                     $prevPage = Request::segment(2)-1;
                                 @endphp
-                                <a class="page-link" href="{{url('video-page/').'/'.$prevPage}}" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
+
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('video-page/').'/'.$prevPage.'/'.'1?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('video-page/').'/'.$prevPage.'/'.'0?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @endif
+
                             @else
                                 <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
                                     <span aria-hidden="true">&laquo;</span>
@@ -138,13 +155,23 @@
                         </li>
                         @for ($i = 1; $i <= $page; $i++)
                             <li class="page-item">
-                                <a class="page-link" href="{{url('video-page/').'/'.$i}}">
-                                    @if(Request::segment(2) == $i)
-                                        <strong>{{$i}}</strong>
-                                    @else
-                                        {{$i}}
-                                    @endif
-                                </a>
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('video-page/').'/'.$i.'/'.'1?categoryId=' . Session::get('category-active')}}" >
+                                        @if(Request::segment(2) == $i)
+                                            <strong>{{$i}}</strong>
+                                        @else
+                                            {{$i}}
+                                        @endif
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('video-page/').'/'.$i.'/'.'0?categoryId=' . Session::get('category-active')}}" >
+                                        @if(Request::segment(2) == $i)
+                                            <strong>{{$i}}</strong>
+                                        @else
+                                            {{$i}}
+                                        @endif
+                                    </a>
+                                @endif
                             </li>
                         @endfor
                         <li class="page-item">
@@ -152,10 +179,17 @@
                                 @php
                                     $nextPage = Request::segment(2)+1;
                                 @endphp
-                                <a class="page-link" href="{{url('video-page/').'/'.$nextPage}}" aria-label="Previous">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
+                                @if(Session::get('category-active') == 0)
+                                    <a class="page-link" href="{{url('video-page/').'/'.$nextPage.'/'.'1?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @else
+                                    <a class="page-link" href="{{url('video-page/').'/'.$nextPage.'/'.'0?categoryId=' . Session::get('category-active')}}" aria-label="Previous">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                @endif
                             @else
                                 <a class="page-link" href="" aria-label="Previous" style="pointer-events: none; cursor: default;">
                                     <span aria-hidden="true">&raquo;</span>
