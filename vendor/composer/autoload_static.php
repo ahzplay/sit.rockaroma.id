@@ -620,6 +620,7 @@ class ComposerStaticInitbd6c5be6917aa792252276df3abacd53
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\MemberRegistrationEmail' => __DIR__ . '/../..' . '/app/Mail/MemberRegistrationEmail.php',
+        'App\\Mail\\forgotPasswordEmail' => __DIR__ . '/../..' . '/app/Mail/forgotPasswordEmail.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\Band' => __DIR__ . '/../..' . '/app/Models/Band.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',

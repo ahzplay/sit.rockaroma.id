@@ -9,6 +9,10 @@
             background-position: top;
         }
 
+        a:hover {
+            color: #FDDA25;
+        }
+
         .video-wrapper {position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}
         .video-wrapper iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
     </style>
@@ -19,9 +23,28 @@
 
     <div class="container" style="padding-top: 10%; padding-left: 10%; padding-right: 10%; padding-bottom: 45px;">
         <div class="row">
-            <div class="col-sm-12 text-center" style="padding-bottom: 17.6%;">
+            <div class="col-sm-12 text-center" style="padding-bottom: 3%;">
                 <h4 style="color: #FDDA25;"><strong>VIDEO GALLERY</strong></h4>
             </div>
+
+
+                <div class="col-sm-12 text-center" style="padding-bottom: 11%;">
+                    <center>
+                    <label style="color: white;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
+                    @foreach($category as $val)
+                        <label style="color: white;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
+                    @endforeach
+                    {{--<center>
+                        <select class="form-control-yellow" id="category-select" style="width:auto;">
+                            <option value="{{url('shop-page/1/1/?categoryId=0')}}">All</option>
+                            @foreach($category as $val)
+                                <option value="{{url('shop-page/1/0/?categoryId=').$val['id']}}">{{$val['name']}}</option>
+                            @endforeach
+                        </select>
+                    </center>--}}
+                    </center>
+                </div>
+
         </div>
 
         <div class="row" >
@@ -91,7 +114,8 @@
             </div>--}}
         </div>
 
-        <div class="row">
+
+
             <div class="col-md-12 text-center">
                 {{Request::segment(2)}}
                 <nav aria-label="Page navigation">
