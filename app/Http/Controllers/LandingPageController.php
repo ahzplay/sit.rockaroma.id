@@ -40,7 +40,7 @@ class LandingPageController extends Controller
     }
 
     public function fetchArticlesTopThree(){
-        $raw = Article::where('is_active',1)->take(3)->orderby('created_at', 'desc')->get();
+        $raw = Article::where('is_active',1)->take(3)->orderBy('id', 'desc')->get();
         return $raw;
     }
 
@@ -80,7 +80,7 @@ class LandingPageController extends Controller
 
         return $data;*/
 
-        $raw = Video::where('is_active',1)->take(5)->get();
+        $raw = Video::where('is_active',1)->take(5)->orderBy('id','desc')->get();
         return $raw;
     }
 
