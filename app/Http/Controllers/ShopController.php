@@ -31,7 +31,7 @@ class ShopController extends Controller
     }
 
     public function fetchCategories(){
-        return Category::get();
+        return Category::where('related_table', 'products')->get();
     }
 
     public function fetchProducts($param=array()) {

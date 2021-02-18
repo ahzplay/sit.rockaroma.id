@@ -15,7 +15,6 @@
             flex-direction: column;
         }
         a:hover {color: #FDDA25;}
-
     </style>
     <link rel="stylesheet" href="{{asset('css/add_on/container-card.css')}}">
 @endsection
@@ -28,10 +27,26 @@
             </div>
 
             <div class="col-sm-12 text-center" style="padding-bottom: 8%;">
-                <label style="color: white;">&nbsp;&nbsp;<a href="{{url('shop-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
+                {{--<label class="dropdown">
+                    <select>
+                        <option>All</option>
+                        @foreach($category as $val)
+                            <option value="{{url('shop-page/1/0/?categoryId=').$val['id']}}">{{$val['name']}}</option>
+                        @endforeach
+                    </select>
+                </label>--}}
+                {{--<label style="color: white;">&nbsp;&nbsp;<a href="{{url('shop-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
                 @foreach($category as $val)
                     <label style="color: white;">&nbsp;&nbsp;<a href="{{url('shop-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
-                @endforeach
+                @endforeach--}}
+                <center>
+                    <select class="form-control-yellow" id="category-select" style="width:auto;">
+                        <option value="{{url('shop-page/1/1/?categoryId=0')}}">All</option>
+                        @foreach($category as $val)
+                            <option value="{{url('shop-page/1/0/?categoryId=').$val['id']}}">{{$val['name']}}</option>
+                        @endforeach
+                    </select>
+                </center>
 
             </div>
         </div>
@@ -166,6 +181,12 @@
             $("#olshop-modal").on('hidden.bs.modal', function (e) {
                 $("#tokopedia-url").attr("href", '#');
                 $("#shopee-url").attr("href", '#');
+            });
+
+            $('#category-select').on('change', function (e) {
+                //var optionSelected = $("option:selected", this);
+                console.log(this.value);
+                location.href = this.value;
             });
         })
 

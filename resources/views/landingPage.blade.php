@@ -97,7 +97,7 @@
                             <p class="card-text" style="text-align: left;">
                                 <strong style="color: #FDDA25">{{isset($articles[0]['title'])?$articles[0]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                                <div style="color: white">{!! substr(isset($articles[0]['content'])?$articles[0]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
+                            <div style="color: white">{!! substr(isset($articles[0]['content'])?$articles[0]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
                             </p>
                         </div>
                     </div>

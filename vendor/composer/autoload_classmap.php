@@ -29,6 +29,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Mail\\MemberRegistrationEmail' => $baseDir . '/app/Mail/MemberRegistrationEmail.php',
+    'App\\Mail\\forgotPasswordEmail' => $baseDir . '/app/Mail/forgotPasswordEmail.php',
     'App\\Models\\Article' => $baseDir . '/app/Models/Article.php',
     'App\\Models\\Band' => $baseDir . '/app/Models/Band.php',
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
