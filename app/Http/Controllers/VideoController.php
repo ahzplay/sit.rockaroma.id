@@ -79,7 +79,7 @@ class VideoController extends Controller
         $offset = ($page-1)*9;
         $total = Video::where('is_active',1)->count();
         $row = Video::where('is_active',1)->skip($offset)->take($rows)->count();
-        $raw = Video::where('is_active',1)->skip($offset)->take($rows)->get();
+        $raw = Video::where('is_active',1)->skip($offset)->take($rows)->orderBy('id','desc')->get();
         $page = ceil($total/$rows);
         return array(
             'row' => $row,
