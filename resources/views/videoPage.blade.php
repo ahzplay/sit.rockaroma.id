@@ -30,15 +30,15 @@
                 <div class="col-sm-12 text-center" style="padding-bottom: 11%;">
                     <center>
                         @if(Session::get('category-active') == 0)
-                            <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
-                        @else
                             <label style="color: #FFFFFF;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
+                        @else
+                            <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/1/?categoryId=0')}}" style="text-decoration:none;">All</a>&nbsp;&nbsp;</label>
                         @endif
                         @foreach($category as $val)
                             @if(Session::get('category-active') == $val['id'])
-                                <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
-                            @else
                                 <label style="color: #FFFFFF;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
+                            @else
+                                <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
                             @endif
 
                     @endforeach
