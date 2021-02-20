@@ -41,9 +41,9 @@
                 @endforeach--}}
                 <center>
                     <select class="form-control-yellow" id="category-select" style="width:auto;">
-                        <option value="{{url('shop-page/1/1/?categoryId=0')}}">All</option>
+                        <option uri="{{url('shop-page/1/1/?categoryId=0')}}" value="0">All</option>
                         @foreach($category as $val)
-                            <option value="{{url('shop-page/1/0/?categoryId=').$val['id']}}">{{$val['name']}}</option>
+                            <option uri="{{url('shop-page/1/0/?categoryId=').$val['id']}}" value="{{$val['id']}}">{{$val['name']}}</option>
                         @endforeach
                     </select>
                 </center>
@@ -205,17 +205,19 @@
 @section('js-add-on')
     <script>
         $(document).ready(function() {
-            //$('#category-select option[value={{Session::get('category-active')}}]').prop('selected', true);
-            $("#category-select[data-value='" + {{Session::get('category-active')}} +"']").attr("selected","selected");
+            console.log({{Session::get('category-active')}});
+            //$("#category-select option[value='{{Session::get('category-active')}}']").attr("selected", true);
+            $('#category-select').val('{{Session::get("category-active")}}');
             $("#olshop-modal").on('hidden.bs.modal', function (e) {
                 $("#tokopedia-url").attr("href", '#');
                 $("#shopee-url").attr("href", '#');
             });
 
             $('#category-select').on('change', function (e) {
-                //var optionSelected = $("option:selected", this);
-                console.log(this.value);
-                location.href = this.value;
+                var uri = $('option:selected', this).attr('uri');
+                console.log( this.value );
+                console.log(uri);
+                location.href = uri;
             });
         })
 
