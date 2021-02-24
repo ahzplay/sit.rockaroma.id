@@ -125,7 +125,6 @@
 
 
             <div class="col-md-12 text-center">
-                {{Request::segment(2)}}
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
                         <li class="page-item">

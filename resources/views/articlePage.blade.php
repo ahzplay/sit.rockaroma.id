@@ -94,7 +94,7 @@
                                 <p class="card-text" style="text-align: left;">
                                     <strong style="color: #FDDA25">{{$val['title']}}</strong>
                                     <br>
-                                    <div style="color: white">{!! substr($val['content'], 0, 50)  !!} ... </div>
+                                    <div style="color: white; text-align: left">{!! substr($val['content'], 0, 50)  !!} ... </div>
                                 </p>
                             </div>
                         </center>
