@@ -149,7 +149,7 @@
             </div>
             <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-right">
-                    <a href="{{url('video-page/1')}}" class="btn btn-primary btn-block btn-sm">MORE VIDEOS</a>
+                    <a href="{{url('video-page/1/1/?categoryId=0')}}" class="btn btn-primary btn-block btn-sm">MORE VIDEOS</a>
                 </div>
             </div>
         </div>
