@@ -9,7 +9,7 @@
         }
 
         .login-form {
-            width: 37%;
+            width: 470px;
             margin: 2% auto;
             color: white;
         }
