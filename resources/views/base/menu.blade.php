@@ -57,7 +57,7 @@
             <a class="nav-link" href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank" style="color: white;"><i class="fa fa-youtube-play" style="color: white;"></i> Youtube</a>
         </div>
     </div>
-    <nav class="navbar navbar-dark bg-dark" id="hamburger-menu" style="display: block;">
+    <nav class="navbar navbar-dark bg-dark" id="hamburger-menu">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

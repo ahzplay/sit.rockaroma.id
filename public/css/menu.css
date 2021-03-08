@@ -38,7 +38,7 @@
 }
 
 
-@media (max-width: 70em) {
+@media (max-width: 75em) {
     .carousel-menu {
         display: none;
     }
@@ -47,9 +47,9 @@
     }
 }
 
-@media (min-width: 70em) {
+@media (min-width: 75em) {
     #hamburger-menu {
-        display: block;
+        display: none;
     }
 }
 
