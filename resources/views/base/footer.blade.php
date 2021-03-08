@@ -1,4 +1,4 @@
-<footer style="
+<footer id="main-footer" style="
     background-color: #FDDA25;
     clear: both;
     bottom: -100px;

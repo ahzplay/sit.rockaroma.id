@@ -4,7 +4,15 @@
 
 .masthead-brand {
     margin-bottom: 0;
-    display: none;
+    display: block;
+}
+
+.masthead-brand {
+    float: left;
+}
+
+.nav-masthead {
+    float: right;
 }
 
 .nav-masthead .nav-link {
@@ -29,15 +37,19 @@
     border-bottom-color: #FFD143;
 }
 
-@media (min-width: 48em) {
-    .masthead-brand {
-        display: block;
-    }
 
-    .masthead-brand {
-        float: left;
+@media (max-width: 70em) {
+    .carousel-menu {
+        display: none;
     }
-    .nav-masthead {
-        float: right;
+    #main-footer {
+        display: none;
     }
 }
+
+@media (min-width: 70em) {
+    #hamburger-menu {
+        display: block;
+    }
+}
+
