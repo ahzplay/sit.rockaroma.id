@@ -23,8 +23,8 @@
                 <a href="{{url('term-and-condition-page')}}" style="text-decoration:none">Term and Condition</a><br>
                 <a href="mailto:rockaromaid@gmail.com" style="text-decoration:none">Contact Us</a><br>
                 <div id="footer-socmed-mobile">
-                <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #da291c; padding-right: 1%;"></i> Instagram</a>
-                <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #da291c;"></i> Youtube</a>
+                <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #da291c; padding-right: 1%;"></i></a>
+                <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #da291c;"></i></a>
                 </div>
             </div>
             <div id="footer-brand" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; margin-top: 2.5%;">
