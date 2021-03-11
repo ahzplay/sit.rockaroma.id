@@ -43,13 +43,28 @@
         display: none;
     }
     #main-footer {
+        height: 95px;
+    }
+    #footer-brand {
         display: none;
+    }
+    #footer-socmed {
+        display: none;
+    }
+    #footer-socmed-mobile {
+        display: block;
     }
 }
 
 @media (min-width: 75em) {
     #hamburger-menu {
         display: none;
+    }
+    #footer-socmed-mobile {
+        display: none;
+    }
+    #main-footer {
+        height: 85px;
     }
 }
 
