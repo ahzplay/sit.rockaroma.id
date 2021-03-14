@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="card-body" >
-                                <p class="card-text" style="text-align: left; font-size: 12px;">
+                                <p class="card-text text-center" style="text-align: left; font-size: 12px;">
                                     <strong style="color: #FDDA25">{{$val['name']}}</strong>
                                     <br>
                                     <label style="color: white">IDR {{number_format($val['price'], 0, '', '.')}}</label>
