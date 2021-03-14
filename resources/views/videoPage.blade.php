@@ -40,8 +40,7 @@
                             @else
                                 <label style="color: #FDDA25;">&nbsp;&nbsp;<a href="{{url('video-page/1/0/?categoryId=').$val['id']}}" style="text-decoration:none;">{{$val['name']}}</a>&nbsp;&nbsp;</label>
                             @endif
-
-                    @endforeach
+                        @endforeach
                     {{--<center>
                         <select class="form-control-yellow" id="category-select" style="width:auto;">
                             <option value="{{url('shop-page/1/1/?categoryId=0')}}">All</option>

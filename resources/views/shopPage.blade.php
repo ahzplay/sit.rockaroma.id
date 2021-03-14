@@ -53,7 +53,7 @@
 
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px;">
             @foreach($raw as $val)
-            <div class="col-md-3" style="padding-bottom: 5%;">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12" style="padding-bottom: 5%;">
                 <center>
                     <div class="card w3-animate-top" style="width: 13rem;">
                         <a href="#" onclick="openOlshopModal('{{$val['tokopedia_url']}}' , '{{$val['shopee_url']}}' )" data-toggle="modal" data-target=".bd-example-modal-sm">
