@@ -81,7 +81,7 @@
 
         <div class="row" style="padding-top: 35px; padding-left: 0px; padding-right: 0px;">
             @foreach($raw as $val)
-                <div class="col-md-4 col-sm-8" style="padding-bottom: 5%;">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="card w3-animate-top text-center" style="width: 17.75rem;">
                         <center>
                             <div class="container-card" >

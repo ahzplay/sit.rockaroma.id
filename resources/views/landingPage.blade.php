@@ -86,7 +86,7 @@
         <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px;">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <center>
-                    <div class="card w3-animate-top" style="width: 17.75rem;">
+                    <div class="card w3-animate-top text-center" style="width: 17.75rem;">
                         <div class="container-card" >
                             <img src="{{asset(isset($articles[0]['thumb_path'])?$articles[0]['thumb_path']:'img/bg-1.jpg')}}" alt="Avatar" class="image-card" width="50">
                             <div class="overlay">
