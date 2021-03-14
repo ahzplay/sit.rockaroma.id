@@ -57,7 +57,7 @@
 
         <div class="row" >
             @foreach($raw as $val)
-                <div class="col-md-4" style="padding-bottom: 5%;">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12" style="padding-bottom: 5%;">
                     <center>
                         <div class="card" style="width: 17.75rem;">
                             <div class="container-card" >
@@ -121,9 +121,6 @@
                 </center>
             </div>--}}
         </div>
-
-
-
             <div class="col-md-12 text-center">
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
