@@ -7,8 +7,8 @@
     }
     body{
         background-image: url("{{asset('img/bg-2.jpg')}}");
-        background-repeat: no-repeat;
-        background-size: auto;
+        background-repeat: repeat;
+        background-size: cover;
         background-position: top;
     }
     @media (min-width: 48em) {
@@ -42,13 +42,14 @@
                 <h3 style="color: #FDDA25;"><strong>REGISTER FORM</strong></h3>
                 <p style="font-size: 11px; color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus placerat metus</p>
                 <hr style="height:3px;border:none;color:#333;background-color:#ffffff;" />
-                <a href="#" style="text-decoration:none;"> <label id="profile-label-link" ><strong>Band Profile</strong></label> </a>
-                <a href="#" style="text-decoration:none;"> <label id="demo-track-label-link" ><strong>Upload Demo</strong></label> </a>
+                <a href="#" onclick="showProfileContainer()" style="text-decoration:none;"> <label id="profile-label-link-sm" ><strong>Band Profile</strong></label> </a>
+                &nbsp;
+                <a href="#" onclick="showDemoTrackContainerIncludingCheck()" style="text-decoration:none;"> <label id="demo-track-label-link-sm" ><strong>Upload Demo</strong></label> </a>
             </div>
 
             <div class="col-md-1"></div>
 
-            <div id="profile-container" class="col-lg-8 col-md-8 col-sm-12" style="background-color: #F7F7F8; border-radius: 5px; height: 37em; padding-top: 2%; padding-bottom: 2%; padding-right: 5%; padding-left: 5%;">
+            <div id="profile-container" class="col-lg-8 col-md-8 col-sm-12" style="background-color: #F7F7F8; border-radius: 5px; padding-top: 2%; padding-bottom: 2%; padding-right: 5%; padding-left: 5%;">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Band Profile</h4>
@@ -71,6 +72,7 @@
                                 Upload your amazing band profile photo. For best result please use photo with ratio 5:4 with jpg or jpeg format
                             </label>
                         </div>
+                        <br>
                     </div>
 
                     <div class="col-md-6">
@@ -81,8 +83,7 @@
                             </div>
                             <div class="form-group">
                                 <label>City</label>
-
-                                <select type="text" class="form-control form-control-lg" id="city-code" name="cityCode" placeholder="Select You Location">
+                                <select type="text" class="form-control" id="city-code" name="cityCode" placeholder="Select You Location">
                                     <option value="" selected >Select Your Location</option>
                                     @foreach($cities as $val)
                                         <option value="{{$val->city_code}}">{{$val->city_name}}</option>
@@ -95,21 +96,28 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon3">+62</span>
                                     </div>
-                                    <input type="text" class="form-control" id="contact" name="contact" aria-describedby="basic-addon3" placeholder="818 2345 9876">
+                                    <input type="number" class="form-control" id="contact" name="contact" aria-describedby="basic-addon3" placeholder="818 2345 9876">
                                 </div>
-
                             </div>
-                            <div class="col-sm-12" style="padding-top: 11em;">
+                            <br>
+                            {{--<div class="col-sm-6" style="padding-top: 11em;">
                                 <div class="text-right">
-                                    <button type="button" id="submit-register-button" onclick="showDemoTrackContainerIncludingCheck()" class="btn btn-primary btn-sm">UPLOAD DEMO</button>
+                                    <button type="button" id="submit-register-button" onclick="showDemoTrackContainerIncludingCheck()" class="btn btn-primary btn-sm btn-block">UPLOAD DEMO</button>
                                 </div>
-                            </div>
+                            </div>--}}
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-right">
+                            <button type="button" id="submit-register-button" onclick="showDemoTrackContainerIncludingCheck()" class="btn btn-primary btn-sm">UPLOAD DEMO</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div id="demo-track-container" class="col-lg-8 col-md-8 col-sm-12" style="display: none; background-color: #F7F7F8; border-radius: 5px; height: 37em; padding-top: 2%; padding-bottom: 2%; padding-right: 5%; padding-left: 5%;">
+            <div id="demo-track-container" class="col-lg-8 col-md-8 col-sm-12" style="display: none; background-color: #F7F7F8; border-radius: 5px;  padding-top: 5%; padding-bottom: 2%; padding-right: 5%; padding-left: 5%;">
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Upload Demo</h4>
@@ -133,12 +141,21 @@
                                     <li>For sound file upload with format .mp3, .m4a, .wav</li>
                                 </ol>
                             </div>
-                            <div class="col-sm-12" style="padding-top: 14em;">
+                            {{--<div class="col-sm-12" style="padding-top: 14em;">
                                 <div class="text-right">
                                     <button type="button" id="upload-demo-submit-btn" onclick="uploadDemo()" class="btn btn-primary btn-sm">REGISTER</button>
                                 </div>
-                            </div>
+                            </div>--}}
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-right">
+                            <br>
+                            <br>
+                            <button type="button" id="upload-demo-submit-btn" onclick="uploadDemo()" class="btn btn-primary btn-sm">REGISTER</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,8 +172,10 @@
     $(document).ready(function() {
         $('#profile-container').show();
         $('#profile-label-link').css('color','#FDDA25');
+        $('#profile-label-link-sm').css('color','#FDDA25');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
+        $('#demo-track-label-link-sm').css('color','white');
         $('.file-upload').file_upload();
         $('#city-code').select2();
         $("#contact").keypress(function (e) {
@@ -194,14 +213,18 @@
     function showProfileContainer() {
         $('#profile-container').show();
         $('#profile-label-link').css('color','#FDDA25');
+        $('#profile-label-link-sm').css('color','#FDDA25');
         $('#demo-track-container').hide();
         $('#demo-track-label-link').css('color','white');
+        $('#demo-track-label-link-sm').css('color','white');
     }
     function showDemoTrackContainer() {
         $('#profile-container').hide();
         $('#profile-label-link').css('color','white');
+        $('#profile-label-link-sm').css('color','white');
         $('#demo-track-container').show();
         $('#demo-track-label-link').css('color','#FDDA25');
+        $('#demo-track-label-link-sm').css('color','#FDDA25');
     }
     function showDemoTrackContainerIncludingCheck() {
         //console.log($('#band-name').val());
@@ -250,8 +273,10 @@
                     if(response.status == 'success') {
                         $('#profile-container').hide();
                         $('#profile-label-link').css('color','white');
+                        $('#profile-label-link-sm').css('color','white');
                         $('#demo-track-container').show();
                         $('#demo-track-label-link').css('color','#FDDA25');
+                        $('#demo-track-label-link-sm').css('color','#FDDA25');
                     } else {
                         $.alert({
                             title: "Something wrong !",
