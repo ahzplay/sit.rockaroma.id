@@ -79,13 +79,12 @@
             </div>
         </div>
 
-        <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px;">>
+        <div class="row" style="padding-top: 35px; padding-left: 25px; padding-right: 25px;">
             @foreach($raw as $val)
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card w3-animate-top text-center" style="width: 17.75rem;">
-                        <center>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card w3-animate-top" style="width: 17.75rem;">
                             <div class="container-card" >
-                                <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card article-card">
+                                <img src="{{asset($val['image_path'])}}" alt="Avatar" class="image-card" width="50">
                                 <div class="overlay">
                                     <a href="{{url('article-detail-page/').'/'. urlencode($val['title']) .'/'.$val['id']}}"><div class="text-card">Read More</div></a>
                                 </div>
@@ -97,7 +96,6 @@
                                     <div style="color: white; text-align: left">{!! substr($val['content'], 0, 50)  !!} ... </div>
                                 </p>
                             </div>
-                        </center>
                     </div>
                 </div>
             @endforeach
