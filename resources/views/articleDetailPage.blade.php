@@ -17,7 +17,7 @@
         /* Basic style for Slider */
         .slider{
             position: relative;
-            width: auto;
+            width: 600px;
             padding-top: 400px;
             margin: 0px auto;
             /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);*/
