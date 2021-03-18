@@ -141,7 +141,7 @@
                             <label for="id1">
                                 <img src="{{$articleContent['gallery_1_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{$articleContent['gallery_1_path']}}" style="width: 600px; height: 400px;">
+                            <img src="{{$articleContent['gallery_1_path']}}" style="width: auto; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id2" />
                             <label for="id2">
