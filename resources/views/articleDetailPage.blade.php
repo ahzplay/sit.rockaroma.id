@@ -135,13 +135,13 @@
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content" style="background-color: #212020;">
-                    <div class="modal-body" style="max-height: calc(100vh - 143px); overflow-y: auto;">
+                    <div class="modal-body" style="/*max-height: calc(100vh - 143px);*/ overflow-y: auto; overflow-x: auto;">
                         <div class="slider">
                             <input type="radio" name="slide_switch" id="id1" checked="checked" />
                             <label for="id1">
                                 <img src="{{$articleContent['gallery_1_path']}}" style="width: 80px; height: 53px;">
                             </label>
-                            <img src="{{$articleContent['gallery_1_path']}}" style="width: auto; height: 400px;">
+                            <img src="{{$articleContent['gallery_1_path']}}" style="width: 600px; height: 400px;">
 
                             <input type="radio" name="slide_switch" id="id2" />
                             <label for="id2">
