@@ -69,7 +69,7 @@
 
     <div id="searchLanding" class="container" style="padding-left: 10%; padding-right: 10%;">
         <div class="row" style="padding-top: 30px">
-            <div class="col-sm-9">
+            <div class="col-sm-8">
                 <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
             </div>
             <div class="col-sm-4">
