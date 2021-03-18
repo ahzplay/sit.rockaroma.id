@@ -72,7 +72,7 @@
             <div class="col-sm-9">
                 <h4 style="color: #FDDA25;"><strong>WHATS NEWS</strong></h4>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="text-right">
                     <input id="search-keyword" type="text" class="form-control" placeholder="&#xF002; Search by keyword" style="font-family:Arial, FontAwesome" >
                 </div>
