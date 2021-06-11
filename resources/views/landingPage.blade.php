@@ -97,7 +97,7 @@
                             <p class="card-text" style="text-align: left;">
                                 <strong style="color: #FDDA25">{{isset($articles[0]['title'])?$articles[0]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                            <div style="color: white">{!! substr(isset($articles[0]['content'])?$articles[0]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
+                            <div style="color: white">{{ substr(isset($articles[0]['content'])?strip_tags($articles[0]['content']):'Rockaroma Article Content', 0, 50) }}...</div>
                             </p>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                             <p class="card-text" style="text-align: left;">
                                 <strong style="color: #FDDA25">{{isset($articles[1]['title'])?$articles[1]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                            <div style="color: white">{!! substr(isset($articles[1]['content'])?$articles[1]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
+                           <div style="color: white">{{ substr(isset($articles[1]['content'])?strip_tags($articles[1]['content']):'Rockaroma Article Content', 0, 50) }}...</div>
                             </p>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             <p class="card-text" style="text-align: left;">
                                 <strong style="color: #FDDA25">{{isset($articles[2]['title'])?$articles[2]['title']:'Rockaroma Article Title'}}</strong>
                                 <br>
-                            <div style="color: white">{!! substr(isset($articles[2]['content'])?$articles[2]['content']:'Rockaroma Article Content', 0, 50) !!}...</div>
+                            <div style="color: white">{{ substr(isset($articles[2]['content'])?strip_tags($articles[2]['content']):'Rockaroma Article Content', 0, 50) }}...</div>
                             </p>
                         </div>
                     </div>
