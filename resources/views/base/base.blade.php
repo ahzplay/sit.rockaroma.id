@@ -56,14 +56,32 @@
 
 <script>
     function showPopUp() {
-        var cookie = $.cookie('acceptCookie');
-        if(!cookie){
+        if(!$.cookie('cookie18Alert')){
+            $.confirm({
+                title: 'Peringatan',
+                content: 'Website ini hanya diperuntukkan bagi Anda yang berusia 18 tahun ke atas',
+                buttons: {
+                    confirm: function () {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (1440 * 60 * 1000));
+                        $.cookie("cookie18Alert", 1, { expires: date });
+                        setCookieAccept();
+                    },
+                },
+            });
+        } else {
+            setCookieAccept();
+        }
+    }
+
+    function setCookieAccept() {
+        if(!$.cookie('cookieAccept')){
             $('#cookie-modal').modal('show');
-            $.cookie('acceptCookie', '1');
         }
     }
 
     function closePopUp() {
+        $.cookie('cookieAccept', 1);
         $('#cookie-modal').modal('hide');
     }
 
