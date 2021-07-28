@@ -33,7 +33,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="row">
-                        <button type="button" class="btn btn-primary">Izinkan Cookie</button>
+                        <button type="button" onclick="closePopUp()" class="btn btn-primary">Izinkan Cookie</button>
                         &nbsp;
                         <a href="{{url('term-and-condition-page')}}" class="btn btn-outline-primary">Syarat &amp; Ketentuan Cookie</a>
                     </div>
@@ -61,6 +61,10 @@
             $('#cookie-modal').modal('show');
             $.cookie('the_cookie', 'the_value');
         }
+    }
+
+    function closePopUp() {
+        $('#cookie-modal').modal('hide');
     }
 
     $(document).ready(function() {
