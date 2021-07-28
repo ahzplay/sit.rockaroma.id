@@ -22,7 +22,7 @@
 <div class="content-wrapper">
 @yield('content')
 <!-- Modal Cookie -->
-    <div class="modal fade in" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="cookie-modal" aria-hidden="false" style="display: block;">
+    <div class="modal fade in" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="cookie-modal" aria-hidden="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -56,10 +56,10 @@
 
 <script>
     function showPopUp() {
-        var cookie = $.cookie('the_cookie');
+        var cookie = $.cookie('acceptCookie');
         if(!cookie){
             $('#cookie-modal').modal('show');
-            $.cookie('the_cookie', 'the_value');
+            $.cookie('acceptCookie', '1');
         }
     }
 
