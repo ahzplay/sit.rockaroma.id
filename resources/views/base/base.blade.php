@@ -21,6 +21,27 @@
 
 <div class="content-wrapper">
 @yield('content')
+<!-- Modal Cookie -->
+    <div class="modal fade in" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="cookie-modal" aria-hidden="false" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Situs web ini menggunakan cookie</h4>
+                </div>
+                <div class="modal-body">
+                    Kami menggunakan cookie untuk mempersonalisasi konten dan iklan, untuk menyediakan fitur media sosial dan untuk menganalisis lalu lintas kami. Kami juga membagikan informasi tentang penggunaan Anda atas situs kami dengan mitra media sosial, periklanan, dan analitik kami yang mungkin menggabungkannya dengan informasi lain yang Anda berikan kepada mereka atau yang mereka kumpulkan dari penggunaan Anda atas layanan mereka.
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary">Izinkan Cookie</button>
+                        &nbsp;
+                        <a href="{{url('term-and-condition-page')}}" class="btn btn-outline-primary">Syarat &amp; Ketentuan Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
@@ -31,6 +52,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="{{asset('js/jquery.cookie.js')}}"></script>
+
+<script>
+    function showPopUp() {
+        var cookie = $.cookie('the_cookie');
+        if(!cookie){
+            $('#cookie-modal').modal('show');
+            $.cookie('the_cookie', 'the_value');
+        }
+    }
+
+    $(document).ready(function() {
+        showPopUp();
+    });
+
+</script>
 @yield('js-add-on')
 
 </body>
