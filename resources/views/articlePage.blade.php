@@ -37,7 +37,7 @@
             <a href="{{isset($topThree[0]['id'])?url('article-detail-page').'/'. urlencode($topThree[0]['title']) .'/'.$topThree[0]['id']:'#'}}">
                 <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 95%;">
                     <strong>{{isset($topThree[0]['title'])?strip_tags($topThree[0]['title']):'Rockaroma Article Title'}}</strong><br>
-                    <label style="color: white;">{!! substr(isset($topThree[0]['content'])?$topThree[0]['content']:'Rockaroma Article Content', 0, 120) !!} ...</label>
+                    <label style="color: white;">{!! substr(isset($topThree[0]['content'])?strip_tags($topThree[0]['content']):'Rockaroma Article Content', 0, 120) !!} ...</label>
                 </div>
             </a>
         </div>
@@ -48,7 +48,7 @@
                     <a href="{{isset($topThree[1]['id'])?url('article-detail-page').'/'. urlencode($topThree[1]['title']) .'/'.$topThree[1]['id']:'#'}}">
                         <div style="color: #FDDA25; background-color: black; opacity: 0.8; padding: 10px; position: absolute; bottom: 5%; left: 5%; width: 100%;">
                             <strong>{{isset($topThree[1]['title'])?strip_tags($topThree[1]['title']):'Rockaroma Article Title'}}</strong><br>
-                            <label style="color: white;">{!! substr(isset($topThree[1]['content'])?$topThree[1]['content']:'Rockaroma Article Content', 0, 120) !!} ...</label>
+                            <label style="color: white;">{!! substr(isset($topThree[1]['content'])?strip_tags($topThree[1]['content']):'Rockaroma Article Content', 0, 120) !!} ...</label>
                         </div>
                     </a>
                 </div>
