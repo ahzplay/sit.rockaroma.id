@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717b6c40-9479-45fe-b552-a114e441bb4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sit.rockaroma.id.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sit.rockaroma.id.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/base/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registrationPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registrationPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,18 +173,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeders" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/database/seeders" />
       <recent name="$PROJECT_DIR$/resources/views/base" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/public/css/add_on" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/js" />
@@ -242,7 +249,7 @@
       <workItem from="1614301886045" duration="3923000" />
       <workItem from="1614912054598" duration="1896000" />
       <workItem from="1615187525161" duration="12991000" />
-      <workItem from="1627432186094" duration="9419000" />
+      <workItem from="1627432186094" duration="16680000" />
     </task>
     <servers />
   </component>
@@ -250,9 +257,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="298" y="144" width="683" height="486" key="find.popup" timestamp="1627467247642">
+    <state x="378" y="149" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1627523855080">
       <screen x="0" y="23" width="1280" height="729" />
     </state>
-    <state x="298" y="144" width="683" height="486" key="find.popup/0.23.1280.729@0.23.1280.729" timestamp="1627467247642" />
+    <state x="378" y="149" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1280.729@0.23.1280.729" timestamp="1627523855080" />
+    <state x="458" y="318" key="NewPhpFileDialog" timestamp="1627523579734">
+      <screen x="0" y="23" width="1280" height="729" />
+    </state>
+    <state x="458" y="318" key="NewPhpFileDialog/0.23.1280.729@0.23.1280.729" timestamp="1627523579734" />
+    <state x="298" y="144" width="683" height="486" key="find.popup" timestamp="1627527644333">
+      <screen x="0" y="23" width="1280" height="729" />
+    </state>
+    <state x="298" y="144" width="683" height="486" key="find.popup/0.23.1280.729@0.23.1280.729" timestamp="1627527644333" />
   </component>
 </project>

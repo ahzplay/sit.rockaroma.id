@@ -109,7 +109,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label style="color: #FDDA25; font-size: 12px;">Smoker</label>
-                        <div class="form-check">
+                        <div id="smoker-option" class="form-check">
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-check-input" type="radio" name="smoker" id="smoker-yes" value="1">
@@ -125,6 +125,17 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="cigarette-brand-select" class="form-group" style="display: none;">
+                        <label style="color: #FDDA25; font-size: 12px;">Cigarette Brand</label>
+                        <select class="form-control" id="cigarette-brand" name="cigaretteBrandId" placeholder="Select your cigarette">
+                            <option value="">Select your cigarette</option>
+                            @foreach($cigaretteBrands as $val)
+                                <option value="{{$val->id}}">{{$val->cigarette_brand_name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -155,6 +166,15 @@
         });
 
         $(document).ready(function() {
+            $("#smoker-option input[name='smoker']").click(function(){
+                console.log('checked');
+                if($('input:radio[name=smoker]:checked').val() == '1'){
+                    $('#cigarette-brand-select').show();
+                } else {
+                    $('#cigarette-brand-select').hide();
+                }
+            });
+
             $('#province-code').change(function() {
                 $("#city-code").empty();
                 $.get('{{url('api/get-cities')}}/'+this.value, function (data, status) {

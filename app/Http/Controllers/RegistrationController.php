@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use App\Mail\MemberRegistrationEmail;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
@@ -24,16 +25,20 @@ class RegistrationController extends Controller
 
     public function register() {
         $region = new RegionController();
+        $cigaretteBrand = new CigaretteBrandController();
         $cities = $region->fetchCities();
         $provinces = $region->fetchProvinces();
+        $cigaretteBrands = $cigaretteBrand->fetchCigarettes();
         $data = array(
             'cities' => $cities,
             'provinces' => $provinces,
+            'cigaretteBrands' => $cigaretteBrands
         );
         return view('registrationPage')->with($data);
     }
 
     public function doRegister(Request $request) {
+        //echo json_encode($_POST); die();
         $validator = Validator::make($request->all(),[
                 'fullname'=>'required',
                 'email'=>'unique:users|required|email|max:255',
@@ -78,6 +83,7 @@ class RegistrationController extends Controller
                 'city_code' => $request->cityCode,
                 'gender' => $request->gender,
                 'is_smoker' => $request->smoker,
+                'cigarette_brand_id' => $request->smoker==1?$request->cigaretteBrandId:0,
                 'created_at' => date('Y-m-d'),
 
             ]);
@@ -94,8 +100,16 @@ class RegistrationController extends Controller
                 return response()->json(array('status'=>'fail','message'=>'Registration failed'), 200);
             }
 
-        } catch(Exception $e) {
+        } catch(\Illuminate\Database\QueryException $e){
+            User::where('email',$request->email)->delete();
+            Log::error($e->getMessage());
+            return response()->json(array('status'=>'fail','message'=>'Registration failed, please contact administrator'), 200);
+        } catch(\Swift_TransportException $e){
+            Log::error($e->getMessage());
+            $user = new User();
+            $user->where('email',$request->email)->delete();
 
+            return response()->json(array('status'=>'fail','message'=>'Registration failed, please contact administrator'), 200);
         }
     }
 

@@ -13,6 +13,36 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+    <style>
+        /* Absolute Center Spinner */
+        .loading-overlay {
+            position: fixed;
+            z-index: 999;
+            height: 2em;
+            width: 2em;
+            overflow: visible;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Transparent Overlay */
+        .loading-overlay:before {
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+
+    </style>
     @yield('css-add-on')
 
 </head>
@@ -21,6 +51,7 @@
 
 <div class="content-wrapper">
 @yield('content')
+    <div id="overlay-screen" class="loading-overlay" style="display: none;"></div>
 <!-- Modal Cookie -->
     <div class="modal fade in" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="cookie-modal" aria-hidden="false">
         <div class="modal-dialog" role="document">
@@ -57,6 +88,7 @@
 <script>
     function showPopUp() {
         if(!$.cookie('cookie18Alert')){
+            $('#overlay-screen').show();
             $.confirm({
                 title: 'Peringatan',
                 content: 'Website ini hanya diperuntukkan bagi Anda yang berusia 18 tahun ke atas',
@@ -65,8 +97,12 @@
                         var date = new Date();
                         date.setTime(date.getTime() + (1440 * 60 * 1000));
                         $.cookie("cookie18Alert", 1, { expires: date });
+                        $('#overlay-screen').hide();
                         setCookieAccept();
                     },
+                    cancel: function () {
+                        showPopUp();
+                    }
                 },
             });
         } else {
