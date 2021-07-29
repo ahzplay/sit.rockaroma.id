@@ -36,7 +36,7 @@
                 <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #da291c;"></i></a>
             </div>
             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-left" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; margin-top: 1%;">
-                <img src="{{asset('img/18plus.png')}}" width="60">
+                <img src="{{asset('img/18plus.png')}}">
             </div>
         </div>
     </div>
