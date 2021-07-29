@@ -10,7 +10,7 @@ class Profile extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'full_name', 'phone_number', 'province_code', 'city_code', 'gender', 'is_smoker', 'created_at', 'updated_at'
+        'user_id', 'full_name', 'phone_number', 'province_code', 'city_code', 'gender', 'is_smoker', 'cigarette_brand_id', 'created_at', 'updated_at'
     ];
 
     public function user(){
@@ -21,5 +21,9 @@ class Profile extends Model
     }
     public function city(){
         return $this->belongsTo(Region::class,'city_code','code');
+    }
+
+    public function cigaretteBrand(){
+        return $this->belongsTo(CigaretteBrand::class,'cigarette_brand_id','id');
     }
 }

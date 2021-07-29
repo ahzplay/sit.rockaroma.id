@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CigaretteBrandController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RegistrationController;
@@ -22,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('fetch-cigarette-brands',[CigaretteBrandController::class, 'fetchCigarettes']);
 Route::get('fetch-cities',[RegionController::class, 'fetchCities']);
 Route::get('fetch-bands',[RegisterController::class, 'fetchBands']);
 Route::get('get-cities/{provinceCode}', [RegionController::class, 'getCities']);
