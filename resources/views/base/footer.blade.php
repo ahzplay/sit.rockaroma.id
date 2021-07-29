@@ -34,7 +34,7 @@
                 <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #da291c; padding-right: 1%;"></i></a>
                 <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #da291c;"></i></a>
             </div>
-            <div id="footer-18-plus-logo" class="col-xl-1 col-lg-1 col-md-1 col-sm-6 col-xs-6 text-right" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; margin-top: 1%;">
+            <div id="footer-18-plus-logo" class="col-xl-1 col-lg-1 col-md-1 col-sm-6 col-xs-6 text-right" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; ">
                 <img src="{{asset('img/18plus.png')}}">
             </div>
         </div>
