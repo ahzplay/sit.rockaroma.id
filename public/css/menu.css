@@ -45,6 +45,11 @@
     #main-footer {
         height: 95px;
     }
+    #footer-menu {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
     #footer-brand {
         display: none;
     }
@@ -53,6 +58,11 @@
     }
     #footer-socmed-mobile {
         display: block;
+    }
+    #footer-18-plus-logo {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 

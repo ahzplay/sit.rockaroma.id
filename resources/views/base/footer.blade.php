@@ -3,7 +3,6 @@
     clear: both;
     bottom: -100px;
     position: relative;
-
     margin-top:-85px;
 
 ">
@@ -18,7 +17,7 @@
                     <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #670404;"></i></a>
 
             </div>--}}
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6" style="color: #da291c;font-size: 14px; text-align: left; font-weight: bold; margin-top: 1%; margin-bottom: 1%;">
+            <div id="footer-menu" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6" style="color: #da291c;font-size: 14px; text-align: left; font-weight: bold; margin-top: 1%; margin-bottom: 1%;">
                 <a href="{{url('about-us-page')}}" style="text-decoration:none">About Us</a><br>
                 <a href="{{url('term-and-condition-page')}}" style="text-decoration:none">Term and Condition</a><br>
                 <a href="mailto:rockaromaid@gmail.com" style="text-decoration:none">Contact Us</a><br>
@@ -35,7 +34,7 @@
                 <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #da291c; padding-right: 1%;"></i></a>
                 <a href="https://www.youtube.com/channel/UCrI6c17u5Fvrf2mFDOAhRFQ" target="_blank"><i class="fa fa-youtube-play" style="font-size: 22px; color: #da291c;"></i></a>
             </div>
-            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-left" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; margin-top: 1%;">
+            <div id="footer-18-plus-logo" class="col-xl-1 col-lg-1 col-md-1 col-sm-6 col-xs-6 text-right" style="color: #da291c;font-size: 14px; text-align: center; font-weight: bold; margin-top: 1%;">
                 <img src="{{asset('img/18plus.png')}}">
             </div>
         </div>
