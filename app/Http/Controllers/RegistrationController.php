@@ -108,9 +108,16 @@ class RegistrationController extends Controller
             Log::error($e->getMessage());
             $user = new User();
             $user->where('email',$request->email)->delete();
-
             return response()->json(array('status'=>'fail','message'=>'Registration failed, please contact administrator'), 200);
         }
+    }
+
+    public function tesEmail() {
+        $data = array(
+            'name' => 'adsfasdf',
+            'link' => env('LIVE_URL').'api/email-verification/'.urlencode(base64_encode('123'))
+        );
+        Mail::to('ari.azharr@gmail.com')->send(new MemberRegistrationEmail($data));
     }
 
     public function emailVerification(Request $request) {
