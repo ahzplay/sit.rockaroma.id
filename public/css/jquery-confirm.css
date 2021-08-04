@@ -97,14 +97,15 @@ body[class*=jconfirm-no-scroll-] {
 }
 
 .jconfirm .jconfirm-box {
-    background: #ffc107;
+    background: #000; /*Edited by ahz*/
     border-radius: 4px;
     position: relative;
     outline: 0;
     padding: 15px 15px 0;
     overflow: hidden;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    color: #fff;
 }
 
 @-webkit-keyframes type-blue {
@@ -516,8 +517,10 @@ body[class*=jconfirm-no-scroll-] {
 }
 
 .jconfirm .jconfirm-box .jconfirm-buttons button.btn-default {
-    background-color: #000; /*Edited by AHZ*/
+    /*background-color: #000;*/ /*Edited by AHZ*/
+    background-color: #FDDA25; /*Edited by AHZ*/
     color: #fff;
+    text-shadow: none;
     text-shadow: none;
     -webkit-transition: background .2s;
     transition: background .2s
@@ -628,7 +631,8 @@ body[class*=jconfirm-no-scroll-] {
 .jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button.btn-default {
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #fff /*Edited by AHZ*/
+    /*color: #fff*/ /*Edited by AHZ*/
+    color: #000 /*Edited by AHZ*/
 }
 
 .jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button.btn-default:hover,
