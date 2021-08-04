@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/menu.css')}}">
     <link rel="stylesheet" href="{{asset('css/circle-loader.css')}}">
     <link rel="stylesheet" href="{{asset('css/overlay-loader.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <link rel="stylesheet" href="{{asset('css/jquery-confirm.css')}}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
@@ -88,16 +88,17 @@
 <script>
     function showPopUp() {
         if(!$.cookie('cookie18Alert')){
-            $('#overlay-screen').show();
+            //$('#overlay-screen').show();
             $.confirm({
                 title: 'Peringatan',
                 content: 'Website ini hanya diperuntukkan bagi Anda yang berusia 18 tahun ke atas',
+
                 buttons: {
                     confirm: function () {
                         var date = new Date();
                         date.setTime(date.getTime() + (1440 * 60 * 1000));
                         $.cookie("cookie18Alert", 1, { expires: date });
-                        $('#overlay-screen').hide();
+                        //$('#overlay-screen').hide();
                         setCookieAccept();
                     },
                     cancel: function () {
