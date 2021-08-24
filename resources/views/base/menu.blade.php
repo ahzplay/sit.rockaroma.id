@@ -13,7 +13,7 @@
                             <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}">ARTICLE</a>
                             <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1/?categoryId=0')}}">VIDEO</a>
                             <a class="nav-link {{Session::get('menu-active-register')}}" href="{{url('register-profile-page')}}">REGISTER</a>
-                            {{--<a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}">SHOP</a>--}}
+                            <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}">SHOP</a>
                         </nav>
                     </div>
                     <div class="col-md-4 text-right">
@@ -41,7 +41,7 @@
             <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}" style="color: white;">Article</a>
             <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1/?categoryId=0')}}" style="color: white;">Video</a>
             <a class="nav-link {{Session::get('menu-active-register')}}" href="{{url('register-profile-page')}}" style="color: white;">Register</a>
-            {{--<a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}" style="color: white;">Shop</a>--}}
+            <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}" style="color: white;">Shop</a>
             @if(session()->has('isLogin'))
                 <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('api/logout-action')}}" style="color: white;">Logout</a>
             @else
