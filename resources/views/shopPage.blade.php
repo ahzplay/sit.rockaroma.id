@@ -88,7 +88,9 @@
                     </div>
                     <div class="modal-body text-center">
                         <a id="tokopedia-url" href="#" target="_blank"><img src="{{asset('img/tokopedia-logo.png')}}" style="padding-right: 5%" width="80"></a>
+                        <img id="tokopedia-not-available" src="{{asset('img/tokopedia-logo-not-avail.png')}}" style="padding-left: 5%; display: none;" width="80">
                         <a id="shopee-url" href="#" target="_blank"><img src="{{asset('img/shopee-logo.png')}}" style="padding-left: 5%" width="80"></a>
+                        <img id="shopee-not-available" src="{{asset('img/shopee-logo-not-avail.png')}}" style="padding-left: 5%; display: none;" width="80">
                     </div>
                 </div>
             </div>
@@ -223,8 +225,19 @@
 
         function openOlshopModal(tokopediaUrl, shopeeUrl) {
             console.log(tokopediaUrl);
-            $("#tokopedia-url").attr("href", tokopediaUrl);
-            $("#shopee-url").attr("href", shopeeUrl);
+            if(tokopediaUrl == '#') {
+                $("#tokopedia-url").hide();
+                $('#tokopedia-not-available').show();
+            } else {
+                $("#tokopedia-url").attr("href", tokopediaUrl);
+            }
+
+            if(shopeeUrl == '#') {
+                $("#shopee-url").hide();
+                $('#shopee-not-available').show();
+            } else {
+                $("#shopee-url").attr("href", shopeeUrl);
+            }
         }
     </script>
 @endsection
