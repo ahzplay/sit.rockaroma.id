@@ -19,6 +19,7 @@
                     <div class="col-md-4 text-right">
                         @if(session()->has('isLogin'))
                             <nav class="nav nav-masthead justify-content-right">
+                                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('member-profile-page')}}">PROFILE</a>
                                 <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('api/logout-action')}}">LOGOUT</a>
                             </nav>
                         @else
