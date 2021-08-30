@@ -55,7 +55,9 @@ class AuthController extends Controller
 
                 if($roleCheck == 1) {
                     if (Hash::check($request->password, $user->password)) {
+                        $userData = User::where('email', $request->email)->first();
                         $request->session()->put('isLogin', true);
+                        $request->session()->put('userId', $userData->id);
                         return response()->json(array('status'=>'success',$user), 200);
                     } else {
                         return response()->json(array('status'=>'fail','message'=>'Your password is wrong'), 200);

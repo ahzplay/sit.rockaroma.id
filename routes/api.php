@@ -7,6 +7,7 @@ use App\Http\Controllers\CigaretteBrandController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,5 @@ Route::post('login-action', [AuthController::class, 'doLogin']);
 Route::get('logout-action', [AuthController::class, 'dologout']);
 Route::post('reset-password-action', [AuthController::class, 'resetPassword']);
 Route::post('change-password-action', [AuthController::class, 'changePassword']);
+Route::get('get-member-profile', [MemberController::class, 'getMemberProfile']);
+Route::post('update-member-profile', [MemberController::class, 'updateProfile']);
