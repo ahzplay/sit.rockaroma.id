@@ -36,7 +36,7 @@ class MemberController extends Controller
                 'city_code'=>$request->cityCode,
                 'gender'=>$request->gender,
                 'is_smoker'=>$request->smoker,
-                'cigarette_brand_id'=>$request->cigaretteBrandId,
+                'cigarette_brand_id'=>$request->smoker==1?$request->cigaretteBrandId:0,
             ]);
 
         if($profile) {
