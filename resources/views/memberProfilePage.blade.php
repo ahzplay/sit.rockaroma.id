@@ -48,7 +48,7 @@
             </div>
             <div class="form-group">
                 <label style="color: #FDDA25; font-size: 12px;">Fullname</label>
-                <input type="text" class="form-control" id="fullname" name="fullname" value="{{$userData->profile->full_name}}" placeholder="Enter your fullname">
+                <input type="text" class="form-control" id="fullname" name="fullname" value="{{$userData->profile->full_name}}" placeholder="Enter your fullname" required>
             </div>
             <div class="row">
                 <div class="col-md-6">
