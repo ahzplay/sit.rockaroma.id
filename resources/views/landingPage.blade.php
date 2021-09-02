@@ -73,7 +73,7 @@
     <div class="container" >
         <div class="row" style="padding-top: 30px">
             <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
-                <h4 style="color: #FDDA25; cursor: -webkit-grab; cursor: grab;"><strong>NEWS</strong></h4>
+                <h4 style="color: #FDDA25; cursor: grab;"><strong>NEWS</strong></h4>
                 <p style="font-size: 12px; color: white;"></p>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">

@@ -188,7 +188,7 @@
         function doRegister() {
             $.confirm({
                 title: 'Are you sure ?',
-                content: 'Your profile will be register',
+                content: 'Your profile will be registered',
                 buttons: {
                     confirm: function () {
                         $('#file-demo').show();
