@@ -4,15 +4,17 @@
             <div class="inner">
                 <div class="row">
                     {{--<h3 class="masthead-brand" style="color: #FFDF6C;">ROCK AROMA</h3>--}}
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img class="masthead-brand" src="{{asset('img/logo-rockaroma.png')}}" style="padding-top: 0.5%; float: left;">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5 text-left">
                         <nav class="nav nav-masthead justify-content-center">
                             <a class="nav-link {{Session::get('menu-active-home')}}" href="{{url('landing-page')}}">HOME</a>
-                            <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}">ARTICLE</a>
+                            <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}">NEWS</a>
                             <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1/?categoryId=0')}}">VIDEO</a>
+                            @if(session()->has('isLogin'))
                             <a class="nav-link {{Session::get('menu-active-register')}}" href="{{url('register-profile-page')}}">REGISTER</a>
+                            @endif
                             <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}">SHOP</a>
                         </nav>
                     </div>
@@ -39,9 +41,11 @@
         <div class="bg-dark p-4" style="background-color: #212020">
             {{--<h5 class="text-white h4">ROCKAROMA</h5>--}}
             <a class="nav-link {{Session::get('menu-active-home')}}" href="{{url('landing-page')}}" style="color: white;">Home</a>
-            <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}" style="color: white;">Article</a>
+            <a class="nav-link {{Session::get('menu-active-article')}}" href="{{url('article-page/1/topRow')}}" style="color: white;">News</a>
             <a class="nav-link {{Session::get('menu-active-video')}}" href="{{url('video-page/1/1/?categoryId=0')}}" style="color: white;">Video</a>
+            @if(session()->has('isLogin'))
             <a class="nav-link {{Session::get('menu-active-register')}}" href="{{url('register-profile-page')}}" style="color: white;">Register</a>
+            @endif
             <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}" style="color: white;">Shop</a>
             @if(session()->has('isLogin'))
                 <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('api/logout-action')}}" style="color: white;">Logout</a>

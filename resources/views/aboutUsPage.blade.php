@@ -23,17 +23,15 @@
             <div class="col-md-12" style="color: white; text-align: justify; padding-bottom: 5%">
                 <center><img src="{{asset('img/logo-rockaroma.png')}}" style="padding-bottom: 6%;"></center>
                 <p>
-                    Suatu bentuk kolektif untuk mendukung semua musisi tanah air dan pecinta musik tanah air seperti kalian. Yes! Kalian yang muda, berani, punya semangat membara! Selamat datang, di Rockaroma.id!
+                    Suatu bentuk kolektif untuk mendukung semua musisi tanah air dan pecinta musik tanah air seperti kalian. Yes! Kalian yang muda, berani, dan juga pastinya beda dari yg lain! Selamat datang di Rockaroma.id!
                 </p>
                 <p>
-                    Di ​Rockaroma.id ​kalian bebas untuk berekspresi, berbagi inspirasi, mencari informasi atau berinteraksi dengan musisi atau penikmat musik lainnya! Ayo, ikut setiap kegiatan di ​Rockaroma.id!​ Kalian bisa upload demo band kalian, ikut d​ igital event ​seru, atau dapetin merchandise keren dari musisi favorit kalian! Akses juga halaman S​yarat & Ketentuan ​untuk gali informasi lebih lagi tentang rangkaian kegiatan serta berbagai aturan di R​ockaroma.id
+                    Di Rockaroma.id kalian bebas untuk berekspresi, berbagi inspirasi, mencari informasi atau berinteraksi dengan musisi atau penikmat musik lainnya! Ayo, ikuti setiap kegiatan di Rockaroma.id! Kalian bisa upload demo band kalian, baca dan juga nonton band favorit kalian, atau dapetin merchandise keren dari musisi favorit kalian!
                 </p>
                 <p>
-                    Selalu ada ruang apresiasi untuk kalian yang ingin karyanya didengar hingga nama kalian terdengar. R​ ockaroma​.id h​ adir buat kalian semua untuk unjuk karya-karya terbaik kalian!
+                    Pastinya selalu ada ruang apresiasi untuk kalian yang menginkan kepuasan yg berbeda dan ingin karyanya didengar hingga nama kalian terdengar.
                 </p>
-                <p>
-                    Tunggu apalagi? Let’s make some noise with us!
-                </p>
+                <br><br><br><br><br><br><br><br>
             </div>
         </div>
     </div>

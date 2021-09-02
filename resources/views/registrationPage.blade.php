@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label style="color: #FDDA25; font-size: 12px;">Handphone</label>
+                        <label style="color: #FDDA25; font-size: 12px;">Mobile Phone</label>
                         <input type="number" class="form-control" id="phone-number" name="phoneNumber" placeholder="Ex. 081166738867">
                     </div>
                 </div>
