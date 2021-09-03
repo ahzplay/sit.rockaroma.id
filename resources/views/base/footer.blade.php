@@ -19,7 +19,7 @@
             </div>--}}
             <div id="footer-menu" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6" style="color: #FDDA25;font-size: 14px; text-align: left; font-weight: bold; margin-top: 1%; margin-bottom: 1%;">
                 <a href="{{url('about-us-page')}}" style="text-decoration:none">About Us</a><br>
-                <a href="{{url('term-and-condition-page')}}" style="text-decoration:none">Terms and Condition</a><br>
+                <a href="{{url('term-and-condition-page')}}" style="text-decoration:none">Terms and Conditions</a><br>
                 <a href="mailto:info@rockaroma.id" style="text-decoration:none">Contact Us</a><br>
                 <div id="footer-socmed-mobile">
                     <a href="https://www.instagram.com/rockaroma_id" target="_blank"><i class="fa fa-instagram" style="font-size: 22px; color: #da291c; padding-right: 1%;"></i></a>
