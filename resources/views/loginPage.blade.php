@@ -47,7 +47,8 @@
             </div>
             <div class="form-group">
                 <label style="color: #FDDA25; font-size: 12px;">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter your password" {{--required="required"--}}>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" {{--required="required"--}}>
+                <input type="checkbox" onclick="showPassword()" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;"> <label style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Show Password</label>
                 <a href="{{url('forgot-password-page')}}" class="float-right" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Forgot Password?</a>
             </div>
             <div class="form-group">
@@ -60,6 +61,14 @@
 @endsection
 @section('js-add-on')
     <script>
+        function showPassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
         function doLogin() {
             $('#loading-div').show();
             $.ajax({
