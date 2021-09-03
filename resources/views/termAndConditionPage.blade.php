@@ -28,7 +28,7 @@
                 <br><br><br><br><br><br><br><br>
                 {{--<p>
                     <strong>Rockaroma.id</strong> adalah platform media dan kolektif sosial online. Situs ini adalah milik PT. Aroma Tobacco Indonesia dan/atau dikelola oleh ...... Selaku pengelola situs <strong>Rockaroma.id</strong> ​kami menyediakan sebuah jasa untuk berbagi konten secara digital dimana setiap konten atau pun kegiatan dapat direvisi atau berubah dari waktu ke waktu. Pada laman ini akan mengatur dan menjelaskan ​“Syarat dan Ketentuan” ketika menggunakan platform ​<strong>Rockaroma.id</strong> yang kami harapkan semua pengunjung dapat memahami dengan seksama mengenai syarat dan ketentuan yang ada di bawah ini sebelum mengakses situs kami. Ketika Anda mengakses dan menggunakan platform ​<strong>Rockaroma.id</strong>​, berarti Anda telah menyetujui dan memahami ​“Syarat dan Ketentuan” ​di dalam situs ini. Jika ada yang kurang disetujui dan berkenan, mohon untuk tidak mengakses atau menggunakan situs <strong>Rockaroma.id</strong>​ serta kegiatan-kegiatan di dalamnya.
-                </p>
+                </p>--}}
 
                 <center><h3 style="padding-bottom: 2%; font-weight: bold; padding-top: 10%">PENDAFTARAN DAN PENGGUNAAN SITUS OLEH ANDA</h3></center>
                 <p>
@@ -82,7 +82,7 @@
 
                 <p>
                     <strong>Rockaroma</strong> ​mempunyai hak penuh untuk menghapus konten setiap penggunan, memberhentikan sementara atau mengakhiri akses terhadap layanan di situs <strong>Rockaroma.id</strong>​, ​termasuk keputusan untuk mengambil jalur hukum apabila salah satu dari materi atau konten pengguna diyakini telah melanggar ​Syarat dan Ketentuan ​di laman ini dan melanggar hak orang lain atau setiap hukum yang ada, serta peraturan yang telah diatur dan disepakti oleh pengguna di dalam ​Syarat dan Ketentuan​ ini.
-                </p>--}}
+                </p>
 
             </div>
         </div>
