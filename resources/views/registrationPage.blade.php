@@ -147,6 +147,7 @@
             <div class="form-group" >
                 <label style="color: #FDDA25; font-size: 12px;">Confirm Password</label>
                 <input type="password" class="form-control" id="password-confirmation" name="password_confirmation" placeholder="Confirm your password">
+                <input type="checkbox" onclick="showPassword()" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;"> <label style="color: #FDDA25; padding-top: 3%; font-size: 12px;">Show Password</label>
             </div>
 
             <div class="form-group" style="padding-top: 5%;">
@@ -164,6 +165,18 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        function showPassword() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("password-confirmation");
+            if (x.type === "password") {
+                x.type = "text";
+                y.type = "text";
+            } else {
+                x.type = "password";
+                y.type = "password";
+            }
+        }
 
         $(document).ready(function() {
             $("#smoker-option input[name='smoker']").click(function(){
