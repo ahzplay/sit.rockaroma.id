@@ -165,7 +165,10 @@
                     <label style="color: #FDDA25; font-size: 12px;">Confirm New Password</label>
                     <input type="password" class="form-control" id="confirmation-password" name="confirmationPassword" placeholder="Confirm your new password">
                 </div>
-                <div class="form-group" style="padding-top: 5%;">
+                <div class="form-group">
+                    <input type="checkbox" onclick="showPassword()" style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;"> <label style="color: #FDDA25; padding-top: 3%; padding-bottom: 10%; font-size: 12px;">Show Password</label>
+                </div>
+                <div class="form-group">
                     <button type="button" onclick="changePassword()" class="btn btn-warning btn-block">CHANGE PASSWORD</button>
                 </div>
             </form>
@@ -176,6 +179,21 @@
 
 @section('js-add-on')
     <script>
+        function showPassword() {
+            var x = document.getElementById("old-password");
+            var y = document.getElementById("new-password");
+            var z = document.getElementById("confirmation-password");
+            if (x.type === "password" || y.type === "password" || z.type === "password") {
+                x.type = "text";
+                y.type = "text";
+                z.type = "text";
+            } else {
+                x.type = "password";
+                y.type = "password";
+                z.type = "password";
+            }
+        }
+
         $(document).ready(function() {
             @if($userData->profile->is_smoker)
                 document.getElementById("smoker-yes").checked = true;
