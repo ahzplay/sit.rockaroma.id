@@ -37,3 +37,4 @@ Route::post('reset-password-action', [AuthController::class, 'resetPassword']);
 Route::post('change-password-action', [AuthController::class, 'changePassword']);
 Route::get('get-member-profile', [MemberController::class, 'getMemberProfile']);
 Route::post('update-member-profile', [MemberController::class, 'updateProfile']);
+Route::post('update-member-password', [MemberController::class, 'updatePassword']);

@@ -4279,7 +4279,8 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  /*border-color: #FDDA25 #FDDA25 #FDDA25;*/
+  color: #FDDA25;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -4290,9 +4291,9 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: #000000;
+  background-color: #FDDA25;
+  border-color: #FDDA25 #FDDA25 #FDDA25;
 }
 
 .nav-tabs .dropdown-menu {

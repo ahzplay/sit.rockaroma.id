@@ -37,10 +37,19 @@
 @section('content')
     <div class="loading" id="loading-div" style="display:none;"></div>
     {{--<div class="text-center" style="padding-top: 5%;"><a href="{{url('/')}}"><img class="logo" src="{{asset('img/logo-rockaroma.png')}}"></a></div>--}}
-    <div class="login-form">
-        <form action="#" id="register-form" method="post" enctype="multipart/form-data">
-            <div class="text-center" style="font-size: 20px; font-weight: bold;">Profile</div>
-            <div class="text-center" style="padding-bottom: 5%; font-size: 12px;"></div>
+    <div class="login-form" style="padding-top: 3%; padding-bottom: 4%;">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#edit-profile-form">Edit Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#change-password-form">Change Password</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <form action="#" id="edit-profile-form" class="tab-pane container active" method="post" enctype="multipart/form-data">
+            <div class="text-center" style="font-size: 20px; font-weight: bold;">Edit Profile</div><br>
             <div class="form-group" >
                 <label style="color: #FDDA25; font-size: 12px;">Email</label>
                 <br>
@@ -141,23 +150,26 @@
             <div class="form-group" style="padding-top: 5%;">
                 <button type="button" onclick="updateProfile()" class="btn btn-warning btn-block">UPDATE PROFILE</button>
             </div>
-            {{--<hr>
-            <div class="form-group">
-                <label style="color: #FDDA25; font-size: 12px;">Old Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your old password">
-            </div>
-            <div class="form-group" >
-                <label style="color: #FDDA25; font-size: 12px;">New Password</label>
-                <input type="password" class="form-control" id="password-confirmation" name="password_confirmation" placeholder="Enter your new password">
-            </div>
-            <div class="form-group" >
-                <label style="color: #FDDA25; font-size: 12px;">Confirm New Password</label>
-                <input type="password" class="form-control" id="password-confirmation" name="password_confirmation" placeholder="Confirm your new password">
-            </div>
-            <div class="form-group" style="padding-top: 5%;">
-                <button type="button" onclick="doRegister()" class="btn btn-warning btn-block">CHANGE PASSWORD</button>
-            </div>--}}
         </form>
+            <form action="#" id="change-password-form" class="tab-pane container fade" method="post" enctype="multipart/form-data" >
+                <div class="text-center" style="font-size: 20px; font-weight: bold;">Change Password</div><br>
+                <div class="form-group">
+                    <label style="color: #FDDA25; font-size: 12px;">Old Password</label>
+                    <input type="password" class="form-control" id="old-password" name="oldPassword" placeholder="Enter your old password">
+                </div>
+                <div class="form-group" >
+                    <label style="color: #FDDA25; font-size: 12px;">New Password</label>
+                    <input type="password" class="form-control" id="new-password" name="newPassword" placeholder="Enter your new password">
+                </div>
+                <div class="form-group" >
+                    <label style="color: #FDDA25; font-size: 12px;">Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmation-password" name="confirmationPassword" placeholder="Confirm your new password">
+                </div>
+                <div class="form-group" style="padding-top: 5%;">
+                    <button type="button" onclick="changePassword()" class="btn btn-warning btn-block">CHANGE PASSWORD</button>
+                </div>
+            </form>
+        </div>
 
     </div>
 @endsection
@@ -219,7 +231,7 @@
         function updateProfile() {
             $.confirm({
                 title: 'Are you sure ?',
-                content: 'Your profile will be update',
+                content: 'Your profile will be updated',
                 buttons: {
                     confirm: function () {
                         $('#file-demo').show();
@@ -228,7 +240,62 @@
                         $.ajax({
                             type: "POST",
                             url: "{{url('api/update-member-profile')}}",
-                            data: $('#register-form').serialize(),
+                            data: $('#edit-profile-form').serialize(),
+                            processData:false,
+                            timeout: 60000,
+                            beforeSend: function(){
+                                //$('#upload-demo-submit-btn').attr("disabled","disabled");
+                            },
+                            success: function(response){
+                                $('#loading-div').hide();
+                                if(response.status == 'success') {
+                                    $.alert({
+                                        title: 'Successfull !',
+                                        content: response.message,
+                                    });
+                                    $.confirm({
+                                        title: 'Well done !',
+                                        content: response.message,
+                                        buttons: {
+                                            confirm: function() {
+                                                location.reload();
+                                            }
+                                        }
+                                    });
+                                } else {
+                                    $('#loading-div').hide();
+                                    $.alert({
+                                        title: 'Something Wrong !',
+                                        content: response.message
+                                    });
+                                }
+
+                            },
+                            error: function(){
+                                $('#loading-div').hide();
+                            },
+                        });
+                    },
+                    cancel: function () {
+                        $('#loading-div').hide();
+                    },
+                }
+            });
+        }
+
+        function changePassword() {
+            $.confirm({
+                title: 'Are you sure ?',
+                content: 'Your password will be updated',
+                buttons: {
+                    confirm: function () {
+                        $('#file-demo').show();
+                        $('#loading-div').show();
+                        //$('#loading-div').show();
+                        $.ajax({
+                            type: "POST",
+                            url: "{{url('api/update-member-password')}}",
+                            data: $('#change-password-form').serialize(),
                             processData:false,
                             timeout: 60000,
                             beforeSend: function(){

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
@@ -43,6 +44,34 @@ class MemberController extends Controller
             return response()->json(array('status'=>'success','message'=>'Profile Updated'), 200);
         } else {
             return response()->json(array('status'=>'fail','message'=>'Profile cannot updated, please contact administrator'), 200);
+        }
+
+    }
+
+    function updatePassword(Request $request) {
+        $userId = $request->session()->get('userId');
+        $user = User::where('id', $userId)->first();
+        if($request->newPassword == $request->confirmationPassword) {
+            if (Hash::check($request->oldPassword, $user->password)) {
+                try{
+                    $doUpdate = User::where('id',$userId)
+                        ->update(array(
+                            'password' => app('hash')->make($request->newPassword)
+                        ));
+
+                    if($doUpdate) {
+                        return response()->json(array('status'=>'success','message'=>'Password Changed'), 200);
+                    } else {
+                        return response()->json(array('status'=>'fail','message'=>'Password cannot changed, please contact administrator'), 200);
+                    }
+                } catch(Exception $e) {
+                    return response()->json(array('status'=>'fail','message'=>'System error, please contact administrator'), 200);
+                }
+            } else {
+                return response()->json(array('status'=>'fail','message'=>'Old password is wrong'), 200);
+            }
+        } else {
+            return response()->json(array('status'=>'fail','message'=>'New password must be match with confirmation password'), 200);
         }
 
     }
