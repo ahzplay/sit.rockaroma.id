@@ -58,9 +58,12 @@
                 " style="color: white;">Register
             </a>
 
-
-
             <a class="nav-link {{Session::get('menu-active-shop')}}" href="{{url('shop-page/1/1/?categoryId=0')}}" style="color: white;">Shop</a>
+
+            @if(session()->has('isLogin'))
+                <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('member-profile-page')}}" style="color: white;">Profile</a>
+            @endif
+
             @if(session()->has('isLogin'))
                 <a class="nav-link {{Session::get('menu-active-login')}}" href="{{url('api/logout-action')}}" style="color: white;">Logout</a>
             @else
