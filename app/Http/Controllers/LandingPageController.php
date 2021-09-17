@@ -24,6 +24,8 @@ class LandingPageController extends Controller
         $request->session()->put('menu-active-video', '');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
+        $request->session()->put('menu-title', 'Home');
+
         $data = array(
             'videos' => $this->fetchVideos(),
             'articles' => $this->fetchArticlesTopThree(),

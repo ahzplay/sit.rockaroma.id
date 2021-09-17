@@ -15,6 +15,7 @@ class ShopController extends Controller
         $request->session()->put('menu-active-video', '');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', 'active');
+        $request->session()->put('menu-title', 'Shop');
 
         $request->session()->put('category-active', $request->categoryId);
 

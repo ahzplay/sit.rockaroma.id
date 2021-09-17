@@ -16,6 +16,7 @@ class ArticleController extends Controller
         $request->session()->put('menu-active-video', '');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
+        $request->session()->put('menu-title', 'News');
 
         $articles = $this->fetchArticles(array('page'=>$request->page,'searchKeyword'=>$request->keyword));
         $topThree = $this->fetchArticlesTopThree();

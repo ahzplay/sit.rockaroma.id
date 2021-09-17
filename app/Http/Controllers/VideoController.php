@@ -15,6 +15,7 @@ class VideoController extends Controller
         $request->session()->put('menu-active-video', 'active');
         $request->session()->put('menu-active-register', '');
         $request->session()->put('menu-active-shop', '');
+        $request->session()->put('menu-title', 'Video');
 
         $request->session()->put('category-active', $request->categoryId);
 
