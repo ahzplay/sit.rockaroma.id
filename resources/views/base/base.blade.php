@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="{{asset('css/circle-loader.css')}}">
     <link rel="stylesheet" href="{{asset('css/overlay-loader.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery-confirm.css')}}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R2Y4Q7LHB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9R2Y4Q7LHB');
+    </script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
