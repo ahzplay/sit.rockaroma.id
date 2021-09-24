@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('css/circle-loader.css')}}">
     <link rel="stylesheet" href="{{asset('css/overlay-loader.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery-confirm.css')}}">
+    <link rel="icon" href="{{asset('img/favico.png')}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R2Y4Q7LHB"></script>
     <script>
